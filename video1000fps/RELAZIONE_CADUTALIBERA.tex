@@ -1,0 +1,64 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{graphicx}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{geometry}
+\linespread{1.1}
+\geometry{
+ total={170mm,257mm},
+ left=20mm,
+ top=15mm,
+ bottom=28mm
+ }
+ 
+ \title{\textbf{\scalebox{1.3}{\text{Moto di un grave lungo la verticale}}}}
+ \date{}
+
+\author{\begin{small}Mussini Simone, Ruscillo Fabio, Musi Francesco\end{small}}
+
+
+
+\begin{document}
+\maketitle
+\section{Obbiettivo}
+Lo scopo è verificare la grandezza \textit{g}, accelerazione di gravità terrestre. 
+Ciò è stato fatto prendendo misure tramite fotoregistrazioni ad alta velocità di una sferetta metallica lasciata libera di cadere lungo la verticale. 
+La formula da verificare è:
+\begin{equation*}
+    y(t)=\frac{1}{2}gt^2 + y(0)
+\end{equation*}
+
+
+\section{Strumenti}
+\begin{itemize}
+\setlength\itemsep{0mm}
+    \item Programma di analisi "Tracker"
+    \item Video con 1000 fotogrammi al secondo
+\end{itemize}
+
+\section{Procedimento}
+Il setup del video comprende un asta metallica alla sommità della quale è posizionata una sferetta metallica ferma. L'asta presenta dei segni distanziati di 10cm. 
+Ad un certo punto la sferetta viene rilasciata. Affianco all'asta è presente un cronometro con sensibilità al millesimo di secondo. 
+Essendo il tutto filmato da una fotocamera (Sony DSC-RX100M4) che registra a 1000fps, ad ogni frame il cronometro avanza di un millesimo di secondo.
+
+  
+\subsection{Setting del programma di tracciamento}
+Per iniziare, mediante la funzione "asta di calibrazione" si è posto uguale a 10cm la distanza tra 2 segni sull'asta, in modo che il programma potesse generare un metro calibrato con cui misurare la posizione del target. \\
+Poi si è stabilito il frame di inizio del moto, che è risultato essere il 49esimo.  \\
+La posizione è stata tracciata ogni 10 frame, considerando il target come puntiforme, ponendo il punto di massa nell'estremità rivolta verso il basso. Il metro calibrato è stato posto sulla schermata in modo che coincidesse con la posizione del punto di massa a target fermo.\\
+In totale sono state prese 41 misure. 
+
+
+\subsection{Gestione degli errori}
+L'alta velocità di acquisizione della fotocamera è a scapito della quantità di luce catturata, quindi anche della nitidezza dell'immagine. Per questo è stato necessario stimare ogni grandezza tramite un errore. \\
+Gli errori sono stati misurati in base al numero di pixel di transizione tra il colore del target e dello sfondo, e sono stati stimati misura per misura visto che la chiarezza di ogni frame era variabile. Tramite il metro di calibrazione, è stato posto: 1$px$ = 0.0005$m$, pertanto
+\begin{equation*}
+    \Delta y= (\Delta pixel * 0.0005)m
+\end{equation*}
+
+
+
+
+
+
+\end{document}
