@@ -1,8 +1,10 @@
 \documentclass[12pt, a4paper]{article}
 \usepackage{graphicx}
 \usepackage{mathtools}
+\usepackage{xcolor}
 \usepackage{amsmath}
 \usepackage{geometry}
+\graphicspath{ {./immagini/} }
 \linespread{1.1}
 \geometry{
  total={170mm,257mm},
@@ -25,7 +27,7 @@ Lo scopo è verificare la grandezza \textit{g}, accelerazione di gravità terres
 Ciò è stato fatto prendendo misure tramite fotoregistrazioni ad alta velocità di una sferetta metallica lasciata libera di cadere lungo la verticale. 
 La formula da verificare è:
 \begin{equation*}
-    y(t)=\frac{1}{2}gt^2 + y(0)
+    y(t) = y(0) + v(0)t + \frac{1}{2}gt^2
 \end{equation*}
 
 
@@ -53,12 +55,62 @@ In totale sono state prese 41 misure.
 L'alta velocità di acquisizione della fotocamera è a scapito della quantità di luce catturata, quindi anche della nitidezza dell'immagine. Per questo è stato necessario stimare ogni grandezza tramite un errore. \\
 Gli errori sono stati misurati in base al numero di pixel di transizione tra il colore del target e dello sfondo, e sono stati stimati misura per misura visto che la chiarezza di ogni frame era variabile. Tramite il metro di calibrazione, è stato posto: 1$px$ = 0.0005$m$, pertanto
 \begin{equation*}
-    \Delta y= (\Delta pixel * 0.0005)m
+    \Delta y= (\Delta pixel \cdot 0.0005)m
 \end{equation*}
 
 
+\section{Analisi dei dati}
+Il frame di inizio della caduta è il 49esimo, che corrisonde ad un tempo iniziale \textit{$t_i = 0.012s$}.
+Abbiamo poi terminato lo studio del moto al 459esimo fotogramma, che corrisponde all'istante \textit{$t_f = 0.422s$}, per un tempo totale di caduta \textit{$\Delta t = 0.410s$}. 
+Si è scelto l'ultimo istante di caduta come quello appena precedente al rimbalzo della pallina sul banco di lavoro.
 
 
+\subsection{Grafico spazio-tempo}
+Il primo grafico realizzato con il programma di analisi dati \textit{Igor Pro} è stato il grafico spazio-tempo, ossia quello della legge oraria, che dovrebbe seguire la formula indicata nel primo paragrafo (traiettoria parabolica con posizione e velocità iniziali nulle). 
+Sulle ordiate compaiono i valori numerici di \textit{y(t)} associati ai relativi errori  \textit{$\Delta y$}. Sulle ordinete ci sono gli istanti di tempo \textit{t}. 
 
+In prima analisi, i dati ottenuti tramite la regressione di potenza del secondo ordine (\textit{poli 3}), non sono compratibili con i valori teorici, fatta eccezione per $\frac{g}{2}$:
+
+
+\renewcommand{\theenumii}{\roman{enumii}}
+    \begin{enumerate}
+    \itemsep0em 
+        \item Posizione iniziale: $K_0 = -0.0010852 \pm 0.000739$ ($K_0atteso = 0$)
+        \item Velocità iniziale:  $K_1 =  0.020001 \pm 0.0128$ ($K_1atteso = 0$)
+        \item g/2:                $K_2 =  4.9298 \pm 0.0353$ ($K_2atteso = 4.9033$)
+    \end{enumerate}
+
+\bigskip
+
+Per aumentare la tolleranza e rientrare nei valori attesi abbiamo creato una nuova equazioe isolando il termine in relazione  quadratica con il tempo, calcolando il relativo errore, in modo da \textcolor{red}{NON SO PERCHE}: 
+
+\begin{equation}
+    y_new = y - K_0 - K_1t ;  
+\end{equation}
+\begin{equation}
+ \Delta y_new = \Delta y + \Delta K_0 + \sqrt{(\frac{\Delta K_1}{K_1})^2 + (\frac{\Delta t}{t})^2}
+ \end{equation}
+
+
+ \bigskip
+
+
+Avendo inserito questi nuovi valori (\textit{Grafico 1}), sono risultati i seguenti coefficienti compatibili:
+\renewcommand{\theenumii}{\roman{enumii}}
+    \begin{enumerate}
+    \itemsep0em 
+        \item Posizione iniziale: $K_0' =  4.3447 \cdot 10^-5 \pm 0.0015$ ($K_0'atteso = 0$)
+        \item Velocità iniziale:  $K_1' =  -0.0017052 \pm 0.0252$ ($K_1'atteso = 0$)
+        \item g/2:                $K_2' =  4.9346 \pm 0.0706$ ($K_2'atteso = 4.9033$)
+    \end{enumerate}
+
+\begin{figure}
+\centering
+\includegraphics[width=150mm]{graph1.jpg}
+\caption{Grafico 1}
+\end{figure}
+
+
+\section{Regressione}
 
 \end{document}
