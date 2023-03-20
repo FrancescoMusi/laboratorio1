@@ -49,12 +49,7 @@ Essendo il tutto filmato da una fotocamera (Sony DSC-RX100M4) che registra a 100
 Per iniziare, mediante la funzione "asta di calibrazione" si è posto uguale a 10cm la distanza tra 2 segni sull'asta, in modo che il programma potesse generare un metro calibrato con cui misurare la posizione del target. \\
 Poi si è stabilito il frame di inizio del moto, che è risultato essere il 49esimo.  \\
 La posizione è stata tracciata ogni 10 frame, considerando il target come puntiforme, ponendo il punto di massa nell'estremità rivolta verso il basso. Il metro calibrato è stato posto sulla schermata in modo che coincidesse con la posizione del punto di massa a target fermo.\\
-In totale sono state prese 41 misure. 
-
-
-
-\newpage
-
+In totale sono state prese 41 misure.
 
 
 \subsection{Gestione degli errori}
@@ -63,7 +58,8 @@ Gli errori sono stati misurati in base al numero di pixel di transizione tra il 
 \begin{equation*}
     \Delta y_{misurato}= (\Delta pixel \cdot 0.0005)m
 \end{equation*}
-
+\bigskip
+Tutte le misure sono state riportate in Tabella \ref{Tabella Completa}
 
 \section{Analisi dei dati}
 Il frame di inizio della caduta è il 49esimo, che corrisonde ad un tempo iniziale \textit{$t_i = 0.012s$}.
@@ -84,36 +80,40 @@ I dati ottenuti tramite la regressione di potenza del secondo ordine (\textit{po
 \renewcommand{\theenumii}{\roman{enumii}}  
 \begin{itemize}
     \itemsep0em 
-        \item Posizione iniziale $y(0)$: \center{$K_0 = -0.0010852 \pm 0.000739$}  
-         
-            \small{(Non compatibile con il valore atteso $K_{0}$ $_{atteso}= 0.0000$)} 
-         
+        \item Posizione iniziale $y(0)$:\\
+        \begin{tabular}{cc}
+        {$K_0 = -0.0010852 \pm 0.000739$} &  \small{(Non compatibile con il valore atteso $K_{0}$ $_{atteso}= 0.0000$)}  \\
+        \end{tabular}
+        
     \end{itemize}
     \begin{itemize}
-        \item Velocità iniziale $v(0)$: \center{$K_1 =  0.020001 \pm 0.0128$} 
-        
-        \small{(Non compatibile con il valore atteso $K_{1}$ $_{atteso} = 0.0000$)} 
+        \item Velocità iniziale $v(0)$:\\
+        \begin{tabular}{cc}
+        {$K_1 =  0.020001 \pm 0.0128$} & \small{(Non compatibile con il valore atteso $K_{1}$ $_{atteso} = 0.0000$)}\\
+        \end{tabular}
         
     \end{itemize}
       \begin{itemize}
-          \item Coefficiente del termine quadratico, pari a $\displaystyle{\frac{g}{2}}$:  \center{$K_2 =  4.9298 \pm 0.0353$}
-        
-            \small{(Compatibile con il valore atteso $K_{2}$ $_{atteso}= 4.9033$)} 
+          \item Coefficiente del termine quadratico, pari a $\displaystyle{\frac{g}{2}}$:\\ 
+          \begin{tabular}{cc}
+              {$K_2 =  4.9298 \pm 0.0353$} & \small{(Compatibile con il valore atteso $K_{2}$ $_{atteso}= 4.9033$)}\\
+          \end{tabular}
+         
       \end{itemize}
         
         
-\bigskip
+\newpage
 
 Visto che \textit{posizione iniziale} e \textit{velocità iniziale} non sono compatibili con i valori attesi abbiamo corretto l'incompatibilità, isolando a destra il termine in relazione  quadratica con il tempo, mentre a sinistra, abbiamo ottenuto una nuova variabile $y_{new}$ in cui la posizione è corretta dai termini $K_0$ e $ K_1\ t$, col rispettivo errore $\Delta y_{new}$: \\
 L'equazione diventa quindi:
 \begin{equation*}
 \begin{aligned}
-  & & y - K_0 - K_1\ t =K_{2}\ t^2
+  & & y_{new}= K_0'+K_1'\ t+K_{2}'\ t^2
   &\quad{} 
   \end{aligned}
   &
   \begin{aligned}
-  & & & & & &  &\text{dove la nuova variabile è: } y_{new} = y - K_0 - K_1\ t 
+  & & & & & &  &\text{dove: } y_{new} = y - K_0 - K_1\ t 
   &
   \end{aligned}
 \end{equation*}
@@ -138,4 +138,58 @@ Facendo una nuova regressione di potenza del secondo ordine utilizzando i nuovi 
 
 \section{Regressione}
 
+\newpage
+
+\section{Tabella completa}
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+         \footnotesize Misura & & & \\
+    \hline
+         \footnotesize 1 & & & \\
+         \footnotesize 2 & & & \\
+         \footnotesize 3 & & & \\
+         \footnotesize 4 & & & \\
+         \footnotesize 5 & & & \\
+         \footnotesize 7 & & & \\
+         \footnotesize 8 & & & \\
+         \footnotesize 9 & & & \\
+         \footnotesize 10 & & & \\
+         \footnotesize 11 & & & \\
+         \footnotesize 12 & & & \\ 
+         \footnotesize 13 & & & \\
+         \footnotesize 14 & & & \\
+         \footnotesize 15 & & & \\
+         \footnotesize 16 & & & \\
+         \footnotesize 17 & & & \\
+         \footnotesize 18 & & & \\
+         \footnotesize 19 & & & \\
+         \footnotesize 20 & & & \\
+         \footnotesize 21 & & & \\
+         \footnotesize 22 & & & \\
+         \footnotesize 23 & & & \\
+         \footnotesize 24 & & & \\
+         \footnotesize 25 & & & \\
+         \footnotesize 27 & & & \\
+         \footnotesize 28 & & & \\
+         \footnotesize 29 & & & \\
+         \footnotesize 30 & & & \\
+         \footnotesize 31 & & & \\
+         \footnotesize 32 & & & \\ 
+         \footnotesize 33 & & & \\
+         \footnotesize 34 & & & \\
+         \footnotesize 35 & & & \\
+         \footnotesize 36 & & & \\
+         \footnotesize 37 & & & \\
+         \footnotesize 38 & & & \\
+         \footnotesize 39 & & & \\
+         \footnotesize 40 & & & \\
+         \footnotesize 41 & & & \\
+    \hline
+         
+    \end{tabular}
+    \caption{Caption}
+    \label{Tabella Completa}
+\end{table}
 \end{document}
