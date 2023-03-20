@@ -1,3 +1,4 @@
+
 \documentclass[12pt, a4paper]{article}
 \usepackage{graphicx}
 \usepackage{mathtools}
@@ -38,7 +39,7 @@ La formula da verificare è:
     \item Video con 1000 fotogrammi al secondo
 \end{itemize}
 
-\section{Procedimento}
+\section{Procedimento di misura}
 Il setup del video comprende un asta metallica alla sommità della quale è posizionata una sferetta metallica ferma. L'asta presenta dei segni distanziati di 10cm. 
 Ad un certo punto la sferetta viene rilasciata. Affianco all'asta è presente un cronometro con sensibilità al millesimo di secondo. 
 Essendo il tutto filmato da una fotocamera (Sony DSC-RX100M4) che registra a 1000fps, ad ogni frame il cronometro avanza di un millesimo di secondo.
@@ -51,64 +52,88 @@ La posizione è stata tracciata ogni 10 frame, considerando il target come punti
 In totale sono state prese 41 misure. 
 
 
+
+\newpage
+
+
+
 \subsection{Gestione degli errori}
 L'alta velocità di acquisizione della fotocamera è a scapito della quantità di luce catturata, quindi anche della nitidezza dell'immagine. Per questo è stato necessario stimare ogni grandezza tramite un errore. \\
 Gli errori sono stati misurati in base al numero di pixel di transizione tra il colore del target e dello sfondo, e sono stati stimati misura per misura visto che la chiarezza di ogni frame era variabile. Tramite il metro di calibrazione, è stato posto: 1$px$ = 0.0005$m$, pertanto
 \begin{equation*}
-    \Delta y= (\Delta pixel \cdot 0.0005)m
+    \Delta y_{misurato}= (\Delta pixel \cdot 0.0005)m
 \end{equation*}
 
 
 \section{Analisi dei dati}
 Il frame di inizio della caduta è il 49esimo, che corrisonde ad un tempo iniziale \textit{$t_i = 0.012s$}.
 Abbiamo poi terminato lo studio del moto al 459esimo fotogramma, che corrisponde all'istante \textit{$t_f = 0.422s$}, per un tempo totale di caduta \textit{$\Delta t = 0.410s$}. 
-Si è scelto l'ultimo istante di caduta come quello appena precedente al rimbalzo della pallina sul banco di lavoro.
+E' stato scelto come ultimo istante di caduta, quello che corrisponde all'ultima misura utile, appena precedente al rimbalzo della pallina sul banco di lavoro.\\
 
-
+Successivamente siamo passati al calcolo degli errori relativi di $y$ e $t$, per stabilire quale tra le due è la variabile dipendente e quale quella idipendente. Poichè hanno lo stesso ordine di grandezza, calcoliamo un nuovo errore su $y$ pari a 
+\begin{equation*}
+   \Delta y^{'} = (\frac{2\Delta t}{t})\cdot y + \Delta y_{misurato}
+\end{equation*}
 \subsection{Grafico spazio-tempo}
-Il primo grafico realizzato con il programma di analisi dati \textit{Igor Pro} è stato il grafico spazio-tempo, ossia quello della legge oraria, che dovrebbe seguire la formula indicata nel primo paragrafo (traiettoria parabolica con posizione e velocità iniziali nulle). 
-Sulle ordiate compaiono i valori numerici di \textit{y(t)} associati ai relativi errori  \textit{$\Delta y$}. Sulle ordinete ci sono gli istanti di tempo \textit{t}. 
+Il primo grafico realizzato con il programma di analisi dati \textit{Igor Pro} è stato il grafico spazio-tempo, ossia quello della legge oraria, che dovrebbe seguire la formula indicata nel primo paragrafo (traiettoria parabolica con posizione e velocità iniziali nulle).\\ 
+Sulle ordinate compaiono i valori numerici di \textit{y(t)}, associati ai relativi errori  \textit{$\Delta y^{'}$}, mentre sulle ascisse ci sono gli istanti di tempo \textit{t}. 
 
-In prima analisi, i dati ottenuti tramite la regressione di potenza del secondo ordine (\textit{poli 3}), non sono compratibili con i valori teorici, fatta eccezione per $\frac{g}{2}$:
+I dati ottenuti tramite la regressione di potenza del secondo ordine (\textit{poli 3}), non sono compatibili con i valori teorici, fatta eccezione per $\frac{g}{2}$:
 
 
-\renewcommand{\theenumii}{\roman{enumii}}
-    \begin{enumerate}
+\renewcommand{\theenumii}{\roman{enumii}}  
+\begin{itemize}
     \itemsep0em 
-        \item Posizione iniziale: $K_0 = -0.0010852 \pm 0.000739$ ($K_0atteso = 0$)
-        \item Velocità iniziale:  $K_1 =  0.020001 \pm 0.0128$ ($K_1atteso = 0$)
-        \item g/2:                $K_2 =  4.9298 \pm 0.0353$ ($K_2atteso = 4.9033$)
-    \end{enumerate}
-
+        \item Posizione iniziale $y(0)$: \center{$K_0 = -0.0010852 \pm 0.000739$}  
+         
+            \small{(Non compatibile con il valore atteso $K_{0}$ $_{atteso}= 0.0000$)} 
+         
+    \end{itemize}
+    \begin{itemize}
+        \item Velocità iniziale $v(0)$: \center{$K_1 =  0.020001 \pm 0.0128$} 
+        
+        \small{(Non compatibile con il valore atteso $K_{1}$ $_{atteso} = 0.0000$)} 
+        
+    \end{itemize}
+      \begin{itemize}
+          \item Coefficiente del termine quadratico, pari a $\displaystyle{\frac{g}{2}}$:  \center{$K_2 =  4.9298 \pm 0.0353$}
+        
+            \small{(Compatibile con il valore atteso $K_{2}$ $_{atteso}= 4.9033$)} 
+      \end{itemize}
+        
+        
 \bigskip
 
-Per aumentare la tolleranza e rientrare nei valori attesi abbiamo creato una nuova equazioe isolando il termine in relazione  quadratica con il tempo, calcolando il relativo errore, in modo da \textcolor{red}{NON SO PERCHE}: 
+Visto che \textit{posizione iniziale} e \textit{velocità iniziale} non sono compatibili con i valori attesi abbiamo corretto l'incompatibilità, isolando a destra il termine in relazione  quadratica con il tempo, mentre a sinistra, abbiamo ottenuto una nuova variabile $y_{new}$ in cui la posizione è corretta dai termini $K_0$ e $ K_1\ t$, col rispettivo errore $\Delta y_{new}$: \\
+L'equazione diventa quindi:
+\begin{equation*}
+\begin{aligned}
+  & & y - K_0 - K_1\ t =K_{2}\ t^2
+  &\quad{} 
+  \end{aligned}
+  &
+  \begin{aligned}
+  & & & & & &  &\text{dove la nuova variabile è: } y_{new} = y - K_0 - K_1\ t 
+  &
+  \end{aligned}
+\end{equation*}
+L'errore su  $y_{new}$ è dato da
+\begin{equation*}
+ \Delta y_{new} = \Delta y + \Delta K_0 + \sqrt{(\frac{\Delta K_1}{K_1})^2 + (\frac{\Delta t}{t})^2}
+ \end{equation*}
+Facendo una nuova regressione di potenza del secondo ordine utilizzando i nuovi dati, otteniamo che le variabili $K_0'$, $K_1'$ e $K_2'$ sono tutte compatibili, come possiamo vedere in Figura \ref{Grafico parabolico}:
+\bigskip
+\bigskip
 
-\begin{equation}
-    y_new = y - K_0 - K_1t ;  
-\end{equation}
-\begin{equation}
- \Delta y_new = \Delta y + \Delta K_0 + \sqrt{(\frac{\Delta K_1}{K_1})^2 + (\frac{\Delta t}{t})^2}
- \end{equation}
-
-
- \bigskip
-
-
-Avendo inserito questi nuovi valori (\textit{Grafico 1}), sono risultati i seguenti coefficienti compatibili:
-\renewcommand{\theenumii}{\roman{enumii}}
-    \begin{enumerate}
-    \itemsep0em 
-        \item Posizione iniziale: $K_0' =  4.3447 \cdot 10^-5 \pm 0.0015$ ($K_0'atteso = 0$)
-        \item Velocità iniziale:  $K_1' =  -0.0017052 \pm 0.0252$ ($K_1'atteso = 0$)
-        \item g/2:                $K_2' =  4.9346 \pm 0.0706$ ($K_2'atteso = 4.9033$)
-    \end{enumerate}
-
-\begin{figure}
+    \begin{figure}[h]
 \centering
-\includegraphics[width=150mm]{graph1.jpg}
-\caption{Grafico 1}
+\includegraphics[width=170mm]{Immagini/Graph1.jpg}
+\caption{\textit{\footnotesize{Grafico $y_{new}(t) $: sul'asse asse $Y$ sono riportati i valori di $y_{new}$ coi rispettivi errori, sull'asse $X$ il tempo}}}
+\label{Grafico parabolico}
 \end{figure}
+
+
+\newpage
 
 
 \section{Regressione}
