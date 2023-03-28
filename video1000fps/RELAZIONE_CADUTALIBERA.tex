@@ -1,9 +1,11 @@
-
 \documentclass[12pt, a4paper]{article}
 \usepackage{graphicx}
 \usepackage{mathtools}
 \usepackage{xcolor}
 \usepackage{amsmath}
+\usepackage{caption}
+\usepackage[italian]{babel}
+\usepackage{setspace}
 \usepackage{geometry}
 \graphicspath{ {./immagini/} }
 \linespread{1.1}
@@ -74,7 +76,7 @@ Successivamente siamo passati al calcolo degli errori relativi di $y$ e $t$, per
 Il primo grafico realizzato con il programma di analisi dati \textit{Igor Pro} è stato il grafico spazio-tempo, ossia quello della legge oraria, che dovrebbe seguire la formula indicata nel primo paragrafo (traiettoria parabolica con posizione e velocità iniziali nulle).\\ 
 Sulle ordinate compaiono i valori numerici di \textit{y(t)}, associati ai relativi errori  \textit{$\Delta y^{'}$}, mentre sulle ascisse ci sono gli istanti di tempo \textit{t}. 
 
-I dati ottenuti tramite la regressione di potenza del secondo ordine (\textit{poli 3}), non sono compatibili con i valori teorici, fatta eccezione per $\frac{g}{2}$:
+I dati ottenuti tramite la regressione di potenza del secondo ordine (\textit{poli 3}), non sono compatibili con i valori teorici, fatta eccezione per $\displaystyle{\frac{g}{2}}$ :
 
 
 \renewcommand{\theenumii}{\roman{enumii}}  
@@ -111,7 +113,7 @@ L'equazione diventa quindi:
   & & y_{new}= K_0'+K_1'\ t+K_{2}'\ t^2
   &\quad{} 
   \end{aligned}
-  &
+ &
   \begin{aligned}
   & & & & & &  &\text{dove: } y_{new} = y - K_0 - K_1\ t 
   &
@@ -128,69 +130,123 @@ Facendo una nuova regressione di potenza del secondo ordine utilizzando i nuovi 
     \begin{figure}[h]
 \centering
 \includegraphics[width=170mm]{Immagini/Graph1.jpg}
-\caption{\textit{{Grafico \footnotesize{$y_{new}(t)$}: sul'asse asse $Y$ sono riportati i valori di $y_{new}$ coi rispettivi errori, sull'asse $X$ il tempo}}}
+\caption{\textit{{\footnotesize{Grafico $y_{new}(t)$: sul'asse asse $y$ sono riportati i valori di $y_{new}$ coi rispettivi errori, sull'asse $x$ il tempo}}}}
 \label{Grafico parabolico}
 \end{figure}
 
+\section{Regressione lineare}
+Successivamente si è fatta una regressione lineare, partendo da $y_{new}= \frac{1}{2}\ g\ t^2$, approssimando posizione e velocità iniziali a $0$. Quello che ci aspettiamo di trovare è che vi sia una relazione quadratica con il tempo:\\
+\begin{equation*}
+\begin{aligned}
+  & y_{new}= \frac{1}{2}\ g\ t^2
+  &\quad{} 
+  \end{aligned}
+  &
+  \begin{aligned}
+  & &\text{passando ai logaritmi:}& & \ln{(y_{new)}=\ln{\frac{1}{2}\ g +2\ln{t}}}
+  &
+  \end{aligned}
+\end{equation*}
+e come errore su $\ln{y_{new}}$: 
+\begin{equation*}
+    \Delta\ln{y_{new}}=\frac{1}{y_{new}}\ \Delta y_{new}
+\end{equation*}\\
 
+ Tramite Igor Pro si è ottenuto il seguente grafico:\\
+ 
+   \begin{figure}[h!]
+\centering
+\includegraphics[width=170mm]{Immagini/GraphLn.jpg}
+\caption{\textit{{\footnotesize{Grafico $\ln{(y_{new})}(\ln{t})$: sul'asse asse $y$ sono riportati i valori di $\ln{(y_{new)}}$ coi rispettivi errori, sull'asse $x$ il logaritmo del tempo}}}}
+\label{Grafico logaritmico}
+\end{figure}
+
+Il valore di $b$ è compatibile col valore atteso. Si è così dimostrato che vi è una relazione quadratica tra $y_{new}$ e $t$.
+
+
+
+\section{Calcolo dell'accelerazione di gravità}
+A questo punto, dopo aver verificato che la posizione iniziale e finale sono approssimabili a $0$, e che la poszione è in relazione quadrtica con il tempo, possiamo graficare i valori da noi rilevati, coi rispettivi errori, così da essere in grado di ricavare il valore dell'accelerazione di gravità. i valori ottenuti sono
+\begin{itemize}
+    \item $a=-3.691\cdot 10^{-5}\pm 0.000921$
+    \item$b=4.9301\pm 0.0216$
+\end{itemize}
+Il valore di $g$ ottenuto a partire da $b$ non risulta compatibile col valore tabulato. Questo è dovuto al fatto che ci potrebbero essere errori risultanti dalla configurazione e dalla qualità video dell'esperimento che non era sotto il nostro controllo. Per queste ragioni si è passati a due deviazioni standard con una confidenza del 95\%:
+  \begin{figure}[h!]
+\centering
+\includegraphics[width=140mm, height=60mm]{Immagini/Graphy_t^2.jpg}
+\caption{\textit{{\footnotesize{Grafico $y_{new}(t^2)$: sul'asse asse $y$ sono riportati i valori di $y_{new}$ coi rispettivi errori, sull'asse $x$ il tempo al quadrato}}}}
+\label{Grafico logaritmico}
+\end{figure}
 \newpage
+Dove $b=\frac{1}{2}\ g=(4.9301\pm 0.0216)$, da cui:
+\begin{equation*}
+    g=2 \ b=9.8602
+\end{equation*}
+e l'errore è
+\begin{equation*}
+    \Delta g=2\ \Delta b=0.08
+\end{equation*}
+Quindi il valore dell'accelerazione di gravità è $g=(9.86\pm0.08)$ $\frac{m}{s^2}$, compatibile col valore tabulato.
 
 
-\section{Regressione}
 
 \newpage
 
 \section{Tabella completa}
 \begin{table}[h!]
     \centering
+    {\renewcommand\arraystretch{1.0} 
     \begin{tabular}{|c|c|c|c|}
     \hline
-         \footnotesize Misura & $y$ &$\Delta pixel$& $\Delta y_{misurato}$ \\
-         \footnotesize  & $m$ & &  $m$\\
+         \footnotesize Misura & $y$$(m)$ &$\Delta pixel$& $\Delta y_{misurato}$ \\
     \hline
-         \footnotesize 1 & & & \\
-         \footnotesize 2 & & & \\
-         \footnotesize 3 & & & \\
-         \footnotesize 4 & & & \\
-         \footnotesize 5 & & & \\
-         \footnotesize 7 & & & \\
-         \footnotesize 8 & & & \\
-         \footnotesize 9 & & & \\
-         \footnotesize 10 & & & \\
-         \footnotesize 11 & & & \\
-         \footnotesize 12 & & & \\ 
-         \footnotesize 13 & & & \\
-         \footnotesize 14 & & & \\
-         \footnotesize 15 & & & \\
-         \footnotesize 16 & & & \\
-         \footnotesize 17 & & & \\
-         \footnotesize 18 & & & \\
-         \footnotesize 19 & & & \\
-         \footnotesize 20 & & & \\
-         \footnotesize 21 & & & \\
-         \footnotesize 22 & & & \\
-         \footnotesize 23 & & & \\
-         \footnotesize 24 & & & \\
-         \footnotesize 25 & & & \\
-         \footnotesize 27 & & & \\
-         \footnotesize 28 & & & \\
-         \footnotesize 29 & & & \\
-         \footnotesize 30 & & & \\
-         \footnotesize 31 & & & \\
-         \footnotesize 32 & & & \\ 
-         \footnotesize 33 & & & \\
-         \footnotesize 34 & & & \\
-         \footnotesize 35 & & & \\
-         \footnotesize 36 & & & \\
-         \footnotesize 37 & & & \\
-         \footnotesize 38 & & & \\
-         \footnotesize 39 & & & \\
-         \footnotesize 40 & & & \\
-         \footnotesize 41 & & & \\
+         \footnotesize 1 &\footnotesize 0.0001& & \\
+         \footnotesize 2 & \footnotesize0.0020& & \\
+         \footnotesize 3 & \footnotesize0.0045& & \\
+         \footnotesize 4 & \footnotesize0.0090& & \\
+         \footnotesize 5 & \footnotesize0.0130& & \\
+         \footnotesize 7 &\footnotesize0.0195 & & \\
+         \footnotesize 8 &\footnotesize0.0250 & & \\
+         \footnotesize 9 & \footnotesize0.0325& & \\
+         \footnotesize 10 &\footnotesize0.0420 & & \\
+         \footnotesize 11 & \footnotesize0.0515& & \\
+         \footnotesize 12 & \footnotesize0.0620& & \\ 
+         \footnotesize 13 &\footnotesize 0.0730& & \\
+         \footnotesize 14 & \footnotesize0.0865& & \\
+         \footnotesize 15 & \footnotesize0.1005& & \\
+         \footnotesize 16 & \footnotesize0.1160& & \\
+         \footnotesize 17 & \footnotesize0.1315& & \\
+         \footnotesize 18 & \footnotesize0.1475& & \\
+         \footnotesize 19 & \footnotesize0.1660& & \\
+         \footnotesize 20 & \footnotesize0.1850& & \\
+         \footnotesize 21 & \footnotesize0.2045& & \\
+         \footnotesize 22 &\footnotesize 0.2250& & \\
+         \footnotesize 23 & \footnotesize0.2465& & \\
+         \footnotesize 24 & \footnotesize0.2700& & \\
+         \footnotesize 25 & \footnotesize0.2935& & \\
+         \footnotesize 26 & \footnotesize0.3180& & \\
+         \footnotesize 27 & \footnotesize0.3435& & \\
+         \footnotesize 28 & \footnotesize0.3700& & \\
+         \footnotesize 29 & \footnotesize0.3975& & \\
+         \footnotesize 30 & \footnotesize0.4260& & \\
+         \footnotesize 31 & \footnotesize0.4550& & \\ 
+         \footnotesize 32 & \footnotesize0.4865& & \\
+         \footnotesize 33 & \footnotesize0.5180& & \\
+         \footnotesize 34 & \footnotesize0.5500& & \\
+         \footnotesize 35 & \footnotesize0.6175& & \\
+         \footnotesize 36 & \footnotesize0.6520& & \\
+         \footnotesize 37 & \footnotesize0.6875& & \\
+         \footnotesize 38 & \footnotesize0.7245& & \\
+         \footnotesize 39 & \footnotesize0.7625& & \\
+         \footnotesize 40 & \footnotesize0.8020& & \\
+         \footnotesize 41 & \footnotesize0.8420& & \\
+         \footnotesize 42 &\footnotesize 0.8835& & \\
     \hline
          
-    \end{tabular}
+    \end{tabular}}
     \caption{Caption}
     \label{Tabella Completa}
 \end{table}
+
 \end{document}
