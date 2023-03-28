@@ -26,11 +26,11 @@
 \begin{document}
 \maketitle
 \section{Obbiettivo}
-Lo scopo è verificare la grandezza \textit{g}, accelerazione di gravità terrestre. 
-Ciò è stato fatto prendendo misure tramite fotoregistrazioni ad alta velocità di una sferetta metallica lasciata libera di cadere lungo la verticale. 
-La formula da verificare è:
+Lo scopo di questo esperimento è di riuscire ad ottenere la misura dell'accelerazione di gravità, analizzando un filmato che ritrae una sferetta in caduta libera. 
+Ciò è stato fatto prendendo varie misure della posizione del corpo tramite fotoregistrazioni ad alta velocità. 
+La formula che mette in relazione la posizione del corpo e $g$ è:
 \begin{equation*}
-    y(t) = y(0) + v(0)t + \frac{1}{2}gt^2
+    y(t) = \frac{1}{2}gt^2
 \end{equation*}
 
 
@@ -50,7 +50,7 @@ Essendo il tutto filmato da una fotocamera (Sony DSC-RX100M4) che registra a 100
 \subsection{Setting del programma di tracciamento}
 Per iniziare, mediante la funzione "asta di calibrazione" si è posto uguale a 10cm la distanza tra 2 segni sull'asta, in modo che il programma potesse generare un metro calibrato con cui misurare la posizione del target. \\
 Poi si è stabilito il frame di inizio del moto, che è risultato essere il 49esimo.  \\
-La posizione è stata tracciata ogni 10 frame, considerando il target come puntiforme, ponendo il punto di massa nell'estremità rivolta verso il basso. Il metro calibrato è stato posto sulla schermata in modo che coincidesse con la posizione del punto di massa a target fermo.\\
+La posizione è stata tracciata ogni 10 frame, mettendo i punti di massa nella parte inferiore della sferetta. Il metro calibrato è stato posto sulla schermata in modo che coincidesse con la posizione del punto di massa a target fermo.\\
 In totale sono state prese 41 misure.
 
 
@@ -68,9 +68,9 @@ Il frame di inizio della caduta è il 49esimo, che corrisonde ad un tempo inizia
 Abbiamo poi terminato lo studio del moto al 459esimo fotogramma, che corrisponde all'istante \textit{$t_f = 0.422s$}, per un tempo totale di caduta \textit{$\Delta t = 0.410s$}. 
 E' stato scelto come ultimo istante di caduta, quello che corrisponde all'ultima misura utile, appena precedente al rimbalzo della pallina sul banco di lavoro.\\
 
-Successivamente siamo passati al calcolo degli errori relativi di $y$ e $t$, per stabilire quale tra le due è la variabile dipendente e quale quella idipendente. Poichè hanno lo stesso ordine di grandezza, calcoliamo un nuovo errore su $y$ pari a 
+Successivamente siamo passati al calcolo degli errori relativi di $y$ e $t$, per stabilire quale tra le due è la variabile dipendente e quale quella idipendente. Ciò che si è riscontrato è che esse hanno lo stesso ordine di grandezza, pertanto calcoliamo un nuovo errore su $y$ pari a 
 \begin{equation*}
-   \Delta y^{'} = (\frac{2\Delta t}{t})\cdot y + \Delta y_{misurato}
+   \Delta y^{'} = \left(\frac{2\Delta t}{t}\right)\cdot y + \Delta y_{misurato}
 \end{equation*}
 \subsection{Grafico spazio-tempo}
 Il primo grafico realizzato con il programma di analisi dati \textit{Igor Pro} è stato il grafico spazio-tempo, ossia quello della legge oraria, che dovrebbe seguire la formula indicata nel primo paragrafo (traiettoria parabolica con posizione e velocità iniziali nulle).\\ 
@@ -82,9 +82,11 @@ I dati ottenuti tramite la regressione di potenza del secondo ordine (\textit{po
 \renewcommand{\theenumii}{\roman{enumii}}  
 \begin{itemize}
     \itemsep0em 
-        \item Posizione iniziale $y(0)$:\\
+    
+        \item Posizione iniziale $y(0)$:
+        
         \begin{tabular}{ccc}
-        {$K_0 = -0.0010852 \pm 0.000739$} & & \small{(Non compatibile con il valore atteso $K_{0}$ $_{atteso}= 0.0000$)}  \\
+        {$K_0 = -0.0010852 \pm 0.000739$} & & \small{(Non compatibile con il valore atteso $K_{0}$ $_{atteso}= 0.0000$)}\\
         \end{tabular}
         
     \end{itemize}
@@ -110,18 +112,17 @@ Visto che \textit{posizione iniziale} e \textit{velocità iniziale} non sono com
 L'equazione diventa quindi:
 \begin{equation*}
 \begin{aligned}
-  & & y_{new}= K_0'+K_1'\ t+K_{2}'\ t^2
+  & & y - K_0 - K_1\ t = K_0'+K_1'\ t+K_{2}'\ t^2
   &\quad{} 
   \end{aligned}
- &
   \begin{aligned}
-  & & & & & &  &\text{dove: } y_{new} = y - K_0 - K_1\ t 
+  & &\text{dove:\phantom{.......}} y_{new} = y - K_0 - K_1\ t 
   &
   \end{aligned}
 \end{equation*}
 L'errore su  $y_{new}$ è dato da
 \begin{equation*}
- \Delta y_{new} = \Delta y + \Delta K_0 + \sqrt{(\frac{\Delta K_1}{K_1})^2 + (\frac{\Delta t}{t})^2}
+ \Delta y_{new} = \Delta y + \Delta K_0 + \sqrt{\left(\frac{\Delta K_1}{K_1}\right)^2 + \left(\frac{\Delta t}{t}\right)^2}
  \end{equation*}
 Facendo una nuova regressione di potenza del secondo ordine utilizzando i nuovi dati, otteniamo che le variabili $K_0'$, $K_1'$ e $K_2'$ sono tutte compatibili, come possiamo vedere in Figura \ref{Grafico parabolico}:
 \bigskip
@@ -135,25 +136,22 @@ Facendo una nuova regressione di potenza del secondo ordine utilizzando i nuovi 
 \end{figure}
 
 \section{Regressione lineare}
-Successivamente si è fatta una regressione lineare, partendo da $y_{new}= \frac{1}{2}\ g\ t^2$, approssimando posizione e velocità iniziali a $0$. Quello che ci aspettiamo di trovare è che vi sia una relazione quadratica con il tempo:\\
+Successivamente si è fatta una regressione lineare, partendo da $y_{new}= \frac{1}{2}\ g t^2$, approssimando posizione e velocità iniziali a $0$. Quello che ci si aspetta di trovare è che la posizione sia in relazione quadratica con il tempo:
 \begin{equation*}
 \begin{aligned}
   & y_{new}= \frac{1}{2}\ g\ t^2
   &\quad{} 
   \end{aligned}
-  &
   \begin{aligned}
-  & &\text{passando ai logaritmi:}& & \ln{(y_{new)}=\ln{\frac{1}{2}\ g +2\ln{t}}}
+  &&\text{passando ai logaritmi:\phantom{..}}& & \ln(y_{new})=\ln\left({\frac{1}{2}\ g}\right) +2\ln{t}
   &
   \end{aligned}
 \end{equation*}
-e come errore su $\ln{y_{new}}$: 
+e come errore su $\ln({y_{new}})$: 
 \begin{equation*}
-    \Delta\ln{y_{new}}=\frac{1}{y_{new}}\ \Delta y_{new}
+    \Delta\ln{(y_{new})}=\frac{\Delta y_{new}}{y_{new}}\ 
 \end{equation*}\\
-
- Tramite Igor Pro si è ottenuto il seguente grafico:\\
- 
+ Tramite \textit{Igor Pro} si è ottenuto il seguente grafico:\\
    \begin{figure}[h!]
 \centering
 \includegraphics[width=170mm]{Immagini/GraphLn.jpg}
@@ -161,25 +159,34 @@ e come errore su $\ln{y_{new}}$:
 \label{Grafico logaritmico}
 \end{figure}
 
-Il valore di $b$ è compatibile col valore atteso. Si è così dimostrato che vi è una relazione quadratica tra $y_{new}$ e $t$.
+Il valore di $b$ è compatibile col valore $2$, esponente del tempo nella formula usata in partenza.  Si è così dimostrato che vi è una relazione quadratica tra $y_{new}$ e $t$.
 
 
 
 \section{Calcolo dell'accelerazione di gravità}
-A questo punto, dopo aver verificato che la posizione iniziale e finale sono approssimabili a $0$, e che la poszione è in relazione quadrtica con il tempo, possiamo graficare i valori da noi rilevati, coi rispettivi errori, così da essere in grado di ricavare il valore dell'accelerazione di gravità. i valori ottenuti sono
+A questo punto, dopo aver verificato che la posizione iniziale e finale sono approssimabili a $0$, e che la poszione è in relazione quadrtica con il tempo, possiamo creare un grafico lineare dei valori $y_{new}$, coi rispettivi errori, e del tempo al quadrato, così da essere in grado di ricavare il valore dell'accelerazione di gravità. L'intercetta e la pendenza della retta ottenuta sono:
 \begin{itemize}
     \item $a=-3.691\cdot 10^{-5}\pm 0.000921$
     \item$b=4.9301\pm 0.0216$
 \end{itemize}
-Il valore di $g$ ottenuto a partire da $b$ non risulta compatibile col valore tabulato. Questo è dovuto al fatto che ci potrebbero essere errori risultanti dalla configurazione e dalla qualità video dell'esperimento che non era sotto il nostro controllo. Per queste ragioni si è passati a due deviazioni standard con una confidenza del 95\%:
+Dove $b=\frac{1}{2}\ g=(4.9301\pm 0.0216)$, da cui:
+\begin{equation*}
+    g=2 \ b=9.8602
+\end{equation*}
+e l'errore è
+\begin{equation*}
+    \Delta g=2\ \Delta b=0.04
+\end{equation*}
+Quindi l'accelerazione di gravità ottenuta sarebbe $g=(9.86\pm0.04)$ $\frac{m}{s^2}$.
+Il valore $g$, ricavato a partire da $b$ , non risulta compatibile col valore tabulato. Questo è dovuto al fatto che ci potrebbero essere errori risultanti dalla configurazione e dalla qualità video dell'esperimento, che non erano sotto il nostro controllo. Per queste ragioni si è passati a due deviazioni standard con una confidenza del 95\%, e il grafico ottenuto è il seguente:
   \begin{figure}[h!]
 \centering
-\includegraphics[width=140mm, height=60mm]{Immagini/Graphy_t^2.jpg}
+\includegraphics[width=170mm, height=80mm]{Immagini/Graphy_t^2.jpg}
 \caption{\textit{{\footnotesize{Grafico $y_{new}(t^2)$: sul'asse asse $y$ sono riportati i valori di $y_{new}$ coi rispettivi errori, sull'asse $x$ il tempo al quadrato}}}}
 \label{Grafico logaritmico}
 \end{figure}
-\newpage
-Dove $b=\frac{1}{2}\ g=(4.9301\pm 0.0216)$, da cui:
+
+Si è infine passati al calcolo di $g$, utilizzando il valore di $b$ con un nuovo errore:
 \begin{equation*}
     g=2 \ b=9.8602
 \end{equation*}
