@@ -7,7 +7,6 @@
 \usepackage{caption}
 \usepackage[italian]{babel}
 
-
 \geometry{
  total={170mm,257mm},
  left=20mm,
@@ -20,10 +19,11 @@
 
 \author{\begin{small}Mussini Simone, Ruscillo Fabio, Musi Francesco\end{small}}
 
-
  
 \begin{document}
 \maketitle
+
+
 \section{Obbiettivi}
 Gli obbiettivi di questo esperimento sono: 
 Determinare la costante elastica di una molla $(K_s)$ con metodo statico,  utilizzare la molla come dinamometro statico per la determinazione di una massa incognita $(M_i)$, per determinare la costante elastica di una molla precompressa $(K_p)$ e la forza di precompressione con il metodo statico $(F_0)$.
@@ -45,6 +45,8 @@ Determinare la costante elastica di una molla $(K_s)$ con metodo statico,  utili
 Il setup dell'esperimento è costituito da un piedistallo, la cui funzione è di sostenere due aste, collegate tra loro tramite un morsetto, in modo da formare un supporto per sostenere le molle in posizione verticale.
 All'asta messa in orizzontale rispetto al piano, del tavolo, viene poi fissato un metro a nastro, al fine di misurare le deformazioni, che verranno indotte sulle molle. 
 
+
+
 \section{Analisi preliminare}
 Per avere una stima sull'ordine di grandezza dell'errore su $K_s$, si è calcolato l'errore relativo della costante elastica della molla, in modo statico, tramite singola misura, usando la formula 
 \begin{equation*}
@@ -63,10 +65,9 @@ Per avere un errore relativo minore, si è calcolato il periodo di dieci oscilla
 
 
 
-\section{Misura della costante con il metodo statico}
+\section{Misura della costante elastica con il metodo statico}
 Questo step consiste nel misurare l'allungamento delle due molle soggette a differenti forze, generate dai contrappesi. I dati sono riportati di seguito in Tabella \ref{tab: Misure Statiche Non Precompresse} e Tabella \ref{tab: Misure Statiche Precompresse}:
 \\
-
 
 \begin{table}[!htb]
     \begin{minipage}[t]{.5\linewidth}
@@ -122,30 +123,31 @@ Questo step consiste nel misurare l'allungamento delle due molle soggette a diff
 
 
 
-
-
-\subsection{Molla Armonica}
+\subsection{Molla Armonica (non precompressa) - metodo statico}
 Dato che la legge di Hook $Mg=K_s\cdot(L-L_0)$ ci suggerisce che l'allungameto sia in relazione lineare con la forza applicata, abbiamo attuato una regressione lineare. 
-Per la molla non precompressa la legge di cui trovare i coefficienti è: \begin{equation*}
+Per la molla non precompressa la legge di cui trovare i coefficienti è: 
+\begin{equation*}
     L=M\cdot\displaystyle\frac{g}{K_s}+L_0
+    \xrightarrow{} Y = A + BX
 \end{equation*} 
 dove\\ 
 \begin{equation*}
- A= L_0 \text{ e } B=\displaystyle\frac{g}{K_s}   
+ A= L_0 \mbox{ , } B=\displaystyle\frac{g}{K_s} \mbox{ , } y = L \mbox{ e } X = m
 \end{equation*}
 
 
 
-    \begin{figure}[h]
-
-\includegraphics[width=170mm]{./immagini/Graph Molla Arm Stat.jpg}
+\begin{figure}[h]
+\includegraphics[width=170mm]{IMMAGINI/Graph Molla Arm Stat.jpg}
 \centering
 \caption{\textit{{\footnotesize{Grafico $L(M)$}: sul'asse asse \textit{y} sono riportati i valori della posizione finale misurata $L$ coi rispettivi errori, sull'asse \textit{x} la massa corrispettiva}}}
 \label{Grafico parabolico}
 \end{figure}
 
+
 \bigskip
 \bigskip
+
 
 Calcolando $K_s$ e il rispettivo errore $\Delta K_s$ come\\
 
@@ -157,7 +159,12 @@ Calcolando $K_s$ e il rispettivo errore $\Delta K_s$ come\\
 
 Si ottiene $K_s = (24.1 \pm 0.2)$ $N m^{-1}$
 
-\subsection{Molla Precompressa}
+
+
+
+
+
+\subsection{Molla Precompressa - metodo statico}
 Nel caso di una molla precompressa, la legge che lega l'allungamento alla forza applicata differisce dalla legge di Hooke per un termine costante $\frac{F_0}{K_p}$ , dovuto alla forza $F_0$ di precompressione della molla.  
 \\La legge su cui abbiamo eseguito la regressione lineare risulata quindi: 
 \begin{equation}
@@ -171,4 +178,100 @@ dove
 \begin{equation}
     K_p = \frac{g}{B} e \Delta K_p = \left | \frac{g}{B}  \right | \cdot \Delta B 
 \end{equation}
+
+
+
+
+
+
+\section{Misura della costante elastica con metodo dinamico }
+Questo step consiste nel misurare il tempo impiegato dalla molla, alla quale è fissato un pesetto da $500kg$, a compiere dieci oscillazioni complete. Al fine di ricavare la costante $k_d$ dalla relazione: 
+\begin{equation}
+    T = 2\pi \cdot \sqrt{\frac{k_d}{m}}
+\end{equation} 
+
+Per avere una miglior stima del periodo, abbiamo misurato 30  volte il tempo relativo alle 10 oscillazioni, inserendoli con le relative frequenze di misura, nella Tabella \ref{tab: Misure Dinamiche} a fine paragrafo.  
+
+Abbiamo controllato che il campione fosse compatibile con una distribuzione gaussiana.
+Calcolando il valore medio $\overline{x}$ e la deviazione standar $\sigma_x$ tramite le formule: 
+\begin{equation}
+    \overline{x} = \frac{\sum_{i=1}^{N}x_i}{N} \mbox{\hspace{0.5cm} , \hspace{0.5cm}}
+    \sigma_x = \sqrt{\frac{\sum_{i=1}^{N}(x_i-\overline{x})^2}{(N-1)}}
+\end{equation}
+
+\smallskip
+Nel nostro caso $\overline{x} = 9,2773$ e $\sigma_x = 0,0921 $. 
+Ora possiamo dividere le misure delle dieci oscilazioni in classi con il relativo numero valori osservatie  riportarle  nella seguente tabella  
+
+
+\begin{table}[hbt!]
+    \centering
+    {\renewcommand\arraystretch{1.0} 
+    \begin{tabular}{|c|c|}
+    \hline
+        \textbf{Dieci Periodi} & \textbf{Frequenza}\\
+        $10T(s)$ & $f(n)$\\
+    \hline
+    $ 9.07 $ & $ 1 $ \\ 
+    $ 9.12 $ & $ 1 $ \\
+    $ 9.13 $ & $ 1 $ \\
+    $ 9.15 $ & $ 1 $ \\ 
+    $ 9.21 $ & $ 1 $ \\
+    $ 9.22 $ & $ 1 $ \\
+    $ 9.23 $ & $ 3 $ \\
+    $ 9.25 $ & $ 1 $ \\
+    $ 9.26 $ & $ 3 $ \\
+    $ 9.27 $ & $ 1 $ \\
+    $ 9.28 $ & $ 2 $ \\
+    $ 9.29 $ & $ 1 $ \\
+    $ 9.30 $ & $ 3 $ \\ 
+    $ 9.31 $ & $ 2 $ \\
+    $ 9.32 $ & $ 2 $ \\
+    $ 9.35 $ & $ 2 $ \\
+    $ 9.37 $ & $ 1 $ \\
+    $ 9.38 $ & $ 1 $ \\
+    $ 9.47 $ & $ 1 $ \\
+    $ 9,50 $ & $ 1 $ \\ 
+    \hline
+    \end{tabular}}
+    \caption{Misurazioni dinamiche.}
+    \label{tab: Misure Dinamiche}
+\end{table}
+
+
+\begin{table}[hbt!]
+    \centering
+    {\renewcommand\arraystretch{1.0} 
+    \begin{tabular}{|c|c|}
+    \hline
+        \ & \textbf{}
+        $10T(s)$ & $f(n)$\\
+    \hline 
+    \hline
+    \end{tabular}}
+    \caption{Misurazioni dinamiche.}
+    \label{tab: Classi}
+\end{table}
+
+
+
+\newpage
+\section{Determinazione di una massa incognita}
+Questa misura consiste nell'appendere la massa e misurarne l'allungamento ($\Delta L$). Per calcolare il valore di $m_i$ bisogna usare la relazione lineare del paragrafo 5.1, in quanto anche questa è stata una misura statica. I coefficienti sono già stati trovati e riportati qui sotto. 
+Il processo è stato svolto con la molla non precompressa, e sulla massa incognita compariva la lettera "A".\\
+
+\begin{equation}
+    L = A + Bm  \mbox{\hspace{0.5cm} quindi \hspace{0.5cm}}  m_i = \frac{L - A}{B}
+\end{equation}\\
+
+Con i valori: $A = (0.3052 \pm 0.0011)m$, $B = (0.407 \pm 0.004)\frac{m}{kg}$, $L = (0.517 \pm 0.002)m$, calcolando l'errore sommando le derivate parziali oltiplicate per gli errori relativi, si ottiene: 
+
+\begin{equation} 
+    m_i = (0.520 \pm 0.013)kg 
+\end{equation}
+
+
+
+
 \end{document}
+
