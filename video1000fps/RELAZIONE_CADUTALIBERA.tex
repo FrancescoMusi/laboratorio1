@@ -6,10 +6,12 @@
 \usepackage{amsmath}
 \usepackage{caption}
 \usepackage[italian]{babel}
+\usepackage{eso-pic}
 \usepackage{setspace}
 \usepackage{multirow}
 \usepackage{array}
 \usepackage{geometry}
+\usepackage{longtable}
 \graphicspath{ {./immagini/} }
 \linespread{1.1}
 \geometry{
@@ -22,12 +24,14 @@
  \title{\textbf{\scalebox{1.3}{\text{Caduta libera}}}}
  \date{}
 
-\author{\begin{small}Mussini Simone, Ruscillo Fabio, Musi Francesco\end{small}}
-
-
-
 \begin{document}
 \maketitle
+\AddToShipoutPictureBG*{%
+  \AtPageUpperLeft{%
+    \hspace{\paperwidth}%
+    \raisebox{-\baselineskip}{%
+      \makebox[0pt][r]{\textbf{Gruppo 10}: Mussini Simone, Ruscillo Fabio, Musi Francesco         }
+}}}%
 \section{Cose da aggiungere}
 \begin{itemize}
     \item Foto scattate da noi dell'apparato sperimentale
@@ -41,6 +45,28 @@
     \item A fianco ad una misura va SEMPRE messo l'errore (anche se il prof ci ha detto che nei calcoli potevamo pensare che non ci fosse errore, nella relazione va messo quello strumentale)
 \end{itemize}
 \section{Fenomeno fisico}
+Il fenoeno studiato è la forza di attrazione gravitazionale, descritta dalla legge seguente in modo generale, valida per qualsiasi coppia di enti dotati di massa. 
+
+\begin{equation}
+    F_g = G\frac{m_1 m_2}{r^2}
+\end{equation}
+Con G costante di gravitazione universale, $m_1$ e $m_2$ le masse dei due corpi ed r la distanza tra essi.
+
+Per questa forza, così come per la forza elettrica è possibile definire un campo, detto campo gravitazionale, indicato con la leggera $g$. 
+Il concetto di campo rappresenta come varia la forza generata da un corpo in funzione della distanza da esso. 
+
+\begin{equation}
+    g(r) = G\frac{M}{r^2}
+\end{equation}
+
+Data questa definizione, l'espressione della forza diventa: $F_g = g(r) m$. 
+Ricordando la seconda legge della dinamica, notiamo sbito che il campo $g(r)$ rappresenta l'accelerazione con cui un corpo di massa $m$ viene attratto verso un altro corpo di massa $M$. 
+
+Il termine "accelerazione di gravità" deriva proprio da ciò. Il suo valore adottato sulla terra ($9.80665m/s^2$) è quello che si ottiene dall'espressione $g(R_t) = G\frac{M_t}{r^2}$, usando la massa terrestre ed il valore medio del raggio terrestre, poichè la terra non è perfettamente sferica. 
+
+Visto che le variazioni di altezza rispetto alla superficie terrestre sono irrilevanti nel calcolo della forza perchè molto minori di $R_t$, in prossimità della superficie basta moltiplicare la massa di un oggetto per il valore riportato prima e si ottiene la forza con cui la terra e l'oggetto in questione si attraggono. 
+
+Trascuriamo le forze di attrazione con oggetti minori, come il tavolo su cui si svolge l'esperimento perchè generano forze assolutamente irrilevanti.
 \section{Obbiettivo}
 \label{sezione obbiettivi}
 Lo scopo di questo esperimento è di riuscire ad ottenere la misura dell'accelerazione di gravità, analizzando un filmato che ritrae una sferetta in caduta libera. 
@@ -77,6 +103,26 @@ Gli errori sono stati scelti in base al numero di pixel di transizione tra il co
 \begin{equation*}
     \Delta y_{misurato}= (\Delta pixel \cdot 0.0005)m
 \end{equation*}
+
+\begin{table}[!h]
+    \centering
+    \begin{tabular}{|c|c|c|}
+    \hline
+    \multirow{2}{*}{\small Misura} 
+    &\multirow{2}{*}{\small$y_{misurato}\pm\Delta y_{misurato}$\ $(m)$} 
+    &\multirow{2}{*}{\small $\Delta$Pixel} 
+    \\
+    && 
+    \\
+    \hline
+    \hline
+       &  & \\
+    \hline
+    \end{tabular}
+        \caption{Caption}
+        \label{tab:my_label}
+\end{table}
+
 \bigskip
 Tutte le misure sono state riportate in Tabella \ref{Tabella Completa}
 
@@ -95,9 +141,36 @@ Poichè la posizione dipende dal tempo, e l'ordine di grandezza degli errori rel
 \begin{equation*}
    \Delta y^{'} = \left(\frac{2\Delta t}{t}\right)\cdot y + \Delta y_{misurato}
 \end{equation*}
-\subsection{Grafico spazio-tempo}
+
+\begin{table}[!h]
+    \centering
+    \begin{tabular}{|c|c|}
+    \hline
+    \multirow{2}{*}{\small Misura} 
+    &\multirow{2}{*}{$ \Delta y^{'}$ \ $(m)$} 
+     
+    \\
+    & 
+    \\
+    \hline
+    \hline
+       &   \\
+    \hline
+    \end{tabular}
+        \caption{Caption}
+        \label{tab:my_label}
+\end{table}
+
+\subsection{Grafico spazio-tempo} \label{Agg. misure xconcl}
 Il primo grafico realizzato con il programma di analisi dati \textit{Igor Pro} è stato il grafico spazio-tempo, ossia quello della legge oraria, che dovrebbe seguire la formula indicata nel paragrafo \ref{sezione obbiettivi} (traiettoria parabolica con posizione e velocità iniziali nulle).\\ 
-Sulle ordinate compaiono i valori numerici di \textit{y(t)}, associati ai relativi errori  \textit{$\Delta y^{'}$}, mentre sulle ascisse ci sono gli istanti di tempo \textit{t}. 
+
+    \begin{figure}[h!]
+\centering
+\includegraphics[width=170mm]{Immagini/Graph4 non comp.jpg}
+\caption{\textit{{\footnotesize{Sulle ordinate compaiono i valori numerici di \textit{y(t)}, associati ai relativi errori  \textit{$\Delta y^{'}$}, mentre sulle ascisse ci sono gli istanti di tempo \textit{t}}}}}
+\label{Grafico parabolico}
+\end{figure}
+
 
 I dati ottenuti tramite la regressione di potenza del secondo ordine (\textit{poli 3}), non sono compatibili con i valori teorici, fatta eccezione per $\displaystyle{\frac{g}{2}}$ :
 
@@ -109,7 +182,7 @@ I dati ottenuti tramite la regressione di potenza del secondo ordine (\textit{po
         \item Posizione iniziale $y(0)$:
         
         \begin{tabular}{ccc}
-        {$K_0 = -0.0010852 \pm 0.000739$} & & \small{(Non compatibile con il valore atteso $K_{0}$ $_{atteso}= 0.0000$)}\\
+        {$K_0 = -0.0010852 \pm 0.000793$} & & \small{(Non compatibile con il valore atteso $K_{0}$ $_{atteso}= 0.0000$)}\\
         \end{tabular}
         
     \end{itemize}
@@ -144,17 +217,19 @@ L'errore su  $y_{new}$ è dato da
 \begin{equation*}
  \Delta y_{new} = \Delta y + \Delta K_0 + \sqrt{\left(\frac{\Delta K_1}{K_1}\right)^2 + \left(\frac{\Delta t}{t}\right)^2}
  \end{equation*}
+
+
 Facendo una nuova regressione di potenza del secondo ordine utilizzando i nuovi dati, otteniamo che le variabili $K_0'$, $K_1'$ e $K_2'$ sono tutte compatibili, come possiamo vedere in Figura \ref{Grafico parabolico}:
 \bigskip
 \bigskip
 
-    \begin{figure}[h]
+    \begin{figure}[h!]
 \centering
 \includegraphics[width=170mm]{Immagini/Graph1.jpg}
 \caption{\textit{{\footnotesize{Grafico $y_{new}(t)$: sul'asse asse $y$ sono riportati i valori di $y_{new}$ coi rispettivi errori, sull'asse $x$ il tempo}}}}
 \label{Grafico parabolico}
 \end{figure}
-
+\newpage
 \section{Regressione lineare}
 Successivamente si è fatta una regressione lineare, partendo da $y_{new}= \frac{1}{2}\ g t^2$, approssimando posizione e velocità iniziali a $0$. Quello che ci si aspetta di trovare è che la posizione sia in relazione quadratica con il tempo:
 \begin{equation*}
@@ -171,6 +246,27 @@ e come errore su $\ln({y_{new}})$:
 \begin{equation*}
     \Delta\ln{(y_{new})}=\frac{\Delta y_{new}}{y_{new}}\ 
 \end{equation*}\\
+
+\begin{table}[!h]
+    \centering
+    \begin{tabular}{|c|c|}
+    \hline
+    \multirow{2}{*}{\small Misura} 
+    &\multirow{2}{*}{\small$\ln({y_{new}}) \pm\Delta\ln{(y_{new})}$\ $(m)$} 
+     
+    \\
+    & 
+    \\
+    \hline
+    \hline
+       &   \\
+    \hline
+    \end{tabular}
+        \caption{Caption}
+        \label{tab:my_label}
+\end{table}
+
+
  Tramite \textit{Igor Pro} si è ottenuto il seguente grafico:\\
    \begin{figure}[h!]
 \centering
@@ -182,9 +278,20 @@ e come errore su $\ln({y_{new}})$:
 Il valore di $b$ è compatibile col valore $2$, esponente del tempo nella formula usata in partenza.  Si è così dimostrato che vi è una relazione quadratica tra $y_{new}$ e $t$.
 
 
-
+\newpage
 \section{Calcolo dell'accelerazione di gravità}
-A questo punto, dopo aver verificato che la posizione iniziale e finale sono approssimabili a $0$, e che la poszione è in relazione quadrtica con il tempo, possiamo creare un grafico lineare dei valori $y_{new}$, coi rispettivi errori, e del tempo al quadrato, così da essere in grado di ricavare il valore dell'accelerazione di gravità. L'intercetta e la pendenza della retta ottenuta sono:
+A questo punto, dopo aver verificato che la posizione iniziale e finale sono approssimabili a $0$, e che la poszione è in relazione quadrtica con il tempo, possiamo creare un grafico lineare dei valori $y_{new}$, coi rispettivi errori, e del tempo al quadrato, così da essere in grado di ricavare il valore dell'accelerazione di gravità. 
+
+  \begin{figure}[h!]
+\centering
+\includegraphics[width=170mm, height=80mm]{Immagini/Graph5 non comp.jpg}
+\caption{\textit{{\footnotesize{Grafico $y_{new}(t^2)$: sull'asse asse $y$ sono riportati i valori di $y_{new}$ coi rispettivi errori, sull'asse $x$ il tempo al quadrato}}}}
+\label{Grafico logaritmico}
+\end{figure}
+
+
+
+L'intercetta e la pendenza della retta ottenuta sono:
 \begin{itemize}
     \item $a=-3.691\cdot 10^{-5}\pm 0.000921$
     \item$b=4.9301\pm 0.0216$
@@ -202,7 +309,7 @@ Il valore $g$, ricavato a partire da $b$ , non risulta compatibile col valore st
   \begin{figure}[h!]
 \centering
 \includegraphics[width=170mm, height=80mm]{Immagini/Graphy_t^2.jpg}
-\caption{\textit{{\footnotesize{Grafico $y_{new}(t^2)$: sul'asse asse $y$ sono riportati i valori di $y_{new}$ coi rispettivi errori, sull'asse $x$ il tempo al quadrato}}}}
+\caption{\textit{{\footnotesize{Grafico $y_{new}(t^2)$: sull'asse asse $y$ sono riportati i valori di $y_{new}$ coi rispettivi errori, sull'asse $x$ il tempo al quadrato}}}}
 \label{Grafico logaritmico}
 \end{figure}
 
@@ -231,6 +338,13 @@ Confrontiamo questo risultato col dato dell'accelerazione di gravità standard $
 
 Visto che $|g-g_{tab}|<< |\Delta g-\Delta g_{tab}|$, il valore trovato è compatibile col valore standard.
 
+\section{Conclusioni}
+
+Inizialmente si era calcolato un errore relativo $\frac{\Delta g}{g}\approx 6\% $ ottenuto a partire da dei valori intermedi delle nostre misure. L'errore relativo che si ottinene dal valore finale dell'accelerazione di gravità ottenuto è:
+\begin{equation*}
+    \frac{\Delta g}{g}=\frac{0.08}{9.86}=0.008\%
+\end{equation*}
+risultato molto differente dal primo. Questo può essere dovuto al fatto che sono state attuate delle correzioni,per rendere compatibili le misure, con la posizione iniziale e velocità iniziale che devono essere nulle (vedi paragrafo \ref{Agg. misure xconcl}.). 
 
 
 \newpage
