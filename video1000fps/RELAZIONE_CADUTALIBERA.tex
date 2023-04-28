@@ -34,7 +34,8 @@
 }}}%
 
 \section{Fenomeno fisico}
-Il fenoeno in esame è dovuto alla forza di attrazione gravitazionale, descritta dalla legge seguente, valida per qualsiasi coppia di enti dotati di massa: 
+Il fenomeno in esame è dovuto alla forza di attrazione gravitazionale, descritta dalla legge seguente, valida per qualsiasi coppia di enti dotati di massa: 
+
 
 \begin{equation*}
     \Vec{F_g} = -G\frac{M m}{r^2}\ \hat{r}
@@ -103,25 +104,20 @@ Gli errori sono stati scelti in base al numero di pixel di transizione tra il co
 
 Si riportano in tabella le grandezze misurate per via diretta e indiretta:
 
-\begin{table}[!h]
-    \centering
-    \begin{tabular}{|c|c|c|c|}
-    \hline
-    \multirow{2}{*}{\small Misura} 
-    &\multirow{2}{*}{\small $n^o$pixel} 
-    &\multirow{2}{*}{\small{$ y_{mis}\pm\Delta y_{mis}$\ $(m)$}} 
-    &\multirow{2}{*}{\small$t$\ $(s)$} 
-    \\
-    &&&
-    \\
-    \hline
-    \hline
-       &  &  &\\
-    \hline
-    \end{tabular}
-        \caption{Caption}
-        \label{tab:Tabella dati misurati inizio}
-\end{table}
+\begin{longtable}{|c|c|c|c|}
+\caption{}
+\hline
+\multirow{2}{*}{$misure$}&
+\multirow{2}{*}{$y_{misurato} \pm \Delta y_{misurato}$}&
+\multirow{2}{*}{$n^o pixel$} 
+\\ && \\
+\hline 
+$1$ & $0.0001 \pm 0.00101667$ & $6$ \\ 
+$2$ & $$
+
+
+\end{longtable}
+
 \section{Considerazioni preliminari}
 
 \subsection{Tempo di caduta}
@@ -286,6 +282,29 @@ Il valore di $b$ è compatibile col valore $2$, esponente del tempo nella formul
 \section{Calcolo dell'accelerazione di gravità}
 
 A questo punto, dopo aver verificato che la posizione iniziale e finale sono approssimabili a zero e che la posizione è in relazione quadrtica con il tempo, si può creare un grafico lineare con i valori $y_{new}$, coi rispettivi errori,sull'asse delle ordinate, e del tempo al quadrato su quello delle ascisse, così da essere in grado di ricavare il valore dell'accelerazione di gravità a partire dalla pendenza della retta ottenuta:
+
+
+\begin{table}[!h]
+    \centering
+    \begin{tabular}{|c|c|c|}
+    \hline
+    \multirow{2}{*}{\small Misura} 
+    &\multirow{2}{*}{\small $y_{new}\pm\Delta y_{new}$\ $(m)$}
+    &\multirow{2}{*}{\small $t^2\pm \Delta t^2 (s)$}
+     
+    \\
+    & &
+    \\
+    \hline
+    \hline
+       & &  \\
+    \hline
+    \end{tabular}
+        \caption{Caption}
+        \label{tab:logaritmi con errore}
+\end{table}
+
+
   \begin{figure}[h!]
 \centering
 \includegraphics[width=170mm, height=80mm]{Immagini/Graph5 non comp.jpg}
@@ -347,7 +366,6 @@ Confrontiamo questo risultato col dato dell'accelerazione di gravità tabulato $
 Visto che $|g-g_{tab}|<< |\Delta g-\Delta g_{tab}|$, il valore trovato è compatibile col valore standard.
 
 
-
 \section{Conclusioni}
 La prima difficoltà è stata riscontrata nello stabilire tramite il programa di tracciamento le \\
 distanze metriche del video perchè, nonostante l'asta presentasse ogni 10cm un segno, questi erano tutt'altro che sottili, e ciò ha contribuito alle non compatibilità riscontrate successivamente. 
@@ -373,17 +391,18 @@ Inoltre, date le incompatibilità riscontrate, e anche l'errore molto piccolo ri
 
 
 
-
 \newpage
+
 \section{Tabella completa}
 \begin{table}[!htb]
     \centering
+     
     \centerline{\begin{tabular}{|c|c|c|c|c|c|c|c|}
     \hline
-    \multirow{2}{*}{\small Misura} &\multirow{2}{*}{ $y$\ $(m)$}
-    &\multirow{2}{*}{\small$\Delta pixel $}
-    &\multirow{2}{*}{\small$\Delta y_{misurato}$\ $(m)$}
+    \multirow{2}{*}{\small Misura} &\multirow{2}{*}{ \small$y_{mis}\pm \Delta y_{mis}$\ $(m)$}
+    &\multirow{2}{*}{\small$n^o pixel $}
     &\multirow{2}{*}{\small$t$\ $(s)$} 
+    &\multirow{2}{*}{\small$\Delta y^{'}\ (m) $}
     &\multirow{2}{*}{\small$y_{new}\pm\Delta y_{new}$\ $(m)$}
     &\multirow{2}{*}{\small$\ln({y_{new}}) \pm\Delta\ln{(y_{new})}$\ $(m)$}
     &\multirow{2}{*}{\small$\ln{(t)}$\ $(s)$}\\ 
@@ -391,7 +410,7 @@ Inoltre, date le incompatibilità riscontrate, e anche l'errore molto piccolo ri
     &&&&&&&\\
 \hline
 \hline
-    \footnotesize $1$ &\footnotesize $0.0001$ & $2$& &&&&\\
+    \footnotesize $1$ &\footnotesize $0.0001\pm$ & $2$& &&&&\\
     \footnotesize $2$& \footnotesize$0.0020$  & $2$& &&&&\\
     \footnotesize $3 $& \footnotesize$0.0045$ & $3$& &&&&\\
     \footnotesize $4 $& \footnotesize$0.0090$ & $3$& &&&&\\
