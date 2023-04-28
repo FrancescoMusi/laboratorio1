@@ -1,3 +1,4 @@
+
 \documentclass[12pt, a4paper]{article}
 \usepackage{graphicx}
 \usepackage{mathtools}
@@ -29,58 +30,43 @@
   \AtPageUpperLeft{%
     \hspace{\paperwidth}%
     \raisebox{-\baselineskip}{%
-      \makebox[0pt][r]{\textbf{Gruppo 10}: Mussini Simone, Ruscillo Fabio, Musi Francesco}}}}%
-
-
-\section{Cose da aggiungere}
-\begin{itemize}
-    \item Foto scattate da noi dell'apparato sperimentale
-    \item grafici di risultati sbagliati
-    \item tabelle dei dati utilizzati (messe subito dopo dire che calcoli fare)
-    \item scrivere "Gruppo $10$" vicino ai nomi
-    \item mettere i nomi e il gruppo in alto a sinistra ( e non sotto al titolo)
-    \item spiegazione generale con formule (ma non troppo) di quale fenomeno fisico andiamo ad osservare
-    \item SCRIVERE DELLE CONCLUSIONI LUNGHE E DETTAGLIATE (ho visto dalla relazione che ha consegnato Fra che il prof ha detto che dovevno essere più lunghe (erano di mezza pagina se non di più))
-    \item I grafici devono essere BEN LEGGIBILI, soprattutto le didascalie relative agli assi
-    \item A fianco ad una misura va SEMPRE messo l'errore (anche se il prof ci ha detto che nei calcoli potevamo pensare che non ci fosse errore, nella relazione va messo quello strumentale)
-\end{itemize}
-
+      \makebox[0pt][r]{\textbf{Gruppo 10}: Mussini Simone, Ruscillo Fabio, Musi Francesco         }
+}}}%
 
 \section{Fenomeno fisico}
-Il fenoeno studiato è la forza di attrazione gravitazionale, descritta dalla legge seguente in modo generale, valida per qualsiasi coppia di enti dotati di massa. 
+Il fenoeno in esame è dovuto alla forza di attrazione gravitazionale, descritta dalla legge seguente, valida per qualsiasi coppia di enti dotati di massa: 
 
-\begin{equation}
-    F_g = G\frac{m_1 m_2}{r^2}
-\end{equation}
-Con G costante di gravitazione universale, $m_1$ e $m_2$ le masse dei due corpi ed r la distanza tra essi.
+\begin{equation*}
+    \Vec{F_g} = -G\frac{M m}{r^2}\ \hat{r}
+\end{equation*}
+Con G costante di gravitazione universale, $M$ e $m$ le masse dei due corpi ed $r$ la distanza tra essi.
 
-Per questa forza, così come per la forza elettrica è possibile definire un campo, detto campo gravitazionale, indicato con la leggera $g$. 
-Il concetto di campo rappresenta come varia la forza generata da un corpo in funzione della distanza da esso. 
+Per questa forza è possibile definire un campo, detto campo gravitazionale, indicato con la lettera $\Vec{g}$. 
+Il concetto di campo rappresenta come varia la forza generata da un corpo in funzione della distanza, e si presenta come: 
 
-\begin{equation}
-    g(r) = G\frac{M}{r^2}
-\end{equation}
+\begin{equation*}
+    \Vec{g}(r) = -G\frac{M}{r^2}\  \hat{r}
+\end{equation*}
 
-Data questa definizione, l'espressione della forza diventa: $F_g = g(r) m$. 
-Ricordando la seconda legge della dinamica, notiamo sbito che il campo $g(r)$ rappresenta l'accelerazione con cui un corpo di massa $m$ viene attratto verso un altro corpo di massa $M$. 
+Data questa definizione, l'espressione della forza diventa $\Vec{F_g} = \Vec{g}(r)m$. 
+Ricordando la seconda legge della dinamica, notiamo subito che \textit{il campo $\Vec{g}(r)$ rappresenta l'accelerazione con cui un corpo di massa $m$ viene attratto verso un altro corpo di massa $M$.} 
+Il termine "accelerazione di gravità" deriva proprio da ciò.
 
-Il termine "accelerazione di gravità" deriva proprio da ciò. Il suo valore adottato sulla terra ($9.80665m/s^2$) è quello che si ottiene dall'espressione $g(R_t) = G\frac{M_t}{r^2}$, usando la massa terrestre ed il valore medio del raggio terrestre, poichè la terra non è perfettamente sferica. 
+Il suo valore, adottato sulla Terra, è quello che si ottiene dall'espressione $\displaystyle {g(R_t) = G\frac{M_t}{R_t^2}}$, usando la massa terrestre $M_t$ ed il valore medio del raggio terrestre $R_t$ poichè la Terra non è perfettamente sferica, ed è pari a $g_{tab}=(9.80665\pm 0.00001)\ m/s^2$.
 
-Visto che le variazioni di altezza rispetto alla superficie terrestre sono irrilevanti nel calcolo della forza perchè molto minori di $R_t$, in prossimità della superficie basta moltiplicare la massa di un oggetto per il valore riportato prima e si ottiene la forza con cui la terra e l'oggetto in questione si attraggono. 
+Se la distanza del corpo rispetto alla superficie terrestre è molto minore di $R_t$, basta moltiplicare la massa $m$ dell'oggetto e il valore $g_{tab}$, per ottenere la forza con cui la Terra e il corpo si attraggono a vicenda.
 
-Trascuriamo le forze di attrazione con oggetti minori, come il tavolo su cui si svolge l'esperimento perchè generano forze assolutamente irrilevanti.
-
-
+Si possono considerare trascurabili le forze di attrazione con oggetti minori, come ad esempio il tavolo su cui si svolge l'esperimento, perchè essi generano forze assolutamente irrilevanti rispetto a quella di attrazione terrestre.
 
 \section{Obbiettivo}
 \label{sezione obbiettivi}
-Lo scopo di questo esperimento è riuscire ad ottenere la misura dell'accelerazione di gravità, analizzando un filmato che ritrae una sferetta in caduta libera. 
+Lo scopo di questo esperimento è di riuscire ad ottenere la misura dell'accelerazione di gravità, analizzando un filmato che ritrae una sferetta in caduta libera. 
 Ciò è stato fatto prendendo varie misure della posizione del corpo tramite fotoregistrazioni ad alta velocità. 
+
 La formula da usare, che mette in relazione la posizione del corpo e $g$, è:
 \begin{equation*}
-    y(t) = \frac{1}{2}gt^2
+    y(t) = \frac{1}{2}gt^2+ v(0)t+y(0)
 \end{equation*}
-
 
 
 \section{Strumenti}
@@ -91,62 +77,69 @@ La formula da usare, che mette in relazione la posizione del corpo e $g$, è:
 \end{itemize}
 
 \section{Procedimento di misura}
-Il setup dell'esperimento, osservabile nel video, comprende un asta metallica alla sommità della quale è posizionata una sferetta metallica ferma. L'asta presenta dei segni distanziati gli uni dagli altri di 10cm. 
-Ad un certo punto la sferetta viene rilasciata e cadrà di moto uniformemente accelerato, poichè soggetta alla sola forza di gravità. Affianco all'asta è presente un cronometro con sensibilità al millesimo di secondo. 
+Il setup dell'esperimento, osservabile nel video, comprende un asta, alla sommità della quale è posizionata una sferetta metallica ferma. L'asta presenta dei segni distanziati gli uni dagli altri di 10cm. 
+Ad un certo punto la sferetta viene rilasciata e cade muovendosi di moto uniformemente accelerato, soggetta alla sola forza peso. Affianco all'asta è presente un cronometro con sensibilità al millesimo di secondo. 
 Essendo il tutto filmato da una fotocamera (\textit{Sony DSC-RX100M4}) che registra a 1000\textit{fps}, ad ogni frame il cronometro avanza di un millesimo di secondo.
 
+  
 \subsection{Setting del programma di tracciamento}
-Per iniziare, mediante la funzione "\textit{asta di calibrazione}" si è posto uguale a 10cm la distanza tra 2 segni sull'asta, in modo che il programma potesse generare un metro calibrato con cui misurare la posizione del target. \\
-Poi si è stabilito il frame di inizio del moto, che è risultato essere il 49esimo.  \\
-La posizione è stata tracciata ogni 10 frame, mettendo i punti di massa nella parte inferiore della sferetta. Il metro calibrato è stato posto sulla schermata in modo che coincidesse con la posizione del punto di massa a target fermo.\\
-In totale sono state prese 41 misure.
+Per iniziare, mediante la funzione "\textit{asta di calibrazione}", si è posto uguale a 10cm la distanza tra 2 segni sull'asta, in modo che il programma potesse generare un metro calibrato con cui misurare la posizione del target. Il metro calibrato, è poi stato posto in modo che l'origine coincidesse con la posizione del primo punto di massa, posizionato alla base della sferetta a riposo. Poi si è stabilito il frame di inizio del moto della sferetta, che è risultato essere il 49esimo. 
 
-\subsection{Gestione degli errori}
+La posizione è stata segnata ogni 10 frame, ponendo, ad ogni misura, i punti di massa nella parte inferiore della sferetta. 
+
+In totale sono state prese 42 misure.
+
+
+\subsection{Gestione degli errori sulle misure}
 L'alta velocità di acquisizione della fotocamera è a scapito della quantità di luce catturata, quindi anche della nitidezza dell'immagine.
-Gli errori sono stati scelti in base al numero di pixel di transizione tra il colore del target e dello sfondo, e sono stati stimati misura per misura, visto che la chiarezza di ogni frame era variabile. Tramite il metro di calibrazione, è stato posto: 1$px$ = 0.0005$m$, pertanto:
+Gli errori sono stati scelti in base al numero di pixel di transizione tra il colore del target e dello sfondo, e sono stati stimati misura per misura, visto che la nitidezza di ogni frame era variabile. Tramite il metro di calibrazione è stato posto: 1$px$ = $(0.0005\pm 0.0001)$ $m$, pertanto:
 \begin{equation*}
-    \Delta y_{misurato}= (\Delta pixel \cdot 0.0005)m
+    \Delta y_{misurato}= (n^o pixel \cdot 0.0005)m
 \end{equation*}
+
+\bigskip
+
+\section{Tabella dei dati misurati}
+
+Si riportano in tabella le grandezze misurate per via diretta e indiretta:
 
 \begin{table}[!h]
     \centering
-    \begin{tabular}{|c|c|c|}
+    \begin{tabular}{|c|c|c|c|}
     \hline
     \multirow{2}{*}{\small Misura} 
-    &\multirow{2}{*}{\small$y_{misurato}\pm\Delta y_{misurato}$\ $(m)$} 
-    &\multirow{2}{*}{\small $\Delta$Pixel} 
+    &\multirow{2}{*}{\small $n^o$pixel} 
+    &\multirow{2}{*}{\small{$ y_{mis}\pm\Delta y_{mis}$\ $(m)$}} 
+    &\multirow{2}{*}{\small$t$\ $(s)$} 
     \\
-    && 
+    &&&
     \\
     \hline
     \hline
-       &  & \\
+       &  &  &\\
     \hline
     \end{tabular}
         \caption{Caption}
-        \label{tab:my_label}
+        \label{tab:Tabella dati misurati inizio}
 \end{table}
+\section{Considerazioni preliminari}
 
-\bigskip
-Tutte le misure sono state riportate in Tabella \ref{Tabella Completa}
-
-
-
-
-\section{Analisi dei dati}
-Il frame di inizio della caduta è il 49esimo, che corrisonde ad un tempo iniziale \textit{$t_i = 0.012s$}.
-Abbiamo poi terminato lo studio del moto al 459esimo fotogramma, che corrisponde all'istante \textit{$t_f = 0.422s$}, per un tempo totale di caduta \textit{$(t_f-t_i) = 0.410s$}. 
+\subsection{Tempo di caduta}
+Il frame di inizio della caduta è il 49esimo, che corrisonde ad un tempo iniziale \textit{$t_i = (0.012\pm 0.001)\ s$}.
+Abbiamo poi terminato lo studio del moto al 459esimo fotogramma, che corrisponde all'istante \textit{$t_f = (0.422\pm 0.001)\ s$}, per un tempo totale di caduta \textit{$(t_f-t_i) = (0.410\pm 0.002)\ s$}. 
 E' stato scelto come ultimo istante di caduta, quello che corrisponde all'ultima misura utile, appena precedente al rimbalzo della pallina sul banco di lavoro.\\
-
-Per avere una stima preliminare dell'ordine di grandezza dell'errore di misura su $g$, abbiamo calcolato gli errori relativi di una posizione e di un tempo centrali, nelle nostre misure. Siano $y_{mid}=0.2465$ con $\Delta y_{mid}=0.0010$\ , e \ $t_{mid}=0.033$ con $\Delta t_{mid}=0.001$ :
+\subsection{Stima dell'ordine di grandezza di $g$}
+Per avere una stima preliminare dell'ordine di grandezza dell'errore di misura su $g$, sono stati calcolati gli errori relativi di una posizione e di un tempo, centrali nelle misure. Siano $y_{mediano}=(0.2465\pm0.0010)$\ , e \ $t_{mediano}=(0.033\pm0.001)$ :
 \begin{equation*}
-    \frac{\Delta g}{g}=\frac{\Delta y_{mid}}{y_{mid}}+2\cdot \frac{\Delta t_{mid}}{t_{mid}}
+    \frac{\Delta g}{g}=\frac{\Delta y_{mediano}}{y_{mediano}}+2\cdot \frac{\Delta t_{mediano}}{t_{mediano}}
 \end{equation*}
-Otteniamo che $\displaystyle\frac{\Delta g}{g}\approx 6\%$.\bigskip\\
 
-Poichè la posizione dipende dal tempo, e l'ordine di grandezza degli errori relativi è simile, calcoliamo un nuovo errore su $y$ pari a 
+Otteniamo che $\displaystyle\frac{\Delta g}{g}\approx 6\%$.\bigskip\\
+\subsection{Correzione dell'errore sulla posizione}
+Poichè la posizione dipende dal tempo, e l'ordine di grandezza degli errori relativi di
+$\displaystyle{\frac{\Delta y_{mis}}{y_{mis}}}$ e $\displaystyle{\frac{\Delta t}{t}}$ è lo stesso per la maggior parte delle misure, si calcola un nuovo errore su $y_{mis}$ pari a 
 \begin{equation*}
-   \Delta y^{'} = \left(\frac{2\Delta t}{t}\right)\cdot y + \Delta y_{misurato}
+   \Delta y^{'} = \left(\frac{2\Delta t}{t}\right)\cdot y + \Delta y_{mis}
 \end{equation*}
 
 \begin{table}[!h]
@@ -154,7 +147,7 @@ Poichè la posizione dipende dal tempo, e l'ordine di grandezza degli errori rel
     \begin{tabular}{|c|c|}
     \hline
     \multirow{2}{*}{\small Misura} 
-    &\multirow{2}{*}{$ \Delta y^{'}$ \ $(m)$} 
+    &\multirow{2}{*}{\small$\Delta y^{'}$\ $(m)$} 
      
     \\
     & 
@@ -165,14 +158,13 @@ Poichè la posizione dipende dal tempo, e l'ordine di grandezza degli errori rel
     \hline
     \end{tabular}
         \caption{Caption}
-        \label{tab:my_label}
+        \label{tab:errore ymis corretto inizio}
 \end{table}
 
 
 
-
-\subsection{Grafico spazio-tempo} \label{Agg. misure xconcl}
-Il primo grafico realizzato con il programma di analisi dati \textit{Igor Pro} è stato il grafico spazio-tempo, ossia quello della legge oraria, che dovrebbe seguire la formula indicata nel paragrafo \ref{sezione obbiettivi} (traiettoria parabolica con posizione e velocità iniziali nulle).\\ 
+\section{Regressione di potenza} \label{Agg. misure xconcl}
+Il primo grafico realizzato con il programma di analisi dati \textit{Igor Pro}, è stato il grafico spazio-tempo, che dovrebbe seguire la legge oraria del pParagrafo \ref{sezione obbiettivi}: \textit{Obbiettivi} (traiettoria parabolica con posizione e velocità iniziali nulle): 
 
     \begin{figure}[h!]
 \centering
@@ -181,55 +173,46 @@ Il primo grafico realizzato con il programma di analisi dati \textit{Igor Pro} �
 \label{Grafico parabolico}
 \end{figure}
 
+I dati ottenuti tramite la regressione di potenza del secondo ordine (\textit{poli 3}), non sono compatibili con i valori teorici, fatta eccezione per $\displaystyle{\frac{g}{2}}$.
 
-I dati ottenuti tramite la regressione di potenza del secondo ordine (\textit{poli 3}), non sono compatibili con i valori teorici, fatta eccezione per $\displaystyle{\frac{g}{2}}$ :
-
-
-\renewcommand{\theenumii}{\roman{enumii}}  
-\begin{itemize}
-    \itemsep0em 
-    
-        \item Posizione iniziale $y(0)$:
-        
-        \begin{tabular}{ccc}
-        {$K_0 = -0.0010852 \pm 0.000793$} & & \small{(Non compatibile con il valore atteso $K_{0}$ $_{atteso}= 0.0000$)}\\
-        \end{tabular}
-        
-    \end{itemize}
-    \begin{itemize}
-        \item Velocità iniziale $v(0)$:\\
-        \begin{tabular}{ccccc}
-        {$K_1 =  0.020001 \pm 0.0128$} & & & & \small{(Non compatibile con il valore atteso $K_{1}$ $_{atteso} = 0.0000$)}\\
-        \end{tabular}
-        
-    \end{itemize}
-      \begin{itemize}
-          \item Coefficiente del termine quadratico, pari a $\displaystyle{\frac{g}{2}}$:\\ 
-          \begin{tabular}{cccccc}
-              {$K_2 =  4.9298 \pm 0.0353$} & & & & &\small{(Compatibile con il valore atteso $K_{2}$ $_{atteso}= 4.9033$)}\\
-          \end{tabular}
-         
-      \end{itemize}
     \bigskip
-Visto che \textit{posizione iniziale} e \textit{velocità iniziale} non sono compatibili con i valori attesi abbiamo corretto l'incompatibilità, isolando a destra il termine in relazione  quadratica con il tempo, mentre a sinistra, abbiamo ottenuto una nuova variabile $y_{new}$ in cui, la posizione $y$, è corretta dai termini $K_0$ e $ K_1\ t$, col rispettivo errore $\Delta y_{new}$: \\
+Visto che \textit{posizione iniziale} e \textit{velocità iniziale} non sono compatibili con i valori attesi, si è corretta l'incompatibilità, isolando a destra il termine in relazione  quadratica con il tempo, mentre a sinistra, si è ottenuta una nuova variabile $y_{new}$ in cui, la posizione $y$, è corretta dai termini $K_0$ e $ K_1\ t$, col rispettivo errore $\Delta y_{new}$: \\
 L'equazione diventa quindi:
 \begin{equation*}
 \begin{aligned}
-  & & y - K_0 - K_1\ t = K_0'+K_1'\ t+K_{2}'\ t^2
+  & & (y_{mis} - K_0 - K_1\ t) = K_0'+K_1'\ t+K_{2}'\ t^2
   &\quad{} 
   \end{aligned}
   \begin{aligned}
-  & &\text{dove:\phantom{.......}} y_{new} = y - K_0 - K_1\ t 
+  & &\text{dove:\phantom{.......}} y_{new} = y_{mis} - K_0 - K_1\ t 
   &
   \end{aligned}
 \end{equation*}
 L'errore su  $y_{new}$ è dato da
 \begin{equation*}
- \Delta y_{new} = \Delta y + \Delta K_0 + \sqrt{\left(\frac{\Delta K_1}{K_1}\right)^2 + \left(\frac{\Delta t}{t}\right)^2}
+ \Delta y_{new} = \Delta y^{'} + \Delta K_0 + \sqrt{\left(\frac{\Delta K_1}{K_1}\right)^2 + \left(\frac{\Delta t}{t}\right)^2}
  \end{equation*}
 
+\begin{table}[!h]
+    \centering
+    \begin{tabular}{|c|c|}
+    \hline
+    \multirow{2}{*}{\small Misura} 
+    &\multirow{2}{*}{\small$y_{new} \pm\Delta y_{new}$\ $(m)$} 
+     
+    \\
+    & 
+    \\
+    \hline
+    \hline
+       &   \\
+    \hline
+    \end{tabular}
+        \caption{Caption}
+        \label{tab:ynew con errore }
+\end{table}
 
-Facendo una nuova regressione di potenza del secondo ordine utilizzando i nuovi dati, otteniamo che le variabili $K_0'$, $K_1'$ e $K_2'$ sono tutte compatibili, come possiamo vedere in Figura \ref{Grafico parabolico}:
+Facendo una nuova regressione di potenza del secondo ordine utilizzando i nuovi dati, si ottene che le variabili $K_0'$, $K_1'$ e $K_2'$ sono tutte compatibili, come possiamo vedere in Figura \ref{Grafico parabolico}:
 \bigskip
 \bigskip
 
@@ -242,20 +225,23 @@ Facendo una nuova regressione di potenza del secondo ordine utilizzando i nuovi 
 
 
 
-
-\newpage
 \section{Regressione lineare}
-Successivamente si è fatta una regressione lineare, partendo da $y_{new}= \frac{1}{2}\ g t^2$, approssimando posizione e velocità iniziali a $0$. Quello che ci si aspetta di trovare è che la posizione sia in relazione quadratica con il tempo:
+Successivamente si è fatta una regressione lineare, partendo da $y_{new}= \frac{1}{2}\ g t^2$, approssimando posizione e velocità iniziali a $0$. Quello che ci si aspetta di trovare è che la posizione sia in relazione quadratica con il tempo.
+
+Posti
+
+\phantom{aad} $ln{(A)}=a$ \phantom{aad} , \phantom{aad} $B=b$
 \begin{equation*}
 \begin{aligned}
-  & y_{new}= \frac{1}{2}\ g\ t^2
+  & y_{new}= A\ t^B
   &\quad{} 
   \end{aligned}
   \begin{aligned}
-  &&\text{passando ai logaritmi:\phantom{..}}& & \ln(y_{new})=\ln\left({\frac{1}{2}\ g}\right) +2\ln{t}
+  &&\text{passando ai logaritmi:\phantom{..}}& & \ln{(y_{new})}=a +b\ \ln{(t)}
   &
   \end{aligned}
 \end{equation*}
+
 e come errore su $\ln({y_{new}})$: 
 \begin{equation*}
     \Delta\ln{(y_{new})}=\frac{\Delta y_{new}}{y_{new}}\ 
@@ -277,8 +263,10 @@ e come errore su $\ln({y_{new}})$:
     \hline
     \end{tabular}
         \caption{Caption}
-        \label{tab:my_label}
+        \label{tab:logaritmi con errore}
 \end{table}
+
+\bigskip
 
 
  Tramite \textit{Igor Pro} si è ottenuto il seguente grafico:\\
@@ -289,17 +277,16 @@ e come errore su $\ln({y_{new}})$:
 \label{Grafico logaritmico}
 \end{figure}
 
+
+
 Il valore di $b$ è compatibile col valore $2$, esponente del tempo nella formula usata in partenza.  Si è così dimostrato che vi è una relazione quadratica tra $y_{new}$ e $t$.
 
 
 
-
-
-\newpage
 \section{Calcolo dell'accelerazione di gravità}
-A questo punto, dopo aver verificato che la posizione iniziale e finale sono approssimabili a $0$, e che la poszione è in relazione quadrtica con il tempo, possiamo creare un grafico lineare dei valori $y_{new}$, coi rispettivi errori, e del tempo al quadrato, così da essere in grado di ricavare il valore dell'accelerazione di gravità. 
 
-\begin{figure}[h!]
+A questo punto, dopo aver verificato che la posizione iniziale e finale sono approssimabili a zero e che la posizione è in relazione quadrtica con il tempo, si può creare un grafico lineare con i valori $y_{new}$, coi rispettivi errori,sull'asse delle ordinate, e del tempo al quadrato su quello delle ascisse, così da essere in grado di ricavare il valore dell'accelerazione di gravità a partire dalla pendenza della retta ottenuta:
+  \begin{figure}[h!]
 \centering
 \includegraphics[width=170mm, height=80mm]{Immagini/Graph5 non comp.jpg}
 \caption{\textit{{\footnotesize{Grafico $y_{new}(t^2)$: sull'asse asse $y$ sono riportati i valori di $y_{new}$ coi rispettivi errori, sull'asse $x$ il tempo al quadrato}}}}
@@ -307,40 +294,44 @@ A questo punto, dopo aver verificato che la posizione iniziale e finale sono app
 \end{figure}
 
 
+\newpage
 
-L'intercetta e la pendenza della retta ottenuta sono:
-\begin{itemize}
-    \item $a=-3.691\cdot 10^{-5}\pm 0.000921$
-    \item$b=4.9301\pm 0.0216$
-\end{itemize}
+
 Dove $\displaystyle b=\frac{1}{2}\ g=(4.9301\pm 0.0216)$, da cui:
 \begin{equation*}
     g=2 \ b=9.8602 \ \frac{m}{s^2}
 \end{equation*}
 e l'errore è
 \begin{equation*}
-    \Delta g=2\ \Delta b=0.04 \ \frac{m}{s^2}
+    \Delta g=2\ \Delta b=0.0432\approx 0.04 \ \frac{m}{s^2}
 \end{equation*}
 Quindi l'accelerazione di gravità ottenuta sarebbe $g=(9.86\pm0.04)$ $\frac{m}{s^2}$.
-Il valore $g$, ricavato a partire da $b$ , non risulta compatibile col valore standard poichè $|g-g_{tab}|> |\Delta g-\Delta g_{tab}|$. Questo è dovuto al fatto che ci potrebbero essere errori risultanti dalla configurazione e dalla qualità video dell'esperimento, che non erano sotto il nostro controllo. Per queste ragioni si è passati a due deviazioni standard con una confidenza del 95\%, e il grafico ottenuto è il seguente:
+Il valore $g$, ottenuto a partire da $b$ , non risulta compatibile col valore standard, poichè $|g-g_{tab}|> |\Delta g-\Delta g_{tab}|$. Questo è dovuto al fatto che ci potrebbero essere errori dovuti alla configurazione e alla qualità video dell'esperimento, che non erano sotto il nostro controllo.
+
+\addvspace{1.5cm}
+Per queste ragioni si è passati a due deviazioni standard con una confidenza del 95\%, e il grafico ottenuto è il seguente:
   \begin{figure}[h!]
 \centering
 \includegraphics[width=170mm, height=80mm]{Immagini/Graphy_t^2.jpg}
 \caption{\textit{{\footnotesize{Grafico $y_{new}(t^2)$: sull'asse asse $y$ sono riportati i valori di $y_{new}$ coi rispettivi errori, sull'asse $x$ il tempo al quadrato}}}}
-\label{Grafico logaritmico}
+\label{Grafico compatibile y(t^2)}
 \end{figure}
 
-Si è infine passati al calcolo di $g$, utilizzando il valore di $b$ con un nuovo errore:
+
+\newpage
+
+
+Si è infine passati al calcolo di $g$, utilizzando come errore su $b$ il nuovo valore $\Delta b=0.0436$:
 \begin{equation*}
     g=2 \ b=9.8602\ \frac{m}{s^2}
 \end{equation*}
 e l'errore è
 \begin{equation*}
-    \Delta g=2\ \Delta b=0.08\ \frac{m}{s^2}
+    \Delta g=2\ \Delta b=0.0872\approx 0.09\ \frac{m}{s^2}
 \end{equation*}
-Quindi il valore dell'accelerazione di gravità risultate è $g=(9.86\pm0.08)$ $\frac{m}{s^2}$
+Quindi il valore dell'accelerazione di gravità risultate è $g=(9.86\pm0.09)$ $\frac{m}{s^2}$
 \section{Compatibilità}
-Confrontiamo questo risultato col dato dell'accelerazione di gravità standard $g_{tab}=9,80665$, considerando quest'utimo senza errore:
+Confrontiamo questo risultato col dato dell'accelerazione di gravità tabulato $g_{tab}=(9.80665\pm 0.00001)\ m/s^2$, trascurandone l'errore poichè molto inferiore rispetto a quello calcolato:
 \begin{equation*}
 \begin{aligned}
   & |g-g_{tab}|=0.05335 \ \frac{m}{s^2}
@@ -348,14 +339,12 @@ Confrontiamo questo risultato col dato dell'accelerazione di gravità standard $
   \end{aligned}
   \begin{aligned}
   &&\text{,\phantom{..}}& & 
-  |\Delta g-\Delta g_{tab}|=0.08\ \frac{m}{s^2}
+  |\Delta g-\Delta g_{tab}|=0.09\ \frac{m}{s^2}
   &
   \end{aligned}
 \end{equation*}
 
 Visto che $|g-g_{tab}|<< |\Delta g-\Delta g_{tab}|$, il valore trovato è compatibile col valore standard.
-
-
 
 
 
@@ -368,7 +357,7 @@ Infatti, nella prima regressione lineare, nè la velocità iniziale nè l'ordina
 
 Per quanto riguarda la misura di $g$, inizialmente si era calcolato un errore relativo $\frac{\Delta g}{g}\approx 6\% $ ottenuto a partire da dei valori intermedi delle nostre misure. L'errore relativo che si ottinene dal valore finale dell'accelerazione di gravità ottenuto è:
 \begin{equation*}
-    \frac{\Delta g}{g}=\frac{0.08}{9.86}=0.8\%
+    \frac{\Delta g}{g}=\frac{0.09}{9.86}=0.9\%
 \end{equation*}
 risultato che differisce di un ordine di grandezza dal primo. Questo può essere dovuto al fatto che abbiamo cosiderato un errore specifico per ogni misura, in base alla definizione del frame, quindi alcune misure risultano più precise di altre. Inoltre sono state attuate le correzioni citate prima, per rendere compatibili  la posizione iniziale e la velocità iniziale. \\
 
