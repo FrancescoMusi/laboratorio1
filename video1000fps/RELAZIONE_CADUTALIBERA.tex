@@ -1,4 +1,3 @@
-
 \documentclass[12pt, a4paper]{article}
 \usepackage{graphicx}
 \usepackage{mathtools}
@@ -30,8 +29,9 @@
   \AtPageUpperLeft{%
     \hspace{\paperwidth}%
     \raisebox{-\baselineskip}{%
-      \makebox[0pt][r]{\textbf{Gruppo 10}: Mussini Simone, Ruscillo Fabio, Musi Francesco         }
-}}}%
+      \makebox[0pt][r]{\textbf{Gruppo 10}: Mussini Simone, Ruscillo Fabio, Musi Francesco}}}}%
+
+
 \section{Cose da aggiungere}
 \begin{itemize}
     \item Foto scattate da noi dell'apparato sperimentale
@@ -44,6 +44,8 @@
     \item I grafici devono essere BEN LEGGIBILI, soprattutto le didascalie relative agli assi
     \item A fianco ad una misura va SEMPRE messo l'errore (anche se il prof ci ha detto che nei calcoli potevamo pensare che non ci fosse errore, nella relazione va messo quello strumentale)
 \end{itemize}
+
+
 \section{Fenomeno fisico}
 Il fenoeno studiato è la forza di attrazione gravitazionale, descritta dalla legge seguente in modo generale, valida per qualsiasi coppia di enti dotati di massa. 
 
@@ -67,14 +69,18 @@ Il termine "accelerazione di gravità" deriva proprio da ciò. Il suo valore ado
 Visto che le variazioni di altezza rispetto alla superficie terrestre sono irrilevanti nel calcolo della forza perchè molto minori di $R_t$, in prossimità della superficie basta moltiplicare la massa di un oggetto per il valore riportato prima e si ottiene la forza con cui la terra e l'oggetto in questione si attraggono. 
 
 Trascuriamo le forze di attrazione con oggetti minori, come il tavolo su cui si svolge l'esperimento perchè generano forze assolutamente irrilevanti.
+
+
+
 \section{Obbiettivo}
 \label{sezione obbiettivi}
-Lo scopo di questo esperimento è di riuscire ad ottenere la misura dell'accelerazione di gravità, analizzando un filmato che ritrae una sferetta in caduta libera. 
+Lo scopo di questo esperimento è riuscire ad ottenere la misura dell'accelerazione di gravità, analizzando un filmato che ritrae una sferetta in caduta libera. 
 Ciò è stato fatto prendendo varie misure della posizione del corpo tramite fotoregistrazioni ad alta velocità. 
 La formula da usare, che mette in relazione la posizione del corpo e $g$, è:
 \begin{equation*}
     y(t) = \frac{1}{2}gt^2
 \end{equation*}
+
 
 
 \section{Strumenti}
@@ -89,13 +95,11 @@ Il setup dell'esperimento, osservabile nel video, comprende un asta metallica al
 Ad un certo punto la sferetta viene rilasciata e cadrà di moto uniformemente accelerato, poichè soggetta alla sola forza di gravità. Affianco all'asta è presente un cronometro con sensibilità al millesimo di secondo. 
 Essendo il tutto filmato da una fotocamera (\textit{Sony DSC-RX100M4}) che registra a 1000\textit{fps}, ad ogni frame il cronometro avanza di un millesimo di secondo.
 
-  
 \subsection{Setting del programma di tracciamento}
 Per iniziare, mediante la funzione "\textit{asta di calibrazione}" si è posto uguale a 10cm la distanza tra 2 segni sull'asta, in modo che il programma potesse generare un metro calibrato con cui misurare la posizione del target. \\
 Poi si è stabilito il frame di inizio del moto, che è risultato essere il 49esimo.  \\
 La posizione è stata tracciata ogni 10 frame, mettendo i punti di massa nella parte inferiore della sferetta. Il metro calibrato è stato posto sulla schermata in modo che coincidesse con la posizione del punto di massa a target fermo.\\
 In totale sono state prese 41 misure.
-
 
 \subsection{Gestione degli errori}
 L'alta velocità di acquisizione della fotocamera è a scapito della quantità di luce catturata, quindi anche della nitidezza dell'immagine.
@@ -125,6 +129,9 @@ Gli errori sono stati scelti in base al numero di pixel di transizione tra il co
 
 \bigskip
 Tutte le misure sono state riportate in Tabella \ref{Tabella Completa}
+
+
+
 
 \section{Analisi dei dati}
 Il frame di inizio della caduta è il 49esimo, che corrisonde ad un tempo iniziale \textit{$t_i = 0.012s$}.
@@ -160,6 +167,9 @@ Poichè la posizione dipende dal tempo, e l'ordine di grandezza degli errori rel
         \caption{Caption}
         \label{tab:my_label}
 \end{table}
+
+
+
 
 \subsection{Grafico spazio-tempo} \label{Agg. misure xconcl}
 Il primo grafico realizzato con il programma di analisi dati \textit{Igor Pro} è stato il grafico spazio-tempo, ossia quello della legge oraria, che dovrebbe seguire la formula indicata nel paragrafo \ref{sezione obbiettivi} (traiettoria parabolica con posizione e velocità iniziali nulle).\\ 
@@ -229,6 +239,10 @@ Facendo una nuova regressione di potenza del secondo ordine utilizzando i nuovi 
 \caption{\textit{{\footnotesize{Grafico $y_{new}(t)$: sul'asse asse $y$ sono riportati i valori di $y_{new}$ coi rispettivi errori, sull'asse $x$ il tempo}}}}
 \label{Grafico parabolico}
 \end{figure}
+
+
+
+
 \newpage
 \section{Regressione lineare}
 Successivamente si è fatta una regressione lineare, partendo da $y_{new}= \frac{1}{2}\ g t^2$, approssimando posizione e velocità iniziali a $0$. Quello che ci si aspetta di trovare è che la posizione sia in relazione quadratica con il tempo:
@@ -278,11 +292,14 @@ e come errore su $\ln({y_{new}})$:
 Il valore di $b$ è compatibile col valore $2$, esponente del tempo nella formula usata in partenza.  Si è così dimostrato che vi è una relazione quadratica tra $y_{new}$ e $t$.
 
 
+
+
+
 \newpage
 \section{Calcolo dell'accelerazione di gravità}
 A questo punto, dopo aver verificato che la posizione iniziale e finale sono approssimabili a $0$, e che la poszione è in relazione quadrtica con il tempo, possiamo creare un grafico lineare dei valori $y_{new}$, coi rispettivi errori, e del tempo al quadrato, così da essere in grado di ricavare il valore dell'accelerazione di gravità. 
 
-  \begin{figure}[h!]
+\begin{figure}[h!]
 \centering
 \includegraphics[width=170mm, height=80mm]{Immagini/Graph5 non comp.jpg}
 \caption{\textit{{\footnotesize{Grafico $y_{new}(t^2)$: sull'asse asse $y$ sono riportati i valori di $y_{new}$ coi rispettivi errori, sull'asse $x$ il tempo al quadrato}}}}
@@ -338,21 +355,38 @@ Confrontiamo questo risultato col dato dell'accelerazione di gravità standard $
 
 Visto che $|g-g_{tab}|<< |\Delta g-\Delta g_{tab}|$, il valore trovato è compatibile col valore standard.
 
-\section{Conclusioni}
 
-Inizialmente si era calcolato un errore relativo $\frac{\Delta g}{g}\approx 6\% $ ottenuto a partire da dei valori intermedi delle nostre misure. L'errore relativo che si ottinene dal valore finale dell'accelerazione di gravità ottenuto è:
+
+
+
+\section{Conclusioni}
+La prima difficoltà è stata riscontrata nello stabilire tramite il programa di tracciamento le distanze metriche del video perchè, nonostante l'asta presentasse ogni 10cm un segno, questi erano tutt'altro che sottili, e ciò ha contribuito alle non compatibilità riscontrate successivamente. 
+
+Anche in prossimità della fine della caduta è stato difficile prendere dei dati accurati, perchè non era chiaro quando la sfera colpisse il tavolo, quindi, per evitare di misurare ad urto avvenuto, abbiamo preso l'ultimo dato quando eravamo sicuri che fosse ancora in moto.
+
+Infatti, nella prima regressione lineare, nè la velocità iniziale nè l'ordinata iniziale sono compatibili con i valori attesi di 0. Sono stati resi accettabili aumentando la tolleranza come mostrato nel paragrafo \ref{Agg. misure xconcl}\\
+
+Per quanto riguarda la misura di $g$, inizialmente si era calcolato un errore relativo $\frac{\Delta g}{g}\approx 6\% $ ottenuto a partire da dei valori intermedi delle nostre misure. L'errore relativo che si ottinene dal valore finale dell'accelerazione di gravità ottenuto è:
 \begin{equation*}
-    \frac{\Delta g}{g}=\frac{0.08}{9.86}=0.008\%
+    \frac{\Delta g}{g}=\frac{0.08}{9.86}=0.8\%
 \end{equation*}
-risultato molto differente dal primo. Questo può essere dovuto al fatto che sono state attuate delle correzioni,per rendere compatibili le misure, con la posizione iniziale e velocità iniziale che devono essere nulle (vedi paragrafo \ref{Agg. misure xconcl}.). 
+risultato che differisce di un ordine di grandezza dal primo. Questo può essere dovuto al fatto che abbiamo cosiderato un errore specifico per ogni misura, in base alla definizione del frame, quindi alcune misure risultano più precise di altre. Inoltre sono state attuate le correzioni citate prima, per rendere compatibili  la posizione iniziale e la velocità iniziale. \\
+
+
+Successivamente si è effettuata una regressione di potenza tra lo spazio e il tempo. L'esponente risulta pienamente compatibile con il valore atteso di 2, calcolando con una deviazione standard.
+Per il calcolo di $g$, invece, si è usata una regressione lineare tra spazio percorso e tempo al quadrato, per la quale è stato necessario aumentare la cofidenza al 95\% (2 deviazioni standard) perchè il dato non era compatibile. \\
+
+Nonostante tutti i risultati, alla fine, sono corretti, avremmo potuto migliorare le nostre stime agendo sulla calibrazione dello strumento di misura su Tracker, che  sicuramente è la fonte di errore maggiore. Probabimente considerando la distanza tra più di 2 segni sulla sbarra (ad esempio calibrando su $30cm$ invece di $10cm$), l'errore effettivo (non quello stimato) sarebbe calato e quindi avremmo avuto misure più attendibili.
+Inoltre, date le imcompatibilità trovate, e anche l'errore molto piccolo risultante su $g$ può essere che gli errori sulle singole misure fossero stati sottostimati.
+
+
+
 
 
 \newpage
-
 \section{Tabella completa}
 \begin{table}[!htb]
     \centering
-     
     \centerline{\begin{tabular}{|c|c|c|c|c|c|c|c|}
     \hline
     \multirow{2}{*}{\small Misura} &\multirow{2}{*}{ $y$\ $(m)$}
