@@ -1,4 +1,4 @@
-
+ 
 \documentclass[12pt, a4paper]{article}
 \usepackage{graphicx}
 \usepackage{mathtools}
@@ -30,11 +30,11 @@
   \AtPageUpperLeft{%
     \hspace{\paperwidth}%
     \raisebox{-\baselineskip}{%
-      \makebox[0pt][r]{\textbf{Gruppo 10}: Mussini Simone, Ruscillo Fabio, Musi Francesco         }
+      \makebox[0pt][r]{\textbf{Gruppo 10}: Mussini Simone, Musi Francesco, Ruscillo Fabio        }
 }}}%
 
 \section{Fenomeno fisico}
-Il fenomeno in esame è dovuto alla forza di attrazione gravitazionale, descritta dalla legge seguente, valida per qualsiasi coppia di enti dotati di massa: 
+Il fenomeno della caduta libera è dovuto alla forza di attrazione gravitazionale, descritta dalla legge seguente, valida per qualsiasi coppia di enti dotati di massa: 
 
 
 \begin{equation*}
@@ -64,7 +64,7 @@ Si possono considerare trascurabili le forze di attrazione con oggetti minori, c
 Lo scopo di questo esperimento è di riuscire ad ottenere la misura dell'accelerazione di gravità, analizzando un filmato che ritrae una sferetta in caduta libera. 
 Ciò è stato fatto prendendo varie misure della posizione del corpo tramite fotoregistrazioni ad alta velocità. 
 
-La formula da usare, che mette in relazione la posizione del corpo e $g$, è:
+La formula da usare, che mette in relazione $g$ e la posizione del corpo, è:
 \begin{equation*}
     y(t) = \frac{1}{2}gt^2+ v(0)t+y(0)
 \end{equation*}
@@ -95,37 +95,79 @@ In totale sono state prese 42 misure.
 L'alta velocità di acquisizione della fotocamera è a scapito della quantità di luce catturata, quindi anche della nitidezza dell'immagine.
 Gli errori sono stati scelti in base al numero di pixel di transizione tra il colore del target e dello sfondo, e sono stati stimati misura per misura, visto che la nitidezza di ogni frame era variabile. Tramite il metro di calibrazione è stato posto: 1$px$ = $(0.0005\pm 0.0001)$ $m$, pertanto:
 \begin{equation*}
-    \Delta y_{misurato}= (n^o pixel \cdot 0.0005)m
+    \Delta y_{mis}= (n^o pixel \cdot 0.0005)m
 \end{equation*}
-
-\bigskip
+Di seguito è riportata la tabella dei dati misurati per via diretta e indiretta.
+\newpage
 
 \section{Tabella dei dati misurati}
-
-Si riportano in tabella le grandezze misurate per via diretta e indiretta:
-
-\begin{longtable}{|c|c|c|c|}
-\caption{}
+\begin{table}[!h]
+    \centering
+\centerline{\begin{tabular}{|c|c|c|c|}
+    \hline
+    \multirow{2}{*}{\small Misura} &
+    \multirow{2}{*}{ \small$y_{mis}\pm \Delta y_{mis}$\ $(m)$}&
+    \multirow{2}{*}{\small $n^o pixel$}&
+    \multirow{2}{*}{\small $t\pm \Delta t\ (s)$}\\
+    &&&\\ 
 \hline
-\multirow{2}{*}{$misure$}&
-\multirow{2}{*}{$y_{misurato} \pm \Delta y_{misurato}$}&
-\multirow{2}{*}{$n^o pixel$} 
-\\ && \\
-\hline 
-$1$ & $0.0001 \pm 0.00101667$ & $6$ \\ 
-$2$ & $$
-
-
-\end{longtable}
-
+\hline
+\footnotesize$1$  & \footnotesize$0.0001 \pm 0.0010$ & \footnotesize$2$ & \footnotesize$0.012\pm 0.001$\\ 
+\footnotesize$2$  & \footnotesize$0.0020 \pm 0.0010$ & \footnotesize$2$ & \footnotesize$0.022\pm 0.001$\\
+\footnotesize$3$  & \footnotesize$0.0045 \pm 0.0015$ & \footnotesize$3$ & \footnotesize$0.032\pm 0.001$\\
+\footnotesize$4$  & \footnotesize$0.0090 \pm 0.0015$ & \footnotesize$3$ & \footnotesize$0.042\pm 0.001$\\
+\footnotesize$5$  & \footnotesize$0.0130 \pm 0.0015$ & \footnotesize$3$ & \footnotesize$0.052\pm 0.001$\\
+\footnotesize$6$  & \footnotesize$0.0195 \pm 0.0015$ & \footnotesize$3$ & \footnotesize$0.062\pm 0.001$\\
+\footnotesize$7$  & \footnotesize$0.0250 \pm 0.0020$ & \footnotesize$4$ & \footnotesize$0.072\pm 0.001$\\
+\footnotesize$8$  & \footnotesize$0.0325 \pm 0.0020$ & \footnotesize$4$ & \footnotesize$0.082\pm 0.001$\\
+\footnotesize$9$  & \footnotesize$0.0420 \pm 0.0015$ & \footnotesize$3$ & \footnotesize$0.092\pm 0.001$\\
+\footnotesize$10$ & \footnotesize$0.0515 \pm 0.0015$ & \footnotesize$3$ & \footnotesize$0.102\pm 0.001$\\
+\footnotesize$11$ & \footnotesize$0.0620 \pm 0.0010$ & \footnotesize$2$ & \footnotesize$0.112\pm 0.001$\\
+\footnotesize$12$ & \footnotesize$0.0730 \pm 0.0020$ & \footnotesize$4$ & \footnotesize$0.122\pm 0.001$\\   
+\footnotesize$13$ & \footnotesize$0.0865 \pm 0.0020$ & \footnotesize$4$ & \footnotesize$0.132\pm 0.001$\\
+\footnotesize$14$ & \footnotesize$0.1005 \pm 0.0015$ & \footnotesize$3$ & \footnotesize$0.142\pm 0.001$\\
+\footnotesize$15$ & \footnotesize$0.1160 \pm 0.0010$ & \footnotesize$2$ & \footnotesize$0.152\pm 0.001$\\
+\footnotesize$16$ & \footnotesize$0.1315 \pm 0.0020$ & \footnotesize$4$ & \footnotesize$0.162\pm 0.001$\\
+\footnotesize$17$ & \footnotesize$0.1475 \pm 0.0015$ & \footnotesize$3$ & \footnotesize$0.172\pm 0.001$\\
+\footnotesize$18$ & \footnotesize$0.1660 \pm 0.0015$ & \footnotesize$3$ & \footnotesize$0.182\pm 0.001$\\
+\footnotesize$19$ & \footnotesize$0.1850 \pm 0.0015$ & \footnotesize$3$ & \footnotesize$0.192\pm 0.001$\\
+\footnotesize$20$ & \footnotesize$0.2045 \pm 0.0020$ & \footnotesize$4$ & \footnotesize$0.202\pm 0.001$\\ 
+\footnotesize$21$ & \footnotesize$0.2250 \pm 0.0005$ & \footnotesize$1$ & \footnotesize$0.212\pm 0.001$\\
+\footnotesize$22$ & \footnotesize$0.2465 \pm 0.0010$ & \footnotesize$2$ & \footnotesize$0.222\pm 0.001$\\
+\footnotesize$23$ & \footnotesize$0.2700 \pm 0.0010$ & \footnotesize$2$ & \footnotesize$0.232\pm 0.001$\\
+\footnotesize$24$ & \footnotesize$0.2935 \pm 0.0020$ & \footnotesize$4$ & \footnotesize$0.242\pm 0.001$\\
+\footnotesize$25$ & \footnotesize$0.3180 \pm 0.0015$ & \footnotesize$3$ & \footnotesize$0.252\pm 0.001$\\ 
+\footnotesize$26$ & \footnotesize$0.3435 \pm 0.0010$ & \footnotesize$2$ & \footnotesize$0.262\pm 0.001$\\
+\footnotesize$27$ & \footnotesize$0.3700 \pm 0.0020$ & \footnotesize$4$ & \footnotesize$0.272\pm 0.001$\\
+\footnotesize$28$ & \footnotesize$0.3975 \pm 0.0015$ & \footnotesize$3$ & \footnotesize$0.282\pm 0.001$\\
+\footnotesize$29$ & \footnotesize$0.4260 \pm 0.0010$ & \footnotesize$2$ & \footnotesize$0.292\pm 0.001$\\
+\footnotesize$30$ & \footnotesize$0.4550 \pm 0.0010$ & \footnotesize$2$ & \footnotesize$0.302\pm 0.001$\\
+\footnotesize$31$ & \footnotesize$0.4865 \pm 0.0015$ & \footnotesize$3$ & \footnotesize$0.312\pm 0.001$\\
+\footnotesize$32$ & \footnotesize$0.5180 \pm 0.0010$ & \footnotesize$2$ & \footnotesize$0.322\pm 0.001$\\
+\footnotesize$33$ & \footnotesize$0.5500 \pm 0.0015$ & \footnotesize$3$ & \footnotesize$0.332\pm 0.001$\\
+\footnotesize$34$ & \footnotesize$0.5835 \pm 0.0015$ & \footnotesize$3$ & \footnotesize$0.342\pm 0.001$\\
+\footnotesize$35$ & \footnotesize$0.6175 \pm 0.0010$ & \footnotesize$2$ & \footnotesize$0.352\pm 0.001$\\
+\footnotesize$36$ & \footnotesize$0.6520 \pm 0.0020$ & \footnotesize$4$ & \footnotesize$0.362\pm 0.001$\\
+\footnotesize$37$ & \footnotesize$0.6875 \pm 0.0015$ & \footnotesize$3$ & \footnotesize$0.372\pm 0.001$\\
+\footnotesize$38$ & \footnotesize$0.7245 \pm 0.0015$ & \footnotesize$3$ & \footnotesize$0.382\pm 0.001$\\
+\footnotesize$39$ & \footnotesize$0.7625 \pm 0.0015$ & \footnotesize$3$ & \footnotesize$0.392\pm 0.001$\\ 
+\footnotesize$40$ & \footnotesize$0.8020 \pm 0.0020$ & \footnotesize$4$ & \footnotesize$0.402\pm 0.001$\\
+\footnotesize$41$ & \footnotesize$0.8420 \pm 0.0010$ & \footnotesize$2$ & \footnotesize$0.412\pm 0.001$\\ 
+\footnotesize$42$ & \footnotesize$0.8835 \pm 0.0010$ & \footnotesize$2$ & \footnotesize$0.422\pm 0.001$\\ 
+\hline
+    \end{tabular}}
+  \caption{\begin{footnotesize}Sono riportati in Tabella le posizioni misurate $y_{mis}$ col rispettivo errore $\Delta y_{mis}$ ottenuto a partire dal $n^o pixel$, ed il tempo corrispettivo di ogni posizione, avente come errore la sensibilità del cronometro.\end{footnotesize}}
+  \label{Tabella Completa}
+\end{table}
+\newpage
 \section{Considerazioni preliminari}
 
 \subsection{Tempo di caduta}
-Il frame di inizio della caduta è il 49esimo, che corrisonde ad un tempo iniziale \textit{$t_i = (0.012\pm 0.001)\ s$}.
-Abbiamo poi terminato lo studio del moto al 459esimo fotogramma, che corrisponde all'istante \textit{$t_f = (0.422\pm 0.001)\ s$}, per un tempo totale di caduta \textit{$(t_f-t_i) = (0.410\pm 0.002)\ s$}. 
+Il frame di inizio della caduta è il 49\textit{esimo}, che corrisonde ad un tempo iniziale \textit{$t_i = (0.012\pm 0.001)\ s$}.
+Abbiamo poi terminato lo studio del moto al 459esimo fotogramma, che corrisponde all'istante \textit{$t_f = (0.422\pm 0.001)\ s$}, per un tempo totale di caduta \textit{$(t_f-t_i) = (0.410\pm 0.002)\ s$}.
 E' stato scelto come ultimo istante di caduta, quello che corrisponde all'ultima misura utile, appena precedente al rimbalzo della pallina sul banco di lavoro.\\
 \subsection{Stima dell'ordine di grandezza di $g$}
-Per avere una stima preliminare dell'ordine di grandezza dell'errore di misura su $g$, sono stati calcolati gli errori relativi di una posizione e di un tempo, centrali nelle misure. Siano $y_{mediano}=(0.2465\pm0.0010)$\ , e \ $t_{mediano}=(0.033\pm0.001)$ :
+Per avere una stima preliminare sull'ordine di grandezza dell'errore su $g$, sono stati calcolati gli errori relativi di una posizione e di un tempo centrali nelle misure. Siano $y_{mediano}=(0.2465\pm0.0010)$\ , e \ $t_{mediano}=(0.033\pm0.001)$ :
 \begin{equation*}
     \frac{\Delta g}{g}=\frac{\Delta y_{mediano}}{y_{mediano}}+2\cdot \frac{\Delta t_{mediano}}{t_{mediano}}
 \end{equation*}
@@ -138,41 +180,79 @@ $\displaystyle{\frac{\Delta y_{mis}}{y_{mis}}}$ e $\displaystyle{\frac{\Delta t}
    \Delta y^{'} = \left(\frac{2\Delta t}{t}\right)\cdot y + \Delta y_{mis}
 \end{equation*}
 
-\begin{table}[!h]
-    \centering
-    \begin{tabular}{|c|c|}
+\begin{longtable}{|c|c|}
     \hline
-    \multirow{2}{*}{\small Misura} 
-    &\multirow{2}{*}{\small$\Delta y^{'}$\ $(m)$} 
-     
-    \\
-    & 
-    \\
-    \hline
-    \hline
-       &   \\
-    \hline
-    \end{tabular}
-        \caption{Caption}
-        \label{tab:errore ymis corretto inizio}
-\end{table}
-
-
+    \multirow{2}{*}{\small Misura} &
+    \multirow{2}{*}{ \small$\Delta y^{'}$\ $(m)$} 
+    \\&\\
+\hline
+\hline
+\footnotesize$1$  & \footnotesize$0.001 $ \\
+\footnotesize$2$  & \footnotesize$0.001$ \\
+\footnotesize$3$  & \footnotesize$0.002 $ \\
+\footnotesize$4$  & \footnotesize$0.002 $ \\
+\footnotesize$5$  & \footnotesize$0.002 $ \\
+\footnotesize$6$  & \footnotesize$0.002 $ \\ 
+\footnotesize$7$  & \footnotesize$0.003 $ \\
+\footnotesize$8$  & \footnotesize$0.003 $ \\
+\footnotesize$9$  & \footnotesize$0.002 $ \\
+\footnotesize$10$ & \footnotesize$0.003 $ \\ 
+\footnotesize$11$ & \footnotesize$0.002 $ \\
+\hline
+\footnotesize$12$ & \footnotesize$0.003 $ \\    
+\footnotesize$13$ & \footnotesize$0.003 $ \\
+\footnotesize$14$ & \footnotesize$0.003 $ \\
+\footnotesize$15$ & \footnotesize$0.004 $ \\
+\footnotesize$16$ & \footnotesize$0.004 $ \\
+\footnotesize$17$ & \footnotesize$0.003 $ \\
+\footnotesize$18$ & \footnotesize$0.003 $ \\
+\footnotesize$19$ & \footnotesize$0.003 $ \\
+\footnotesize$20$ & \footnotesize$0.004 $ \\ 
+\footnotesize$21$ & \footnotesize$0.003 $ \\
+\footnotesize$22$ & \footnotesize$0.003 $ \\
+\footnotesize$23$ & \footnotesize$0.003 $ \\
+\footnotesize$24$ & \footnotesize$0.004 $ \\
+\footnotesize$25$ & \footnotesize$0.004 $ \\ 
+\footnotesize$26$ & \footnotesize$0.004 $ \\
+\footnotesize$27$ & \footnotesize$0.005 $ \\
+\footnotesize$28$ & \footnotesize$0.004 $ \\
+\footnotesize$29$ & \footnotesize$0.004 $ \\
+\footnotesize$30$ & \footnotesize$0.004 $ \\
+\footnotesize$31$ & \footnotesize$0.005 $ \\
+\footnotesize$32$ & \footnotesize$0.004 $ \\
+\footnotesize$33$ & \footnotesize$0.005 $ \\
+\footnotesize$34$ & \footnotesize$0.005 $ \\
+\footnotesize$35$ & \footnotesize$0.005 $ \\
+\footnotesize$36$ & \footnotesize$0.006 $ \\
+\footnotesize$37$ & \footnotesize$0.005 $ \\
+\footnotesize$38$ & \footnotesize$0.005 $ \\
+\footnotesize$39$ & \footnotesize$0.006 $ \\
+\footnotesize$40$ & \footnotesize$0.005 $ \\
+\footnotesize$41$ & \footnotesize$0.005 $ \\ 
+\footnotesize$42$ & \footnotesize$0.005 $ \\ 
+\hline
+\caption{\begin{footnotesize}
+            E' riportato in Tabella l'errore corretto sulla posizione $\Delta y^'$.
+         \end{footnotesize}}
+  
+  \label{Tabella Completa}
+\end{longtable}
+\newpage
 
 \section{Regressione di potenza} \label{Agg. misure xconcl}
-Il primo grafico realizzato con il programma di analisi dati \textit{Igor Pro}, è stato il grafico spazio-tempo, che dovrebbe seguire la legge oraria del pParagrafo \ref{sezione obbiettivi}: \textit{Obbiettivi} (traiettoria parabolica con posizione e velocità iniziali nulle): 
+Il primo grafico realizzato con il programma di analisi dati \textit{Igor Pro}, è stato il grafico spazio-tempo, che dovrebbe seguire la legge oraria del Paragrafo \ref{sezione obbiettivi}: \textit{Obbiettivi} (traiettoria parabolica con posizione $y(0)$ e velocità $v(0)$ iniziali nulle): 
 
     \begin{figure}[h!]
 \centering
 \includegraphics[width=170mm]{Immagini/Graph4 non comp.jpg}
-\caption{\textit{{\footnotesize{Sulle ordinate compaiono i valori numerici di \textit{y(t)}, associati ai relativi errori  \textit{$\Delta y^{'}$}, mentre sulle ascisse ci sono gli istanti di tempo \textit{t}}}}}
+\caption{\textit{{\footnotesize{Grafico $y_{mis}(t)$:  Sulle ordinate compaiono i valori delle poszioni misurate $y_{mis}$, associati ai relativi errori  \textit{$\Delta y^{'}$}, mentre sulle ascisse gli istanti di tempo \textit{t}}}}}
 \label{Grafico parabolico}
 \end{figure}
 
-I dati ottenuti tramite la regressione di potenza del secondo ordine (\textit{poli 3}), non sono compatibili con i valori teorici, fatta eccezione per $\displaystyle{\frac{g}{2}}$.
+I dati ottenuti tramite la regressione di potenza del secondo ordine (\textit{poli 3}), non sono compatibili con i valori attesi, fatta eccezione per $\displaystyle{\frac{g}{2}}$.
 
     \bigskip
-Visto che \textit{posizione iniziale} e \textit{velocità iniziale} non sono compatibili con i valori attesi, si è corretta l'incompatibilità, isolando a destra il termine in relazione  quadratica con il tempo, mentre a sinistra, si è ottenuta una nuova variabile $y_{new}$ in cui, la posizione $y$, è corretta dai termini $K_0$ e $ K_1\ t$, col rispettivo errore $\Delta y_{new}$: \\
+Visto che \textit{posizione iniziale} e \textit{velocità iniziale} non sono compatibili con i valori attesi si è corretta l'incompatibilità, isolando a destra il termine in relazione  quadratica con il tempo, mentre a sinistra, si è ottenuta una nuova variabile $y_{new}$ in cui, la posizione $y_{mis}$, è corretta dai termini $K_0$ e $ K_1\ t$, col rispettivo errore $\Delta y_{new}$: \\
 L'equazione diventa quindi:
 \begin{equation*}
 \begin{aligned}
@@ -188,25 +268,65 @@ L'errore su  $y_{new}$ è dato da
 \begin{equation*}
  \Delta y_{new} = \Delta y^{'} + \Delta K_0 + \sqrt{\left(\frac{\Delta K_1}{K_1}\right)^2 + \left(\frac{\Delta t}{t}\right)^2}
  \end{equation*}
-
-\begin{table}[!h]
-    \centering
-    \begin{tabular}{|c|c|}
+\\
+\\
+\\
+\begin{longtable}{|c|c|}
     \hline
-    \multirow{2}{*}{\small Misura} 
-    &\multirow{2}{*}{\small$y_{new} \pm\Delta y_{new}$\ $(m)$} 
-     
-    \\
-    & 
-    \\
+    \multirow{2}{*}{\small Misura} &
+    \multirow{2}{*}{ \small$y_{new}\pm \Delta y_{new}$\ $(m)$} 
+    \\&\\
+\hline
+\hline
+    \footnotesize $1$ & \footnotesize$0.001\pm0.002$\\ 
+    \footnotesize $2$ & \footnotesize$0.003\pm0.002 $\\ 
+    \footnotesize $3$ & \footnotesize$0.005\pm0.003 $\\
+    \footnotesize $4$ & \footnotesize$0.009\pm0.003 $\\
+    \footnotesize $5$ & \footnotesize$0.013\pm0.003 $\\
+    \footnotesize $6$ & \footnotesize$0.019\pm0.004$\\
+    \footnotesize $7$ & \footnotesize$0.025\pm0.004$\\
+    \footnotesize $8$ & \footnotesize$0.032\pm0.005$\\
+    \footnotesize $9$ & \footnotesize$0.041\pm0.004$\\  
+    \footnotesize $10$ & \footnotesize$0.051\pm0.005$\\
+    \footnotesize $11$ & \footnotesize$0.061\pm0.004$\\
+    \footnotesize $12$ &\footnotesize $0.072\pm0.006$\\
+    \footnotesize $13$ & \footnotesize$0.085\pm0.006$\\
+    \footnotesize $14$ & \footnotesize$0.099\pm0.006$\\
+    \footnotesize $15$ & \footnotesize$0.114\pm0.006$\\
+    \footnotesize $16$ & \footnotesize$0.129\pm0.006$\\
+    \footnotesize $17$ & \footnotesize$0.145\pm0.006$\\
+    \footnotesize $18$ & \footnotesize$0.163\pm0.006$\\
+    \footnotesize $19$ & \footnotesize$0.182\pm0.007$\\
+    \footnotesize $20$ & \footnotesize$0.201\pm0.007$\\
+    \footnotesize $21$ & \footnotesize$0.222\pm0.006$\\
+    \footnotesize $22$ & \footnotesize$0.243\pm0.007$\\ 
+    \footnotesize $23$ & \footnotesize$0.266\pm0.007$\\
+    \footnotesize $24$ & \footnotesize$0.290\pm0.008$\\
+    \footnotesize $25$ & \footnotesize$0.314\pm0.008$\\
+    \footnotesize $26$ & \footnotesize$0.339\pm0.008$\\
+    \footnotesize $27$ & \footnotesize$0.366\pm0.008$\\
+    \footnotesize $28$ & \footnotesize$0.393\pm0.009$\\
+    \footnotesize $29$ & \footnotesize$0.421\pm0.008$\\
+    \footnotesize $30$ & \footnotesize$0.450\pm0.009$\\
+    \footnotesize $31$ & \footnotesize$0.481\pm0.009$\\
+    \footnotesize $32$ & \footnotesize$0.513\pm0.009$\\
+    \footnotesize $33$ & \footnotesize$0.544\pm0.010$\\  
+    \footnotesize $34$ & \footnotesize$0.578\pm0.010$\\
+    \footnotesize $35$ & \footnotesize$0.612\pm0.010$\\
+    \footnotesize $36$ & \footnotesize$0.646\pm0.011$\\
+    \footnotesize $37$ & \footnotesize$0.681\pm0.011$\\
+    \footnotesize $38$ & \footnotesize$0.718\pm0.011$\\
     \hline
-    \hline
-       &   \\
-    \hline
-    \end{tabular}
-        \caption{Caption}
-        \label{tab:ynew con errore }
-\end{table}
+    \footnotesize $39$ & \footnotesize$0.756\pm0.011$\\
+    \footnotesize $40$ & \footnotesize$0.795\pm0.012$\\
+    \footnotesize $41$ & \footnotesize$0.835\pm0.011$\\
+    \footnotesize $42$ & \footnotesize$0.876\pm0.011$\\
+    \hline 
+  \caption{\begin{footnotesize}
+      Sono riportati in Tabella la posizione corretta $y_{new}$ ed il rispettivo errore $\Delta y_{new}$.
+  \end{footnotesize}}
+  \label{tab: ynew e errore}
+\end{longtable}
 
 Facendo una nuova regressione di potenza del secondo ordine utilizzando i nuovi dati, si ottene che le variabili $K_0'$, $K_1'$ e $K_2'$ sono tutte compatibili, come possiamo vedere in Figura \ref{Grafico parabolico}:
 \bigskip
@@ -214,10 +334,12 @@ Facendo una nuova regressione di potenza del secondo ordine utilizzando i nuovi 
 
     \begin{figure}[h!]
 \centering
-\includegraphics[width=170mm]{Immagini/Graph1.jpg}
-\caption{\textit{{\footnotesize{Grafico $y_{new}(t)$: sul'asse asse $y$ sono riportati i valori di $y_{new}$ coi rispettivi errori, sull'asse $x$ il tempo}}}}
+\includegraphics[width=170mm]{Immagini/Grafico t-2.jpg}
+\caption{\textit{{\footnotesize{Grafico $y_{new}(t)$:  Sulle ordinate compaiono i valori delle poszioni corrette $y_{new}$, associati ai relativi errori  \textit{$\Delta y_{new}$}, mentre sulle ascisse gli istanti di tempo \textit{t}}}}}
 \label{Grafico parabolico}
 \end{figure}
+  
+  
 
 
 
@@ -242,34 +364,75 @@ e come errore su $\ln({y_{new}})$:
 \begin{equation*}
     \Delta\ln{(y_{new})}=\frac{\Delta y_{new}}{y_{new}}\ 
 \end{equation*}\\
-
-\begin{table}[!h]
-    \centering
-    \begin{tabular}{|c|c|}
+\\
+\\
+\begin{longtable}{|c|c|c|}
     \hline
     \multirow{2}{*}{\small Misura} 
     &\multirow{2}{*}{\small$\ln({y_{new}}) \pm\Delta\ln{(y_{new})}$\ $(m)$} 
-     
+    &\multirow{2}{*}{\small$ln(t)\pm\Delta ln(t)$} 
     \\
-    & 
+    &&
     \\
     \hline
+    \footnotesize$1$ & \footnotesize$-7.00\pm2.00$  &\footnotesize$-4.422\pm 0.080$\\
+    \footnotesize$2$ & \footnotesize$-5.90\pm0.90$&\footnotesize$-3.821\pm 0.050$  \\
+    \footnotesize$3$ & \footnotesize$-5.30\pm0.60$&\footnotesize$-3.442\pm 0.030$  \\
+    \footnotesize$4$ & \footnotesize$-4.70\pm0.40$ &\footnotesize$-3.170\pm 0.020$ \\
+    \footnotesize$5$ & \footnotesize$-4.30\pm0.30$&\footnotesize$-2.966\pm 0.020$  \\
+    \footnotesize$6$ & \footnotesize$-3.90\pm0.20$&\footnotesize$-2.780\pm 0.020$  \\
+    \footnotesize$7$ & \footnotesize$-3.80\pm0.20$ &\footnotesize$-2.631\pm 0.010$ \\
+    \footnotesize$8$ & \footnotesize$-3.40\pm0.20$&\footnotesize$-2.501\pm 0.010$   \\
+    \footnotesize$9$ & \footnotesize$-3.20\pm0.10$&\footnotesize$-2.390\pm 0.010$   \\
+    \footnotesize$10$ & \footnotesize$-3.00\pm0.09$&\footnotesize$-2.282\pm 0.009$ \\
+    \footnotesize$11$ & \footnotesize$-2.80\pm0.07$&\footnotesize$-2.190\pm 0.008$ \\
+    \footnotesize$12$ & \footnotesize$-2.64\pm0.08$&\footnotesize$-2.103\pm 0.008$ \\
+    \footnotesize$13$ & \footnotesize$-2.47\pm0.07$&\footnotesize$-2.024\pm 0.007$ \\
+    \footnotesize$14$ & \footnotesize$-2.32\pm0.06$&\footnotesize$-1.951\pm 0.007$ \\
+    \footnotesize$15$ & \footnotesize$-2.17\pm0.05$&\footnotesize$-1.883\pm 0.006$ \\
+    \footnotesize$16$ & \footnotesize$-2.05\pm0.05$&\footnotesize$-1.820\pm 0.006$ \\
+    \footnotesize$17$ & \footnotesize$-1.93\pm0.04$&\footnotesize$-1.760\pm 0.005$ \\
+    \footnotesize$18$ & \footnotesize$-1.81\pm0.04$&\footnotesize$-1.703\pm 0.005$ \\
+    \footnotesize$19$ & \footnotesize$-1.70\pm0.04$&\footnotesize$-1.650\pm 0.005$ \\
+    \footnotesize$20$ & \footnotesize$-1.60\pm0.04$&\footnotesize$-1.609\pm 0.005$ \\
+    \footnotesize$21$ & \footnotesize$-1.51\pm0.03$&\footnotesize$-1.551\pm 0.005$ \\
+    \footnotesize$22$ & \footnotesize$-1.41\pm0.03$&\footnotesize$-1.515\pm 0.004$ \\
+    \footnotesize$23$ & \footnotesize$-1.32\pm0.03$&\footnotesize$-1.461\pm 0.004$ \\
+    \footnotesize$24$ & \footnotesize$-1.24\pm0.03$&\footnotesize$-1.429\pm 0.004$ \\
+    \footnotesize$25$ & \footnotesize$-1.16\pm0.03$&\footnotesize$-1.388\pm 0.004$ \\
+    \footnotesize$26$ & \footnotesize$-1.08\pm0.02$&\footnotesize$-1.349\pm 0.004$ \\
+    \footnotesize$27$ & \footnotesize$-1.01\pm0.02$&\footnotesize$-1.302\pm 0.004$ \\
+    \footnotesize$28$ & \footnotesize$-0.93\pm0.02$&\footnotesize$-1.276\pm 0.003$ \\
+    \footnotesize$29$ & \footnotesize$-0.86\pm0.02$&\footnotesize$-1.231\pm 0.003$ \\
+    \footnotesize$30$ & \footnotesize$-0.80\pm0.02$&\footnotesize$-1.207\pm 0.003$ \\
+    \footnotesize$31$ & \footnotesize$-0.73\pm0.02$&\footnotesize$-1.165\pm 0.003$ \\
+    \footnotesize$32$ & \footnotesize$-0.67\pm0.02$&\footnotesize$-1.133\pm 0.003$ \\
+    \footnotesize$33$ & \footnotesize$-0.61\pm0.02$&\footnotesize$-1.103\pm 0.003$ \\
+    \footnotesize$34$ & \footnotesize$-0.55\pm0.02$&\footnotesize$-1.073\pm 0.003$ \\
+    \footnotesize$35$ & \footnotesize$-0.50\pm0.02$&\footnotesize$-1.044\pm 0.003$\\
+    \footnotesize$36$ & \footnotesize$-0.44\pm0.02$&\footnotesize$-1.026\pm 0.003$ \\
+    \footnotesize$37$ & \footnotesize$-0.38\pm0.02$&\footnotesize$-0.990\pm 0.003$ \\
+    \footnotesize$38$ & \footnotesize$-0.33\pm0.02$&\footnotesize$-0.962\pm 0.003$ \\
     \hline
-       &   \\
     \hline
-    \end{tabular}
-        \caption{Caption}
+    \footnotesize$39$ & \footnotesize$-0.28\pm0.02$&\footnotesize$-0.940\pm 0.002$ \\
+    \footnotesize$40$ & \footnotesize$-0.23\pm0.02$&\footnotesize$-0.911\pm 0.002$ \\ 
+    \footnotesize$41$ & \footnotesize$-0.18\pm0.01$&\footnotesize$-0.890\pm 0.002$ \\
+    \footnotesize$42$ & \footnotesize$-0.13\pm0.01$&\footnotesize$-0.863\pm 0.002$ \\
+    \hline
+        \caption{\begin{footnotesize}
+            Sono riportati in Tabella il logartimo della posizione $ln(y_{new})$ e il logaritmo del tempo $ln(t)$ con i rispettivi errori.
+        \end{footnotesize}}
         \label{tab:logaritmi con errore}
-\end{table}
-
+\end{longtable}
 \bigskip
 
 
  Tramite \textit{Igor Pro} si è ottenuto il seguente grafico:\\
    \begin{figure}[h!]
 \centering
-\includegraphics[width=170mm]{Immagini/GraphLn.jpg}
-\caption{\textit{{\footnotesize{Grafico $\ln{(y_{new})}(\ln{t})$: sul'asse asse $y$ sono riportati i valori di $\ln{(y_{new})}$ coi rispettivi errori, sull'asse $x$ il $\ln{(t)}$}}}}
+\includegraphics[width=170mm]{Immagini/GraficoLn.jpg}
+\caption{\textit{{\footnotesize{Grafico $\ln{(y_{new})}(\ln{(t)})$: sul'asse asse $y$ sono riportati i valori di $\ln{(y_{new})}$ coi rispettivi errori, sull'asse $x$ il $\ln{(t)}$}}}}
 \label{Grafico logaritmico}
 \end{figure}
 
@@ -281,39 +444,87 @@ Il valore di $b$ è compatibile col valore $2$, esponente del tempo nella formul
 
 \section{Calcolo dell'accelerazione di gravità}
 
-A questo punto, dopo aver verificato che la posizione iniziale e finale sono approssimabili a zero e che la posizione è in relazione quadrtica con il tempo, si può creare un grafico lineare con i valori $y_{new}$, coi rispettivi errori,sull'asse delle ordinate, e del tempo al quadrato su quello delle ascisse, così da essere in grado di ricavare il valore dell'accelerazione di gravità a partire dalla pendenza della retta ottenuta:
+A questo punto, dopo aver verificato che la posizione iniziale e finale sono approssimabili a zero e che la posizione è in relazione quadrtica con il tempo, si può creare un grafico lineare con i valori $y_{new}$, coi rispettivi errori, sull'asse delle ordinate, e del tempo al quadrato su quello delle ascisse, così da essere in grado di ricavare il valore dell'accelerazione di gravità a partire dalla pendenza della retta ottenuta. I dati utilizzati sono riportati nella seguente tabella:
 
+\bigskip
 
-\begin{table}[!h]
-    \centering
-    \begin{tabular}{|c|c|c|}
-    \hline
+\bigskip
+
+\bigskip
+\begin{table}[h!]
+
+\centerline{\begin{tabular}{|c|c|c|}
+   \hline
+   
     \multirow{2}{*}{\small Misura} 
     &\multirow{2}{*}{\small $y_{new}\pm\Delta y_{new}$\ $(m)$}
     &\multirow{2}{*}{\small $t^2\pm \Delta t^2 (s)$}
-     
     \\
     & &
     \\
     \hline
+    \footnotesize $1$ & \footnotesize$0.001\pm0.002$ & \footnotesize$0.000\pm0.002$\\ 
+    \footnotesize $2$ & \footnotesize$0.003\pm0.002 $ & \footnotesize$0.001\pm0.002$\\ 
+    \footnotesize $3$ & \footnotesize$0.005\pm0.003 $ & \footnotesize$0.001\pm0.002$\\
+    \footnotesize $4$ & \footnotesize$0.009\pm0.003 $ & \footnotesize$0.002\pm0.002$\\
+    \footnotesize $5$ & \footnotesize$0.013\pm0.003 $ & \footnotesize$0.003\pm0.002$\\
+    \footnotesize $6$ & \footnotesize$0.019\pm0.004 $ & \footnotesize$0.004\pm0.002$\\
+    \footnotesize $7$ & \footnotesize$0.025\pm0.004 $ & \footnotesize$0.005\pm0.002$\\
+    \footnotesize $8$ & \footnotesize$0.032\pm0.005 $ & \footnotesize$0.007\pm0.002$\\
+    \footnotesize $9$ & \footnotesize$0.041\pm0.004 $ & \footnotesize$0.008\pm0.002$\\  
+    \footnotesize $10$ & \footnotesize$0.051\pm0.005$ & \footnotesize$0.010\pm0.002$\\
+    \footnotesize $11$ & \footnotesize$0.061\pm0.004$ & \footnotesize$0.013\pm0.002$\\
+    \footnotesize $12$ &\footnotesize $0.072\pm0.006$ & \footnotesize$0.015\pm0.002$\\
+    \footnotesize $13$ & \footnotesize$0.085\pm0.006$ & \footnotesize$0.017\pm0.002$\\
+    \footnotesize $14$ & \footnotesize$0.099\pm0.006$ & \footnotesize$0.020\pm0.002$\\
+    \footnotesize $15$ & \footnotesize$0.114\pm0.006$ & \footnotesize$0.023\pm0.002$\\
+    \footnotesize $16$ & \footnotesize$0.129\pm0.006$ & \footnotesize$0.026\pm0.002$\\
+    \footnotesize $17$ & \footnotesize$0.145\pm0.006$ & \footnotesize$0.030\pm0.002$\\
+    \footnotesize $18$ & \footnotesize$0.163\pm0.006$ & \footnotesize$0.033\pm0.002$\\
+    \footnotesize $19$ & \footnotesize$0.182\pm0.007$ & \footnotesize$0.037\pm0.002$\\
+    \footnotesize $20$ & \footnotesize$0.201\pm0.007$ & \footnotesize$0.041\pm0.002$\\
+    \footnotesize $21$ & \footnotesize$0.222\pm0.006$ & \footnotesize$0.046\pm0.002$\\
+    \footnotesize $22$ & \footnotesize$0.243\pm0.007$ & \footnotesize$0.049\pm0.002$\\ 
+    \footnotesize $23$ & \footnotesize$0.266\pm0.007$ & \footnotesize$0.054\pm0.002$\\
+    \footnotesize $24$ & \footnotesize$0.290\pm0.008$ & \footnotesize$0.059\pm0.002$\\
+    \footnotesize $25$ & \footnotesize$0.314\pm0.008$ & \footnotesize$0.064\pm0.002$\\
+    \footnotesize $26$ & \footnotesize$0.339\pm0.008$ & \footnotesize$0.069\pm0.002$\\
+    \footnotesize $27$ & \footnotesize$0.366\pm0.008$ & \footnotesize$0.074\pm0.002$\\
+    \footnotesize $28$ & \footnotesize$0.393\pm0.009$ & \footnotesize$0.080\pm0.002$\\
+    \footnotesize $29$ & \footnotesize$0.421\pm0.008$ & \footnotesize$0.085\pm0.002$\\
+    \footnotesize $30$ & \footnotesize$0.450\pm0.009$ & \footnotesize$0.091\pm0.002$\\
+    \footnotesize $31$ & \footnotesize$0.481\pm0.009$ & \footnotesize$0.097\pm0.002$\\
+    \footnotesize $32$ & \footnotesize$0.513\pm0.009$ & \footnotesize$0.104\pm0.002$\\
+    \footnotesize $33$ & \footnotesize$0.544\pm0.010$ & \footnotesize$0.110\pm0.002$\\  
+    \footnotesize $34$ & \footnotesize$0.578\pm0.010$ & \footnotesize$0.117\pm0.002$\\
+    \footnotesize $35$ & \footnotesize$0.612\pm0.010$ & \footnotesize$0.124\pm0.002$\\
+    \footnotesize $36$ & \footnotesize$0.646\pm0.011$ & \footnotesize$0.131\pm0.002$\\
+    \footnotesize $37$ & \footnotesize$0.681\pm0.011$ & \footnotesize$0.138\pm0.002$\\
+    \footnotesize $38$ & \footnotesize$0.718\pm0.011$ & \footnotesize$0.146\pm0.002$\\
+    \footnotesize $39$ & \footnotesize$0.756\pm0.011$ & \footnotesize$0.154\pm0.002$\\
+    \footnotesize $40$ & \footnotesize$0.795\pm0.012$ & \footnotesize$0.162\pm0.002$\\
+    \footnotesize $41$ & \footnotesize$0.835\pm0.011$ & \footnotesize$0.170\pm0.002$\\
+    \footnotesize $42$ & \footnotesize$0.876\pm0.011$ & \footnotesize$0.178\pm0.002$\\
     \hline
-       & &  \\
-    \hline
-    \end{tabular}
-        \caption{Caption}
-        \label{tab:logaritmi con errore}
+    \end{tabular}}
+        \caption{\begin{footnotesize}
+            Sono riportati in Tabella la posizione $y_{new}$ ed il tempo al quadrato $t^2$ con i rispettivi errori.
+        \end{footnotesize}}
+        \label{tab:posizione corr tempo quadro non comp}
 \end{table}
 
 
+\newpage
+
+Il grafico ottenuto è il seguente:
+
   \begin{figure}[h!]
 \centering
-\includegraphics[width=170mm, height=80mm]{Immagini/Graph5 non comp.jpg}
+\includegraphics[width=170mm, height=80mm]{Immagini/Grafico t^2-1.jpg}
 \caption{\textit{{\footnotesize{Grafico $y_{new}(t^2)$: sull'asse asse $y$ sono riportati i valori di $y_{new}$ coi rispettivi errori, sull'asse $x$ il tempo al quadrato}}}}
 \label{Grafico logaritmico}
 \end{figure}
 
-
-\newpage
 
 
 Dove $\displaystyle b=\frac{1}{2}\ g=(4.9301\pm 0.0216)$, da cui:
@@ -324,20 +535,24 @@ e l'errore è
 \begin{equation*}
     \Delta g=2\ \Delta b=0.0432\approx 0.04 \ \frac{m}{s^2}
 \end{equation*}
+
+\addvspace{1.5cm}
 Quindi l'accelerazione di gravità ottenuta sarebbe $g=(9.86\pm0.04)$ $\frac{m}{s^2}$.
 Il valore $g$, ottenuto a partire da $b$ , non risulta compatibile col valore standard, poichè $|g-g_{tab}|> |\Delta g-\Delta g_{tab}|$. Questo è dovuto al fatto che ci potrebbero essere errori dovuti alla configurazione e alla qualità video dell'esperimento, che non erano sotto il nostro controllo.
 
-\addvspace{1.5cm}
+\addvspace{10cm}
 Per queste ragioni si è passati a due deviazioni standard con una confidenza del 95\%, e il grafico ottenuto è il seguente:
+
+\addvspace{1.5cm}
   \begin{figure}[h!]
 \centering
-\includegraphics[width=170mm, height=80mm]{Immagini/Graphy_t^2.jpg}
+\includegraphics[width=170mm, height=80mm]{Immagini/Graficot^2-2.jpg}
 \caption{\textit{{\footnotesize{Grafico $y_{new}(t^2)$: sull'asse asse $y$ sono riportati i valori di $y_{new}$ coi rispettivi errori, sull'asse $x$ il tempo al quadrato}}}}
 \label{Grafico compatibile y(t^2)}
 \end{figure}
 
 
-\newpage
+
 
 
 Si è infine passati al calcolo di $g$, utilizzando come errore su $b$ il nuovo valore $\Delta b=0.0436$:
@@ -365,12 +580,12 @@ Confrontiamo questo risultato col dato dell'accelerazione di gravità tabulato $
 
 Visto che $|g-g_{tab}|<< |\Delta g-\Delta g_{tab}|$, il valore trovato è compatibile col valore standard.
 
-
+\newpage
 \section{Conclusioni}
 La prima difficoltà è stata riscontrata nello stabilire tramite il programa di tracciamento le \\
 distanze metriche del video perchè, nonostante l'asta presentasse ogni 10cm un segno, questi erano tutt'altro che sottili, e ciò ha contribuito alle non compatibilità riscontrate successivamente. 
 
-Anche in prossimità della fine della caduta è stato difficile prendere dei dati accurati, perchè non era chiaro quando la sfera colpisse il tavolo, quindi, per evitare di misurare ad urto avvenuto, abbiamo preso l'ultimo dato quando eravamo sicuri che fosse ancora in moto.
+Anche in prossimità della fine della caduta è stato difficile prendere dei dati accurati, perchè non era chiaro quando la sfera colpisse il tavolo, quindi, per evitare di misurare ad urto avvenuto, si è effettuata l'ultima misura quando si era sicuri che fosse ancora in moto.
 
 Infatti, nella prima regressione lineare, nè la velocità iniziale nè l'ordinata iniziale sono compatibili con i valori attesi di 0. Sono stati resi compatibili correggendole, come mostrato nel paragrafo \ref{Agg. misure xconcl}: \textit{Regressione di potenza}.\\
 
@@ -379,83 +594,18 @@ Per quanto riguarda la misura di $g$, inizialmente si era calcolato un errore re
 \begin{equation*}
     \frac{\Delta g}{g}=\frac{0.09}{9.86}=0.9\%
 \end{equation*}
-risultato che differisce di un ordine di grandezza dal primo. Questo può essere dovuto al fatto che abbiamo cosiderato un errore specifico per ogni misura, in base alla definizione del frame, quindi alcune misure risultano più precise di altre. Inoltre sono state attuate le correzioni citate prima, per rendere compatibili  la posizione iniziale e la velocità iniziale. \\
+risultato che differisce di un ordine di grandezza dal primo. Questo può essere dovuto al fatto che si è cosiderato un errore specifico per ogni misura, in base alla definizione del frame, quindi alcune misure risultano più precise di altre. Inoltre sono state attuate le correzioni citate prima, per rendere compatibili  la posizione iniziale e la velocità iniziale. \\
 
 
-Successivamente si è effettuata una regressione di potenza sulla relazione che intercorre tra la posizione e tempo. L'esponente risulta pienamente compatibile con il valore atteso di 2, calcolanto con una deviazione standard.
+Successivamente si è effettuata una regressione di potenza sulla relazione che intercorre tra la posizione e tempo. L'esponente risulta pienamente compatibile con il valore atteso di 2, calcolato con una deviazione standard.
 Per il calcolo di $g$, invece, si è usata una regressione lineare tra posizione e tempo al quadrato, per la quale è stato necessario aumentare la confidenza al 95\% (2 deviazioni standard) perchè il valore di $g$ ottenuto inizialmente non era compatibile. \\
 
-Nonostante tutti i risultati, alla fine, siano corretti, avremmo potuto migliorare le nostre stime agendo sulla calibrazione dello strumento di misura su Tracker, che  sicuramente è la fonte di errore maggiore. Probabimente considerando la distanza tra più di 2 segni sulla sbarra (ad esempio calibrando su $30cm$ invece di $10cm$), l'errore effettivo (non quello stimato) sarebbe calato e quindi avremmo avuto misure più attendibili.
+Nonostante tutti i risultati, alla fine, siano corretti, si sarebbero potute migliorare le stime agendo sulla calibrazione dello strumento di misura su Tracker, che  probabilmente è la fonte di errore maggiore. Considerando la distanza tra più di 2 segni sulla sbarra (ad esempio calibrando su $30cm$ invece di $10cm$), l'errore effettivo (non quello stimato) sarebbe calato e quindi si sarebbero avute misure più attendibili.
 Inoltre, date le incompatibilità riscontrate, e anche l'errore molto piccolo risultante su $g$, può essere che gli errori sulle singole misure fossero stati sottostimati.
 
 
 
 
-\newpage
 
-\section{Tabella completa}
-\begin{table}[!htb]
-    \centering
-     
-    \centerline{\begin{tabular}{|c|c|c|c|c|c|c|c|}
-    \hline
-    \multirow{2}{*}{\small Misura} &\multirow{2}{*}{ \small$y_{mis}\pm \Delta y_{mis}$\ $(m)$}
-    &\multirow{2}{*}{\small$n^o pixel $}
-    &\multirow{2}{*}{\small$t$\ $(s)$} 
-    &\multirow{2}{*}{\small$\Delta y^{'}\ (m) $}
-    &\multirow{2}{*}{\small$y_{new}\pm\Delta y_{new}$\ $(m)$}
-    &\multirow{2}{*}{\small$\ln({y_{new}}) \pm\Delta\ln{(y_{new})}$\ $(m)$}
-    &\multirow{2}{*}{\small$\ln{(t)}$\ $(s)$}\\ 
-    
-    &&&&&&&\\
-\hline
-\hline
-    \footnotesize $1$ &\footnotesize $0.0001\pm$ & $2$& &&&&\\
-    \footnotesize $2$& \footnotesize$0.0020$  & $2$& &&&&\\
-    \footnotesize $3 $& \footnotesize$0.0045$ & $3$& &&&&\\
-    \footnotesize $4 $& \footnotesize$0.0090$ & $3$& &&&&\\
-    \footnotesize $5 $& \footnotesize$0.0130$ & $3$& &&&&\\
-    \footnotesize $6 $&\footnotesize$0.0195$  & $3$& &&&&\\
-    \footnotesize $7 $&\footnotesize$0.0250$  & $4$& &&&&\\
-    \footnotesize $8 $& \footnotesize$0.0325$ & $4$& &&&&\\
-    \footnotesize $9 $&\footnotesize$0.0420$  & $3$& &&&&\\
-    \footnotesize $10 $& \footnotesize$0.0515$& $3$& &&&&\\
-    \footnotesize $11 $& \footnotesize$0.0620$& $2$& &&&&\\ 
-    \footnotesize $12 $&\footnotesize $0.0730$& $4$& &&&&\\
-    \footnotesize $13 $& \footnotesize$0.0865$& $4$& &&&&\\
-    \footnotesize $14 $& \footnotesize$0.1005$& $3$& &&&&\\
-    \footnotesize $15 $& \footnotesize$0.1160$& $2$& &&&&\\
-    \footnotesize $16 $& \footnotesize$0.1315$& $4$& &&&&\\
-    \footnotesize $17 $& \footnotesize$0.1475$& $3$& &&&&\\
-    \footnotesize $18 $& \footnotesize$0.1660$& $3$& &&&&\\
-    \footnotesize $19 $& \footnotesize$0.1850$& $3$& &&&&\\
-    \footnotesize $20 $& \footnotesize$0.2045$& $4$& &&&&\\
-    \footnotesize $21 $&\footnotesize $0.2250$& $1$& &&&&\\
-    \footnotesize $22 $& \footnotesize$0.2465$& $2$& &&&&\\
-    \footnotesize $23 $& \footnotesize$0.2700$& $2$& &&&&\\
-    \footnotesize $24 $& \footnotesize$0.2935$& $4$& &&&&\\
-    \footnotesize $25 $& \footnotesize$0.3180$& $3$& &&&&\\
-    \footnotesize $26 $& \footnotesize$0.3435$& $2$& &&&&\\
-    \footnotesize $27 $& \footnotesize$0.3700$& $4$& &&&&\\
-    \footnotesize $28 $& \footnotesize$0.3975$& $3$& &&&&\\
-    \footnotesize $29 $& \footnotesize$0.4260$& $2$& &&&&\\
-    \footnotesize $30 $& \footnotesize$0.4550$& $2$& &&&&\\ 
-    \footnotesize $31 $& \footnotesize$0.4865$& $3$& &&&&\\
-    \footnotesize $32 $& \footnotesize$0.5180$& $2$& &&&&\\
-    \footnotesize $33 $& \footnotesize$0.5500$& $3$& &&&&\\
-    \footnotesize $34 $& \footnotesize$0.5835$& $3$& &&&&\\
-    \footnotesize $35 $& \footnotesize$0.6175$& $2$& &&&&\\
-    \footnotesize $36 $& \footnotesize$0.6520$& $4$& &&&&\\
-    \footnotesize $37 $& \footnotesize$0.6875$& $3$& &&&&\\
-    \footnotesize $38 $& \footnotesize$0.7245$& $3$& &&&&\\
-    \footnotesize $39 $& \footnotesize$0.7625$& $3$& &&&&\\
-    \footnotesize $40 $& \footnotesize$0.8020$& $4$& &&&&\\
-    \footnotesize $41 $&\footnotesize $0.8420$& $2$& &&&&\\
-    \footnotesize $42$&\footnotesize $0.8835$ & $2$& &&&&\\
-\hline
-\end{tabular}}
-  \caption{Caption}
-  \label{Tabella Completa}
-\end{table}
 
 \end{document}
