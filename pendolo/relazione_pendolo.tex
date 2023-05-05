@@ -75,8 +75,22 @@ Invece essendo $10T$ nell'ordine di 10 secondi, l'errore relativo scende all'1\%
 È importante anche avere $L > 1m$, in modo che le oscillazioni non siano troppo brevi, sempre per tenere basso l'errore relativo.
 
 
-\section{Analisi preliminare}
-Fissati L, g e $\Phi_{max}$, va verificato che le 30 misure di $10T$ prese siano una popolazione gaussiana, per poter eseguire le regressioni lineari e di potenza che serviranno successivamente. Riportiamo i dati in tabella. 
+\section{Misura di T}
+\subsection{Stima dell'ordine di grandezza dell'errore di T}
+Il cronometro con sui si sono registrati i tempi, ha una sensibilità al centesimo di secondo, ed inoltre i tempi di reazione umani sono dell'ordine del decimo di secondo. L'ordine di grandezza del periodo del pendolo per piccole oscillazioni, considerando un filo di lunghezza $L\approx 1,00\ m$, e usando $g_{tab}=9.80665 \ m/s^2$, è
+\begin{equation*}
+    T= 2\pi\ \sqrt{\frac{L}{g_{tab}}}\approx 2.00\ s
+\end{equation*}
+Per cui $T\approx(2.0\pm 0.1)\ s$ dal quale si calcola un errore relativo sul periodo pari a
+ \begin{equation*}
+     \frac{\Delta T}{T}=5.0\%
+ \end{equation*}
+Poichè il moto è periodico, si può sfruttare il fatto che misurando $10T\approx(20.0\pm 0.1)\ s$, l'errore relativo sul periodo diventerebbe $\displaystyle \frac{\Delta T}{T} = 0.5\% $
+\newpage
+
+\subsection{Distribuzione Gaussiana}
+Si verifica che le misure di $10T$ seguano effettivamente una distribuzione Gaussiana, effettuando 30 misure con la stessa massa $M=0.0222 \ kg$.
+Fissati $L=(1.097\pm 0.002)\ m$ , $g_{tab}=(9.80665\pm 0.00001)\ m/s^2$ e $\Phi_{max}=8^o$ si riportano i dati nella seguente tabella: 
 
 
 \begin{table}[!htb]
@@ -86,13 +100,13 @@ Fissati L, g e $\Phi_{max}$, va verificato che le 30 misure di $10T$ prese siano
             \hline
             $10T$ $(s)$&$N$\\
             \hline
-            $20.67$ & $1$\\
-            $20.72$ & $1$\\
-            $20.76$ & $1$\\
-            $20.87$ & $1$\\
-            $20.93$ & $1$\\
-            $21.00$ & $2$\\
-            $21.07$ & $1$\\
+            $20.67\pm 0.01$ & $1$\\
+            $20.72\pm 0.01$ & $1$\\
+            $20.76\pm 0.01$ & $1$\\
+            $20.87\pm 0.01$ & $1$\\
+            $20.93\pm 0.01$ & $1$\\
+            $21.00\pm 0.01$ & $2$\\
+            $21.07\pm 0.01$ & $1$\\
             \hline
         \end{tabular}
     \end{minipage}
@@ -100,15 +114,15 @@ Fissati L, g e $\Phi_{max}$, va verificato che le 30 misure di $10T$ prese siano
     \centering
         \begin{tabular}{|c|c|}
             \hline
-            $10T$ $(s)$&$N$\\
-            \hline
-            $21.09$ & $2$\\
-            $21.13$ & $2$\\
-            $21.14$ & $1$\\
-            $21.16$ & $2$\\
-            $21.20$ & $1$\\
-            $21.25$ & $2$\\
-            $21.26$ & $3$\\
+            
+            $21.09\pm 0.01$ & $2$\\
+            $21.13\pm 0.01$ & $2$\\
+            $21.14\pm 0.01$ & $1$\\
+            $21.16\pm 0.01$ & $2$\\
+            $21.20\pm 0.01$ & $1$\\
+            $21.25\pm 0.01$ & $2$\\
+            $21.26\pm 0.01$ & $3$\\
+            $21.27\pm 0.01$ & $1$\\
             \hline
         \end{tabular}
     \end{minipage}
@@ -116,21 +130,66 @@ Fissati L, g e $\Phi_{max}$, va verificato che le 30 misure di $10T$ prese siano
     \centering
         \begin{tabular}{|c|c|}
             \hline
-            $10T$ $(s)$&$N$\\
+            
+            
+            $21.33\pm 0.01$ & $2$\\
+            $21.42\pm 0.01$ & $1$\\
+            $21.43\pm 0.01$ & $1$\\
+            $21.52\pm 0.01$ & $2$\\
+            $21.59\pm 0.01$ & $1$\\
+            $21.78\pm 0.01$ & $1$\\
+            &\\
             \hline
-            $21.27$ & $1$\\
-            $21.33$ & $2$\\
-            $21.42$ & $1$\\
-            $21.43$ & $1$\\
-            $21.52$ & $2$\\
-            $21.59$ & $1$\\
-            $21.78$ & $1$\\
+            \hline
+            TOT & 30\\
             \hline
         \end{tabular}
+        \label{TAB:1}
     \end{minipage} 
 \end{table}
+\begin{center}
+   \href{Tabella 1} : \textit{\footnotesize{Nella prima colonna sono riportati i valori registrati di 10T,
+         nella seconda la frequenza delle singole misure.}}
+\end{center}
 
-Successivamente si  verificato se fossero una poolazione gaussiana, ...... FINISCI !!!
+
+\addvspace{3cm}
+
+Tramite l'uso della calcolatrice si sono ottenuti i seguenti valori\begin{itemize}
+
+\bigskip
+
+    \item\phantom{asd} Valore medio:\phantom{aaaaaaaaa.aaaaa}
+          $\overline{x}=21.18633$
+\\
+      
+    \item\phantom{asd} Deviazione standard:\phantom{aaaaaaaa}
+        $\sigma_x=0.2537$
+\\
+
+     \item\phantom{asd} Numero di vincoli:\phantom{aaaaaaaaaaa}$\upsilon=1$
+\\
+
+ \item\phantom{asd} Test del chi quadro:\phantom{aaaaaaaaaa}$\chi^2=0.19577$
+    
+    
+\end{itemize}
+
+\newpage
+
+Suddividendo i dati in 4 classi, si ottiene il seguente istogramma:
+
+    \begin{figure}[h!]
+\centering
+\includegraphics[width=170mm]{Immagini/Histogram Pendolo.jpg}
+\caption{\textit{{\footnotesize{L'Istogramma presenta 4 classi, ciascuna con la relativa frequenza (asse $y$) }}}}
+\label{Grafico parabolico}
+\end{figure}
+
+
+
+La \textit{confidenza} ottenuta, consultando la relativa tabella, è compresa tra il 25\% ed il 50\%, quindi i valori di $10T$ misurati sono compatibili con un campione Gaussiano.
+
 
 
 
@@ -366,4 +425,3 @@ Con i valori: $A = (0.3052 \pm 0.0011)m$, $B = (0.407 \pm 0.004)\frac{m}{kg}$, $
 
 
 \end{document}
-
