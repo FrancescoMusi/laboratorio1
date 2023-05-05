@@ -77,7 +77,7 @@ Invece essendo $10T$ nell'ordine di 10 secondi, l'errore relativo scende all'1\%
 
 \section{Misura di T}
 \subsection{Stima dell'ordine di grandezza dell'errore di T}
-Il cronometro con sui si sono registrati i tempi, ha una sensibilità al centesimo di secondo, ed inoltre i tempi di reazione umani sono dell'ordine del decimo di secondo. L'ordine di grandezza del periodo del pendolo per piccole oscillazioni, considerando un filo di lunghezza $L\approx 1,00\ m$, e usando $g_{tab}=9.80665 \ m/s^2$, è
+Il cronometro con sui si sono registrati i tempi, ha una sensibilità al centesimo di secondo, ed inoltre i tempi di reazione umani sono dell'ordine del decimo di secondo. L'ordine di grandezza del periodo del pendolo per piccole oscillazioni, considerando un filo di lunghezza $L\approx (1,000\pm 0.001)\ m$, e usando $g_{tab}=(9.80665\pm0.00001) \ m/s^2$, è
 \begin{equation*}
     T= 2\pi\ \sqrt{\frac{L}{g_{tab}}}\approx 2.00\ s
 \end{equation*}
@@ -89,7 +89,7 @@ Poichè il moto è periodico, si può sfruttare il fatto che misurando $10T\appr
 \newpage
 
 \subsection{Distribuzione Gaussiana}
-Si verifica che le misure di $10T$ seguano effettivamente una distribuzione Gaussiana, effettuando 30 misure con la stessa massa $M=0.0222 \ kg$.
+Si verifica che le misure di $10T$ seguano effettivamente una distribuzione Gaussiana, effettuando $N=30$ misure con la stessa massa $M=0.0222 \ kg$.
 Fissati $L=(1.097\pm 0.002)\ m$ , $g_{tab}=(9.80665\pm 0.00001)\ m/s^2$ e $\Phi_{max}=8^o$ si riportano i dati nella seguente tabella: 
 
 
@@ -145,11 +145,11 @@ Fissati $L=(1.097\pm 0.002)\ m$ , $g_{tab}=(9.80665\pm 0.00001)\ m/s^2$ e $\Phi_
             \hline
         \end{tabular}
         \label{TAB:1}
+        %\caption{aa}
     \end{minipage} 
 \end{table}
 \begin{center}
-   \href{Tabella 1} : \textit{\footnotesize{Nella prima colonna sono riportati i valori registrati di 10T,
-         nella seconda la frequenza delle singole misure.}}
+   \href{Tabella 1} : \textit{\footnotesize{Nella prima colonna sono riportati i valori registrati di 10T, nella seconda la frequenza delle singole misure.}}
 \end{center}
 
 
@@ -160,7 +160,7 @@ Tramite l'uso della calcolatrice si sono ottenuti i seguenti valori\begin{itemiz
 \bigskip
 
     \item\phantom{asd} Valore medio:\phantom{aaaaaaaaa.aaaaa}
-          $\overline{x}=21.18633$
+          $\overline{x}=\overline{10T}=21.18633$
 \\
       
     \item\phantom{asd} Deviazione standard:\phantom{aaaaaaaa}
@@ -172,8 +172,13 @@ Tramite l'uso della calcolatrice si sono ottenuti i seguenti valori\begin{itemiz
 
  \item\phantom{asd} Test del chi quadro:\phantom{aaaaaaaaaa}$\chi^2=0.19577$
     
-    
 \end{itemize}
+\bigskip
+
+Quindi l'errore sul valore medio è dato da:
+\begin{equation*}
+    \Delta (\overline{10T})=\frac{\sigma_x}{\sqrt{N}}=0.046\approx 0.05\ s
+\end{equation*}
 
 \newpage
 
@@ -187,241 +192,112 @@ Suddividendo i dati in 4 classi, si ottiene il seguente istogramma:
 \end{figure}
 
 
-
+\bigskip
+\addvspace{1.5cm}
 La \textit{confidenza} ottenuta, consultando la relativa tabella, è compresa tra il 25\% ed il 50\%, quindi i valori di $10T$ misurati sono compatibili con un campione Gaussiano.
 
+\newpage
+
+\section{Misura di M}
+Tramite una bilancia elettronica con sensibilità al decigrammo, sono state pesate le masse campione:
+
+\begin{table}[!htb]
+    \centering
+        \begin{tabular}{|c|c|}
+            \hline
+            $N^o$ &Massa M $(kg)$\\
+            \hline
+            $1$ & $0.0663\pm0.0001$\\
+            $2$ & $0.0372\pm0.0001$\\
+            $3$ & $0.0222\pm0.0001$\\
+            $4$ & $0.0168\pm0.0001$\\
+            $5$ & $0.0125\pm0.0001$\\
+           
+            \hline
+        \end{tabular}
+        \label{Tab masse}
+        \caption*{Tabella 2: \textit{\footnotesize In Tabella sono riportate le masse campione}}
+        \end{table}
+
+    Si considerano le masse come note, quindi con ordine di grandezza dell'errore relativo $<0.1\%$. Per questa ragione, si assumono le masse aventi incertezza nulla.
 
 
+    
+\section{Misura di L}
+Si è poi passati al calcolo della lunghezza del filo al variare della massa appesa. Le misure registrate, tramite un metro a nastro con sensibilità al millimetro, sono le seguenti:
+
+\begin{table}[!htb]
+    \centering
+        \begin{tabular}{|c|c|c|}
+            \hline
+            $N^o$ &Massa M $(kg)$&Lunghezza L $(m)$\\
+            \hline
+            $1$ & $0.0663\pm0.0001$&$1.103\pm0.002$\\
+            $2$ & $0.0372\pm0.0001$&$1.099\pm0.002$\\
+            $3$ & $0.0222\pm0.0001$&$1.097\pm0.002$\\
+            $4$ & $0.0168\pm0.0001$&$1.096\pm0.002$\\
+            $5$ & $0.0125\pm0.0001$&$1.095\pm0.002$\\
+            $6$ & $0.0000$         &$1.094\pm0.002$\\
+           
+            \hline
+        \end{tabular}
+        \label{Tab Lunghezze}
+        \caption*{\centering Tabella 3: \textit{\footnotesize In Tabella sono riportate le masse campione e le diverse lunghezze del filo misurate con i rispettivi errori }}
+        \end{table}
+
+
+Come si può osservare dalla Tabella 3, la lunghezza del filo a riposo è $L_0=(1.094\pm0.002)\ m$. Si noti come tutte le lunghezze siano ocnfrontabili, tranne quella corrispondente alla $N^o\ 1$, che vale $L_1=(1.103\pm0.002)\ m$, che per questa ragione si scarta.
+
+Inoltre si osservi come l'errore relativo $\displaystyle \frac{\Delta L_i}{L_i}$, con $i={0,1,2,3,4,5}$ , è circa dello $0.1\%$.
 
 
 
 
 \section{Indipendenza di T da $\Phi_{max}$}
 
+Per mostrare per quale intervallo angolare vale l'indipendenza di T dall'ampiezza massima, sono state effettuate 6 misure di dieci periodi, mantenendo la stessa massa $M=(0.0663\pm0.0002)\ kg$ durante tutte le misurazioni, e variando l'angolo, misurato tramite un goniometro posto all'estremità dell'asta rigida che sorregge il pendolo. 
+
+Le misure sono state fatte per angoli di $\Phi_{max1}=(5^o\pm1^o)$, $\Phi_{max2}=(10^o\pm1^o)$, $\Phi_{max3}=(15^o\pm1^o)$, $\Phi_{max4}=(20^o\pm1^o)$, $\Phi_{max5}=(25^o\pm1^o)$, $\Phi_{max6}=(30^o\pm1^o)$.
+
+Importante ricordare che la formula per calcolare il periodo $T'$ anche per angoli non piccoli, arrestandoci al secondo termine dallo sviluppo in serie, è data da:
+
+\begin{equation*}
+    T'=2\pi\ \sqrt{\frac{L_1}{g_{tab}}}\ \left(1+\frac{1}{4}\ \sin^2{\left(\frac{\Phi_{max}}{2}\right)}\right)
+\end{equation*}
+
+\bigskip
+
+I risultati sono riportati nella seguente tabella:
+
+\begin{table}[ht] 
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|} 
+
+ \hline
+  &$\Phi_{max1}$ & $\Phi_{max2}$ & $\Phi_{max3}$ & $\Phi_{max4}$ & $\Phi_{max5}$ & $\Phi_{max6}$  \\
+\hline
+
+  $10T$& $21.31\pm 0.05 $&$21.30\pm0.05$&$21.25\pm0.5$&$21.19\pm0.05$ &$21.16\pm0.05$&$21.60\pm 0.05$\\
+\hline
+ $T$& $2,13\pm 0.05 $&$2.13\pm0.05$&$2.12\pm0.5$&$2.12\pm0.05$ &$2.12\pm0.05$&$2.16\pm 0.05$\\
+\hline
+ $T'$& $2,11\pm 0.05 $&$2.12\pm0.05$&$2.14\pm0.5$&$2.17\pm0.05$ &$2.21\pm0.05$&$2.25\pm 0.05$\\
+\hline
+
+\end{tabular}\\
+\caption*{\centering Tabella 4:\small{\textit{ } }}
+    \label{tab T indip Angolo}
+\end{table}
+
+\bigskip
+
+Confontando i valori del periodo $T$ misurati, e i valori teorici $T$
+
+
+
+
 \section{Relazione tra T ed L}
 
 \section{Misura di g}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\newpage
-\section{RELAZIONE MOLLA PER COPIARE TABELLE}
-Questo step consiste nel misurare l'allungamento delle due molle soggette a differenti forze, generate dai contrappesi. I dati sono riportati di seguito in Tabella \ref{tab: Misure Statiche Non Precompresse} e Tabella \ref{tab: Misure Statiche Precompresse}:
-\\
-
-\begin{table}[!htb]
-    \begin{minipage}[t]{.5\linewidth}
-    \centering
-        \begin{tabular}{|c|c|}
-        \hline
-        $M$ $(kg)$&$L\pm \Delta L$ $(m)$\\
-        \hline
-        $0.050$ & $0.326$$\pm$$0.002$\\
-        $0.100$ & $0.346$$\pm$$0.002$\\
-        $0.150$ & $0.366$$\pm$$0.002$\\
-        $0.200$ & $0.387$$\pm$$0.002$\\
-        $0.250$ & $0.407$$\pm$$0.002$\\
-        $0.300$ & $0.427$$\pm$$0.002$\\
-        $0.350$ & $0.448$$\pm$$0.002$\\
-        $0.400$ & $0.468$$\pm$$0.002$\\
-        $0.450$ & $0.489$$\pm$$0.002$\\
-        $0.500$ & $0.509$$\pm$$0.002$\\
-        \hline
-    \end{tabular}
-    \captionsetup{width=7cm}
-    \caption{Molla Non Precompressa. Sono riportati la massa e la posizione finale misurata in seguito alla deformazione.}
-
-    \label{tab: Misure Statiche Non Precompresse}
-    \end{minipage}
-    \begin{minipage}[t]{.5\linewidth}
-    \centering
-        \begin{tabular}{|c|c|}
-            \hline
-            $M$ $(kg)$&$L\pm \Delta L$ $(m)$\\
-            \hline
-            $0.050$ & $0.203$$\pm$$0.003$\\
-            $0.100$ & $0.203$$\pm$$0.003$\\
-            $0.150$ & $0.203$$\pm$$0.003$\\
-            $0.200$ & $0.208$$\pm$$0.003$\\
-            $0.250$ & $0.224$$\pm$$0.003$\\
-            $0.300$ & $0.242$$\pm$$0.003$\\
-            $0.350$ & $0.259$$\pm$$0.003$\\
-            $0.400$ & $0.276$$\pm$$0.003$\\
-            $0.450$ & $0.295$$\pm$$0.003$\\
-            $0.500$ & $0.313$$\pm$$0.003$\\
-            \hline
-        \end{tabular}
-        \captionsetup{width=7cm}
-        \caption{Molla Precompressa. Al di sotto di una massa pari a $0.150$ $kg$ non si è ossservata alcuna deformazione della molla.}
-        
-        \label{tab: Misure Statiche Precompresse}
-    \end{minipage} 
-\end{table}
-
-
-
-
-
-
-\subsection{Relazione tra T ed L}
-Dato che la legge di Hook $Mg=K_s\cdot(L-L_0)$ ci suggerisce che l'allungameto sia in relazione lineare con la forza applicata, abbiamo attuato una regressione lineare. 
-Per la molla non precompressa la legge di cui trovare i coefficienti è: 
-\begin{equation*}
-    L=M\cdot\displaystyle\frac{g}{K_s}+L_0
-    \xrightarrow{} Y = A + BX
-\end{equation*} 
-dove\\ 
-\begin{equation*}
- A= L_0 \mbox{ , } B=\displaystyle\frac{g}{K_s} \mbox{ , } y = L \mbox{ e } X = m
-\end{equation*}
-
-
-
-\begin{figure}[h]
-\includegraphics[width=170mm]{IMMAGINI/Graph Molla Arm Stat.jpg}
-\centering
-\caption{\textit{{\footnotesize{Grafico $L(M)$}: sul'asse asse \textit{y} sono riportati i valori della posizione finale misurata $L$ coi rispettivi errori, sull'asse \textit{x} la massa corrispettiva}}}
-\label{Grafico parabolico}
-\end{figure}
-
-
-\bigskip
-\bigskip
-
-
-Calcolando $K_s$ e il rispettivo errore $\Delta K_s$ come\\
-
-\begin{equation*}
-\centering
-    K_s= \frac{g}{B} \text{\phantom{Testo invi}} \text{,} \text{\phantom{Testo sibil}} \Delta K_s = \left | \frac{g}{B}  \right | \cdot \Delta B 
-\end{equation*}
-\bigskip
-
-Si ottiene $K_s = (24.1 \pm 0.2)$ $N m^{-1}$
-
-
-
-
-
-
-\subsection{Molla Precompressa - metodo statico}
-Nel caso di una molla precompressa, la legge che lega l'allungamento alla forza applicata differisce dalla legge di Hooke per un termine costante $\frac{F_0}{K_p}$ , dovuto alla forza $F_0$ di precompressione della molla.  
-\\La legge su cui abbiamo eseguito la regressione lineare risulata quindi: 
-\begin{equation}
-    L = m \frac{g}{k_p} + (L_0 - \frac{F_0}{K_p}) 
-\end{equation}
-dove 
-\begin{equation}
-    A = L_0 + \frac{F_0}{K_p} \  \ \ \   e   \ \ \ \ B = \frac{g}{K_p}
-\end{equation}
-\\Calcolando $K_p$ e il rispettivo errore $\Delta K_p$ come : 
-\begin{equation}
-    K_p = \frac{g}{B} e \Delta K_p = \left | \frac{g}{B}  \right | \cdot \Delta B 
-\end{equation}
-
-
-
-
-
-
-\section{Misura della costante elastica con metodo dinamico }
-Questo step consiste nel misurare il tempo impiegato dalla molla, alla quale è fissato un pesetto da $500kg$, a compiere dieci oscillazioni complete. Al fine di ricavare la costante $k_d$ dalla relazione: 
-\begin{equation}
-    T = 2\pi \cdot \sqrt{\frac{k_d}{m}}
-\end{equation} 
-
-Per avere una miglior stima del periodo, abbiamo misurato 30  volte il tempo relativo alle 10 oscillazioni, inserendoli con le relative frequenze di misura, nella Tabella \ref{tab: Misure Dinamiche} a fine paragrafo.  
-
-Abbiamo controllato che il campione fosse compatibile con una distribuzione gaussiana.
-Calcolando il valore medio $\overline{x}$ e la deviazione standar $\sigma_x$ tramite le formule: 
-\begin{equation}
-    \overline{x} = \frac{\sum_{i=1}^{N}x_i}{N} \mbox{\hspace{0.5cm} , \hspace{0.5cm}}
-    \sigma_x = \sqrt{\frac{\sum_{i=1}^{N}(x_i-\overline{x})^2}{(N-1)}}
-\end{equation}
-
-\smallskip
-Nel nostro caso $\overline{x} = 9,2773$ e $\sigma_x = 0,0921 $. 
-Ora possiamo dividere le misure delle dieci oscilazioni in classi con il relativo numero valori osservatie  riportarle  nella seguente tabella  
-
-
-\begin{table}[hbt!]
-    \centering
-    {\renewcommand\arraystretch{1.0} 
-    \begin{tabular}{|c|c|}
-    \hline
-        \textbf{Dieci Periodi} & \textbf{Frequenza}\\
-        $10T(s)$ & $f(n)$\\
-    \hline
-    $ 9.07 $ & $ 1 $ \\ 
-    $ 9.12 $ & $ 1 $ \\
-    $ 9.13 $ & $ 1 $ \\
-    $ 9.15 $ & $ 1 $ \\ 
-    $ 9.21 $ & $ 1 $ \\
-    $ 9.22 $ & $ 1 $ \\
-    $ 9.23 $ & $ 3 $ \\
-    $ 9.25 $ & $ 1 $ \\
-    $ 9.26 $ & $ 3 $ \\
-    $ 9.27 $ & $ 1 $ \\
-    $ 9.28 $ & $ 2 $ \\
-    $ 9.29 $ & $ 1 $ \\
-    $ 9.30 $ & $ 3 $ \\ 
-    $ 9.31 $ & $ 2 $ \\
-    $ 9.32 $ & $ 2 $ \\
-    $ 9.35 $ & $ 2 $ \\
-    $ 9.37 $ & $ 1 $ \\
-    $ 9.38 $ & $ 1 $ \\
-    $ 9.47 $ & $ 1 $ \\
-    $ 9,50 $ & $ 1 $ \\ 
-    \hline
-    \end{tabular}}
-    \caption{Misurazioni dinamiche.}
-    \label{tab: Misure Dinamiche}
-\end{table}
-
-
-\begin{table}[hbt!]
-    \centering
-    {\renewcommand\arraystretch{1.0} 
-    \begin{tabular}{|c|c|}
-    \hline
-        \ & \textbf{}
-        $10T(s)$ & $f(n)$\\
-    \hline 
-    \hline
-    \end{tabular}}
-    \caption{Misurazioni dinamiche.}
-    \label{tab: Classi}
-\end{table}
-
-
-
-\newpage
-\section{Determinazione di una massa incognita}
-Questa misura consiste nell'appendere la massa e misurarne l'allungamento ($\Delta L$). Per calcolare il valore di $m_i$ bisogna usare la relazione lineare del paragrafo 5.1, in quanto anche questa è stata una misura statica. I coefficienti sono già stati trovati e riportati qui sotto. 
-Il processo è stato svolto con la molla non precompressa, e sulla massa incognita compariva la lettera "A".\\
-
-\begin{equation}
-    L = A + Bm  \mbox{\hspace{0.5cm} quindi \hspace{0.5cm}}  m_i = \frac{L - A}{B}
-\end{equation}\\
-
-Con i valori: $A = (0.3052 \pm 0.0011)m$, $B = (0.407 \pm 0.004)\frac{m}{kg}$, $L = (0.517 \pm 0.002)m$, calcolando l'errore sommando le derivate parziali oltiplicate per gli errori relativi, si ottiene: 
-
-\begin{equation} 
-    m_i = (0.520 \pm 0.013)kg 
-\end{equation}
-
-
-
 
 \end{document}
