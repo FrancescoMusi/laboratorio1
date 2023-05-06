@@ -274,13 +274,13 @@ La lunghezza media del filo $\overline{L}$ è:
   &\quad{} 
   \end{aligned}
   \begin{aligned}
-  & &\text{dove:\phantom{.......}} \Delta \overline{L}=0.002\ m
+  & &\text{dove:\phantom{.......}} \Delta \overline{L}=\sum_{i=0}^{4}=0.010\ m
   &
   \end{aligned}
 \end{equation*}
 \bigskip
 
-Quindi $\overline{L}=(1.096\pm0.002)\ m$
+Quindi $\overline{L}=(1.096\pm0.010)\ m$
 
 
 \section{Indipendenza di T da $\Phi_{max}$}
@@ -294,23 +294,23 @@ Le misure sono state fatte per angoli di $\Phi_{max1}=(5^o\pm1^o)$, $\Phi_{max2}
 Importante ricordare che la formula per calcolare il periodo $T$ anche per angoli grandi, arrestandoci al secondo termine dallo sviluppo in serie, è data da:
 
 \begin{equation*}
-    T=2\pi\ \sqrt{\frac{L_1}{g_{tab}}}\ \left(1+\frac{1}{4}\ \sin^2{\left(\frac{\Phi_{max}}{2}\right)}\right)
+    T=T' \left(1+\frac{1}{4}\ \sin^2{\left(\frac{\Phi_{max}}{2}\right)}\right)
 \end{equation*}
 
-dove nel nostro caso
+dove il primo termine è dato da:
 \begin{equation*}
 \begin{aligned}
   & & \displaystyle T'=2\pi\ \sqrt{\frac{\overline{L}}{g_{tab}}}=2.1005\ s
   &\quad{} 
   \end{aligned}
   \begin{aligned}
-  & &\text{ e l'errore è:\phantom{.......}} \Delta T'=\frac{d}{d\overline{L}}\left( 2\pi\ \sqrt{\frac{\overline{L}}{g_{tab}}}\right)\cdot\Delta\overline{L}=0.002\ s
+  & &\text{ e l'errore è:\phantom{.......}} \Delta T'=\left|\frac{d}{d\overline{L}}\left( 2\pi\ \sqrt{\frac{\overline{L}}{g_{tab}}}\right)\right|\cdot\Delta\overline{L}=0.01\ s
   &
   \end{aligned}
 \end{equation*}
 \bigskip
 
-Quindi $T'=(2.101\pm 0.002)\ s$.
+Quindi $T'$, periodo per angoli piccoli, vale $T'=(2.10\pm 0.01)\ s$, ed è indipendente dall'angolo.
 
 
 \addvspace{3cm}
@@ -338,7 +338,7 @@ I risultati ottenuti a partire dalle misurazioni sono riportati nella seguente t
 
 \newpage
 
-Confontando il periodo $T$ misurato, e i valori $T'$ del periodo indipendente dall'angolo $\displaystyle T'=2\pi\ \sqrt{\frac{\overline{L}}{g_{tab}}}=(\pm)\ s$, si ottine il seguente grafico:
+Confontando il periodo $T$ misurato, e i valori $T'$ del periodo indipendente dall'angolo, si ottine il seguente grafico:
 
 
 
@@ -355,7 +355,7 @@ Come si può vedere in Figura \ref{confrontoTT'}, fino ad una angolo $\Phi_{max5
 
 \section{Indipendenza di T da M}
 \label{Indip T da M}
-Si effettuano 5 misurazioni di $10T$, ciascuna con una massa diversa. Si è scelto di far partire l'oscillazione da un angolo fisso pari a $\Phi_{max}=8^o$, così da non avere una dipendenza di $T$ dall'angolo, come mostrato nella Sezione \ref{Indip T da angolo}: \textit{Indipendenza di T da $\Phi_{max}$}, e con una lunghezza del filo costante pari a $\overline{L}=(1.096\pm0.002)\ m$, risultato ottenuto nella Sezione \ref{Misura di L}: \textit{Misura di L}.
+Si effettuano 5 misurazioni di $10T$, ciascuna con una massa diversa. Si è scelto di far partire l'oscillazione da un angolo fisso pari a $\Phi_{max}=8^o$, così da non avere una dipendenza di $T$ dall'angolo, come mostrato nella Sezione \ref{Indip T da angolo}: \textit{Indipendenza di T da $\Phi_{max}$}, e con una lunghezza del filo costante pari a $\overline{L}=(1.096\pm0.010)\ m$, risultato ottenuto nella Sezione \ref{Misura di L}: \textit{Misura di L}.
 
 I risultti sono riportati in tabella:
 
@@ -384,8 +384,8 @@ I risultti sono riportati in tabella:
 \caption{\textit{{\footnotesize{descrizione  }}}}
 \label{IndipendenzaTM}
 \end{figure}
-\bigskip
 
+\newpage
 Come si può notare dal Grafico \ref{IndipendenzaTM}, $T$ rimane pressochè costante al variare di $M$ e come conseguenza la retta ottenuta dal \textit{Quick Fit} è orizzontale con pendenza $b=(0.0\pm1.2)$.
 
 Si è quindi verificata l'indipendenza di $T$ da $M$. 
