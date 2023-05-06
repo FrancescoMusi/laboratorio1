@@ -1,11 +1,19 @@
+ 
 \documentclass[12pt, a4paper]{article}
 \usepackage{graphicx}
 \usepackage{mathtools}
+\usepackage{xcolor}
 \usepackage{amsmath}
-\usepackage{geometry}
-\linespread{1.1}
 \usepackage{caption}
 \usepackage[italian]{babel}
+\usepackage{eso-pic}
+\usepackage{setspace}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{geometry}
+\usepackage{longtable}
+\graphicspath{ {./immagini/} }
+\linespread{1.1}
 \binoppenalty=10000 %impedisce di separare a capo formule matematiche nel testo
 \relpenalty=10000
 \geometry{
@@ -16,10 +24,15 @@
  }
 \title{\textbf{\scalebox{1.4}{\text{{\Huge Pendolo}}}}}
 \date{}
-\author{\begin{small}Mussini Simone, Ruscillo Fabio, Musi Francesco\end{small}}
+
 \begin{document}
 \maketitle
-
+\AddToShipoutPictureBG*{%
+  \AtPageUpperLeft{%
+    \hspace{\paperwidth}%
+    \raisebox{-\baselineskip}{%
+      \makebox[0pt][r]{\textbf{Gruppo 10}: Mussini Simone, Musi Francesco, Ruscillo Fabio        }
+}}}%
 
 
 \section{Richiami teorici}
@@ -382,3 +395,4 @@ Si è quindi verificata l'indipendenza di $T$ da $M$.
 \section{Conclusioni}
 
 \end{document}
+
