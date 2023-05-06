@@ -6,7 +6,8 @@
 \linespread{1.1}
 \usepackage{caption}
 \usepackage[italian]{babel}
-
+\binoppenalty=10000 %impedisce di separare a capo formule matematiche nel testo
+\relpenalty=10000
 \geometry{
  total={170mm,257mm},
  left=20mm,
@@ -183,6 +184,7 @@ Quindi l'errore sul valore medio è dato da:
 \newpage
 
 Suddividendo i dati in 4 classi, si ottiene il seguente istogramma:
+\bigskip
 
     \begin{figure}[h!]
 \centering
@@ -207,16 +209,15 @@ Tramite una bilancia elettronica con sensibilità al decigrammo, sono state pesa
             \hline
             $N^o$ &Massa M $(kg)$\\
             \hline
-            $1$ & $0.0663\pm0.0001$\\
-            $2$ & $0.0372\pm0.0001$\\
+            $1$ & $0.0125\pm0.0001$\\
+            $2$ & $0.0168\pm0.0001$\\
             $3$ & $0.0222\pm0.0001$\\
-            $4$ & $0.0168\pm0.0001$\\
-            $5$ & $0.0125\pm0.0001$\\
-           
+            $4$ & $0.0372\pm0.0001$\\
+            $5$ & $0.0663\pm0.0001$\\
             \hline
         \end{tabular}
         \label{Tab masse}
-        \caption*{Tabella 2: \textit{\footnotesize In Tabella sono riportate le masse campione}}
+        \caption*{Tabella 2: \textit{\footnotesize In Tabella sono riportate le masse campione, in ordine crescente.}}
         \end{table}
 
     Si considerano le masse come note, quindi con ordine di grandezza dell'errore relativo $<0.1\%$. Per questa ragione, si assumono le masse aventi incertezza nulla.
@@ -224,6 +225,7 @@ Tramite una bilancia elettronica con sensibilità al decigrammo, sono state pesa
 
     
 \section{Misura di L}
+\label{Misura di L}
 Si è poi passati al calcolo della lunghezza del filo al variare della massa appesa. Le misure registrate, tramite un metro a nastro con sensibilità al millimetro, sono le seguenti:
 
 \begin{table}[!htb]
@@ -232,12 +234,12 @@ Si è poi passati al calcolo della lunghezza del filo al variare della massa app
             \hline
             $N^o$ &Massa M $(kg)$&Lunghezza L $(m)$\\
             \hline
-            $1$ & $0.0663\pm0.0001$&$1.103\pm0.002$\\
-            $2$ & $0.0372\pm0.0001$&$1.099\pm0.002$\\
+            $0$ & $0.0000$         &$1.094\pm0.002$\\
+            $1$ & $0.0125\pm0.0001$&$1.095\pm0.002$\\
+            $2$ & $0.0168\pm0.0001$&$1.096\pm0.002$\\
             $3$ & $0.0222\pm0.0001$&$1.097\pm0.002$\\
-            $4$ & $0.0168\pm0.0001$&$1.096\pm0.002$\\
-            $5$ & $0.0125\pm0.0001$&$1.095\pm0.002$\\
-            $6$ & $0.0000$         &$1.094\pm0.002$\\
+            $4$ & $0.0372\pm0.0001$&$1.099\pm0.002$\\
+            $5$ & $0.0663\pm0.0001$&$1.103\pm0.002$\\
            
             \hline
         \end{tabular}
@@ -246,42 +248,73 @@ Si è poi passati al calcolo della lunghezza del filo al variare della massa app
         \end{table}
 
 
-Come si può osservare dalla Tabella 3, la lunghezza del filo a riposo è $L_0=(1.094\pm0.002)\ m$. Si noti come tutte le lunghezze siano ocnfrontabili, tranne quella corrispondente alla $N^o\ 1$, che vale $L_1=(1.103\pm0.002)\ m$, che per questa ragione si scarta.
+Come si può osservare dalla Tabella 3, la lunghezza del filo a riposo è $L_0=(1.094\pm0.002)\ m$. Si noti come tutte le lunghezze siano ocnfrontabili, tranne quella corrispondente alla $N^o\ 5$, che vale $L_5=(1.103\pm0.002)\ m$. Questo può essere dovuto al fatto che il filo utilizzato nell'esperimento, si fosse allentato, poichè l'apparato sperimentale è stato usato precedentemente da altri Gruppi. 
+Perciò si è deciso di scartare questa misura e non usarla nei calcoli successivi. 
 
 Inoltre si osservi come l'errore relativo $\displaystyle \frac{\Delta L_i}{L_i}$, con $i={0,1,2,3,4,5}$ , è circa dello $0.1\%$.
 
+La lunghezza media del filo $\overline{L}$ è:
 
+\begin{equation*}
+\begin{aligned}
+  & & \overline{L}=\frac{\sum_{i=0}^{4}L_i}{6-1}=1.096\ m
+  &\quad{} 
+  \end{aligned}
+  \begin{aligned}
+  & &\text{dove:\phantom{.......}} \Delta \overline{L}=0.002\ m
+  &
+  \end{aligned}
+\end{equation*}
+\bigskip
+
+Quindi $\overline{L}=(1.096\pm0.002)\ m$
 
 
 \section{Indipendenza di T da $\Phi_{max}$}
+\label{Indip T da angolo}
 
 Per mostrare per quale intervallo angolare vale l'indipendenza di T dall'ampiezza massima, sono state effettuate 6 misure di dieci periodi, mantenendo la stessa massa $M=(0.0663\pm0.0002)\ kg$ durante tutte le misurazioni, e variando l'angolo, misurato tramite un goniometro posto all'estremità dell'asta rigida che sorregge il pendolo. 
+\bigskip
 
 Le misure sono state fatte per angoli di $\Phi_{max1}=(5^o\pm1^o)$, $\Phi_{max2}=(10^o\pm1^o)$, $\Phi_{max3}=(15^o\pm1^o)$, $\Phi_{max4}=(20^o\pm1^o)$, $\Phi_{max5}=(25^o\pm1^o)$, $\Phi_{max6}=(30^o\pm1^o)$.
 
-Importante ricordare che la formula per calcolare il periodo $T'$ anche per angoli non piccoli, arrestandoci al secondo termine dallo sviluppo in serie, è data da:
+Importante ricordare che la formula per calcolare il periodo $T$ anche per angoli grandi, arrestandoci al secondo termine dallo sviluppo in serie, è data da:
 
 \begin{equation*}
-    T'=2\pi\ \sqrt{\frac{L_1}{g_{tab}}}\ \left(1+\frac{1}{4}\ \sin^2{\left(\frac{\Phi_{max}}{2}\right)}\right)
+    T=2\pi\ \sqrt{\frac{L_1}{g_{tab}}}\ \left(1+\frac{1}{4}\ \sin^2{\left(\frac{\Phi_{max}}{2}\right)}\right)
 \end{equation*}
 
+dove nel nostro caso
+\begin{equation*}
+\begin{aligned}
+  & & \displaystyle T'=2\pi\ \sqrt{\frac{\overline{L}}{g_{tab}}}=2.1005\ s
+  &\quad{} 
+  \end{aligned}
+  \begin{aligned}
+  & &\text{ e l'errore è:\phantom{.......}} \Delta T'=\frac{d}{d\overline{L}}\left( 2\pi\ \sqrt{\frac{\overline{L}}{g_{tab}}}\right)\cdot\Delta\overline{L}=0.002\ s
+  &
+  \end{aligned}
+\end{equation*}
 \bigskip
 
-I risultati sono riportati nella seguente tabella:
+Quindi $T'=(2.101\pm 0.002)\ s$.
+
+
+\addvspace{3cm}
+I risultati ottenuti a partire dalle misurazioni sono riportati nella seguente tabella:
 
 \begin{table}[ht] 
 \centering
 \begin{tabular}{|c|c|c|c|c|c|c|} 
 
  \hline
-  &$\Phi_{max1}$ & $\Phi_{max2}$ & $\Phi_{max3}$ & $\Phi_{max4}$ & $\Phi_{max5}$ & $\Phi_{max6}$  \\
+  &$\Phi_{max1}\ (^o)$ & $\Phi_{max2}\ (^o)$ & $\Phi_{max3}\ (^o)$ & $\Phi_{max4}\ (^o)$ & $\Phi_{max5}\ (^o)$ & $\Phi_{max6}\ (^o)$  \\
+    &$(5\pm1)$ & $(10\pm1)$ & $(15\pm1)$ & $(20\pm1)$ & $(25\pm1)$ & $(30\pm1)$  \\
 \hline
 
   $10T$& $21.31\pm 0.05 $&$21.30\pm0.05$&$21.25\pm0.5$&$21.19\pm0.05$ &$21.16\pm0.05$&$21.60\pm 0.05$\\
 \hline
  $T$& $2,13\pm 0.05 $&$2.13\pm0.05$&$2.12\pm0.5$&$2.12\pm0.05$ &$2.12\pm0.05$&$2.16\pm 0.05$\\
-\hline
- $T'$& $2,11\pm 0.05 $&$2.12\pm0.05$&$2.14\pm0.5$&$2.17\pm0.05$ &$2.21\pm0.05$&$2.25\pm 0.05$\\
 \hline
 
 \end{tabular}\\
@@ -289,15 +322,63 @@ I risultati sono riportati nella seguente tabella:
     \label{tab T indip Angolo}
 \end{table}
 
+
+\newpage
+
+Confontando il periodo $T$ misurato, e i valori $T'$ del periodo indipendente dall'angolo $\displaystyle T'=2\pi\ \sqrt{\frac{\overline{L}}{g_{tab}}}=(\pm)\ s$, si ottine il seguente grafico:
+
+
+
+    \begin{figure}[h!]
+\centering
+\includegraphics[width=180mm]{Immagini/confrontoTT'.jpg}
+\caption{\textit{{\footnotesize{In verde $T'$ misura del periodo indipendente dall'angolo, in rosso $T$ misurato.  }}}}
+\label{confrontoTT'}
+\end{figure}
+
+Come si può vedere in Figura \ref{confrontoTT'}, fino ad una angolo $\Phi_{max5}=25^o$ il periodo misurato $T$ è compatibile col periodo $T'$ indipendente dall'angolo, mentre per $\Phi_{max6}=30^o$ la misura risulta essere non compatibile. 
+
+
+
+\section{Indipendenza di T da M}
+\label{Indip T da M}
+Si effettuano 5 misurazioni di $10T$, ciascuna con una massa diversa. Si è scelto di far partire l'oscillazione da un angolo fisso pari a $\Phi_{max}=8^o$, così da non avere una dipendenza di $T$ dall'angolo, come mostrato nella Sezione \ref{Indip T da angolo}: \textit{Indipendenza di T da $\Phi_{max}$}, e con una lunghezza del filo costante pari a $\overline{L}=(1.096\pm0.002)\ m$, risultato ottenuto nella Sezione \ref{Misura di L}: \textit{Misura di L}.
+
+I risultti sono riportati in tabella:
+
+\begin{table}[ht] 
+
+\begin{tabular}{|c|c|c|c|c|c|} 
+
+ \hline
+  &$M1\ (kg)$ & $M2\ (kg)$ & $M3\ (kg)$ & $M4\ (kg)$ & $M5\ (kg)$   \\
+   &\small$(0.0125\pm0.0001)$ & \small$(0.0168\pm0.0001)$ & \small$(0.0222\pm0.0001)$ & \small$(0.0372\pm0.0001)$ & \small$(0.0663\pm0.0001)$ \\
+\hline
+
+  $10T$& $21.31\pm 0.05 $&$21.30\pm0.05$&$21.25\pm0.5$&$21.19\pm0.05$ &$21.16\pm0.05$\\
+\hline
+ $T$& $2,13\pm 0.05 $&$2.13\pm0.05$&$2.12\pm0.5$&$2.12\pm0.05$ &$2.12\pm0.05$\\
+\hline
+
+\end{tabular}\\
+\caption*{\centering Tabella 5:\small{\textit{ } }}
+    \label{tab T indip Angolo}
+\end{table}
+
+    \begin{figure}[h!]
+\centering
+\includegraphics[width=180mm]{Immagini/IndipTdaM.jpg}
+\caption{\textit{{\footnotesize{descrizione  }}}}
+\label{IndipendenzaTM}
+\end{figure}
 \bigskip
 
-Confontando i valori del periodo $T$ misurati, e i valori teorici $T$
+Come si può notare dal Grafico \ref{IndipendenzaTM}, $T$ rimane pressochè costante al variare di $M$ e come conseguenza la retta ottenuta dal \textit{Quick Fit} è orizzontale con pendenza $b=(0.0\pm1.2)$.
 
-
-
-
-\section{Relazione tra T ed L}
+Si è quindi verificata l'indipendenza di $T$ da $M$. 
+\section{Dipendenza di T ed L}
 
 \section{Misura di g}
+\section{Conclusioni}
 
 \end{document}
