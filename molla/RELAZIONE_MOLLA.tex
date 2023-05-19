@@ -13,7 +13,7 @@
  top=15mm,
  bottom=28mm
  }
-\title{\textbf{\scalebox{1.4}{\text{{\Huge Pendolo}}}}}
+\title{\textbf{Misura della costante elastica di una molla}}
 \date{}
 \author{\begin{small}Mussini Simone, Ruscillo Fabio, Musi Francesco\end{small}}
 \begin{document}
@@ -24,67 +24,86 @@
 \section{Richiami teorici}
 La molla è un corpo elastico, capace di deformarsi se viene applicata una forza e di tornare sempre allo stesso allungamento in condizioni di equlibrio. 
 Poichè tende a ritornare alla sua posizione di equilibrio, quando deformata esercita una forza, che segue la \textit{Legge di Hooke}: 
-
 \begin{equation}
     F_{el} = -K(X-X_0)
 \end{equation}
-
 Dove $X-X_0$ è la deformazione linare, $K$ è la costante elastica propria di ogni molla e il segno meno 
 indica che è una fornza di richiamo, in direzione opposta alla forza esterna applicata.
 In condizioni ideali, quindi senza forze dissipative, l'equazione del moto di una molla è quella di 
 un oscillatore armonico con pulsazione $\omega = \sqrt{\frac{K}{m}}$ ($m$ = massa del corpo collegato alla molla, la massa della molla è trascurabile). La soluzione dell'equazione differenziale è una funzione sinusoidale con ampiezza $A$ e fase iniziale $\phi$:
-
 \begin{equation}
     F_el = m\ddot{x} = -Kx   \quad\xrightarrow{}\quad   \frac{d^2x}{dt^2} = -\omega^2x  \quad\xrightarrow{}\quad   x(t) = A cos(\omega t + \phi)
 \end{equation}
-
 Il periodo di una oscillazione risulta: $T = \frac{2\pi}{\omega} = 2\pi\sqrt{\frac{m}{K}}$.
+
+
 
 
 \section{Obbiettivi}
 Gli obbiettivi di questo esperimento sono: 
-Determinare la costante elastica di una molla $(K_s)$ con metodo statico,  utilizzare la molla come dinamometro statico per la determinazione di una massa incognita $(M_i)$, per determinare la costante elastica di una molla precompressa $(K_p)$ e la forza di precompressione con il metodo statico $(F_0)$.
+\begin{enumerate}
+    \setlength\itemsep{0cm}
+    \item Determinare la costante elastica di una molla $(K_s)$ con metodo statico
+    \item Utilizzare la molla come dinamometro statico per la determinazione di una massa incognita $(M_i)$
+    \item Determinare la costante elastica di una molla precompressa $(K_p)$ e la forza di precompressione con il metodo statico $(F_0)$
+\end{enumerate}
+
+
+
 
 
 \section{Strumenti}
     \begin{itemize}
-        \item Masse calibrate
-        \item Massa ignota 
-        \item Molla armonica   
-        \item Molla precompressa 
+    \setlength\itemsep{0cm}
+        \item Masse calibrate e massa ignota
+        \item Molla armonica e molla precompressa 
         \item Metro a nastro 
         \item Cronometro 
         \item Sostegno fisso 
     \end{itemize}
 
+
+
     
-\section{Procedimento}
-Il setup dell'esperimento è costituito da un piedistallo, la cui funzione è di sostenere due aste, collegate tra loro tramite un morsetto, in modo da formare un supporto per sostenere le molle in posizione verticale.
-All'asta messa in orizzontale rispetto al piano, del tavolo, viene poi fissato un metro a nastro, al fine di misurare le deformazioni, che verranno indotte sulle molle. 
+\section{Setup}
+Il setup dell'esperimento è costituito da un piedistallo, la cui funzione è di sostenere due aste collegate tra loro tramite un morsetto, in modo da formare un supporto per sostenere le molle in posizione verticale.
+All'asta messa in orizzontale rispetto al piano del tavolo, viene poi fissato un metro a nastro al fine di misurare le deformazioni che verranno indotte sulle molle. 
+
+
 
 
 
 \section{Analisi preliminare}
-Per avere una stima sull'ordine di grandezza dell'errore su $K_s$, si è calcolato l'errore relativo della costante elastica della molla, in modo statico, tramite singola misura, usando la formula 
+In questa analisi, consideriano trascuarbili gli errori sulla massa $m$ e sull'accelerazione di gravità $g$, in quanto hanno imprecisioni di ordini di grandezza minori rispetto alle misure effettuete con il metro, pertanto in questi passaggi possono essere trascurate.\\
+
+Per avere una stima sull'ordine di grandezza dell'errore su $K_s$, si è calcolato l'errore relativo della costante elastica della molla in modo statico. È stata svolta una singola misura: con una massa di $m=250g$ l'allungamento è di $(L-L_0)=0.095\pm 0.004$ $m$ pertanto, l'errore relativo su $K_s$, usando la formula sottostante (errore di un quoziente), risulta essere circa il $4\%$.
 \begin{equation*}
-    \frac{\Delta K_s}{K_s}=\frac{\Delta M}{M}+\frac{\Delta g}{g}+ \frac{\Delta (L-L_0)}{L-L_0}
+    F_{el} = mg = -K_s(L-L_0) \quad \xrightarrow{} \quad   
+    \frac{\Delta K_s}{K_s} = \frac{\Delta (L-L_0)}{L-L_0}
 \end{equation*}
+(L'incertezza sulla variazione di lunghezza è stata ottenuta sommando le incertezze sulle 2 misure della posizione iniziale e finale, ciascuna di $2mm$.) \\
 
-Si è calcolata la lunghezza della molla a riposo e in seguito quella della molla deformata da una massa di $m=250$ $g$.
-Si è assunta quest'ultima e l'accelerazione di gravità $g$ senza incertezza, in modo da avere una stima preliminare dell'ordine di grandezza dell'errore.
-Dato l'allungamento $(L-L_0)=0.095\pm 0.005$ $m$ l'errore relativo au $K_s$ è circa il $6$\%.
-
-Per la stessa ragione, si è calcolato l'errore relativo della costante elastica della molla, in modo dinamico, tramite singola misura, usando la formula 
+Analogamente, si è calcolato l'errore relativo della costante elastica della molla in modo dinamico, utilizzando la rerlazione che lega ques'ultima al periodo. (L'errore è stato calcolato sempre come errore di un quoziente.) 
 \begin{equation*}
+    T = 2\pi\sqrt{\frac{m}{K}} \quad \xrightarrow{} \quad K = \frac{4m\pi^2}{T^2} \quad \xrightarrow{} \quad
     \frac{\Delta K_d}{K_d}=\frac{\Delta M}{M}+2\frac{\Delta T}{T}
 \end{equation*}
-Per avere un errore relativo minore, si è calcolato il periodo di dieci oscillazioni, pari a $10T= 9,30 \pm 0.1$ $s$  GAUSSIANA CON CLASSI + TEST CHI QUADRO. Inserendo nella fomrula $\overline T$, il il valore medio diviso per dieci, otteniamo un errore relativo su $K_d$ del 2 \%.
+Per avere un valore sul periodo e sulla relativa incertezza più corretti possibile, visto che le misure
+dinamiche presentano errori casuali molto maggiori di quelle statiche, procediamo misurando 10 periodi per 
+attutire l'errore dovuto ai riflessi umani, e prendendo 30 misure per ridurre gli errori casuali.
+Su queste misure svolgiamo l'analisi di un campione gaussiano come segue:
+
+\subsection{Ricerca di $T$ e $\Delta T$}
+!!!!!!!!!!!!!!! TABELLA DATI E PROCEDIMENTO !!!!!!!!!!!!!!!!!!!!
+
+otteniamo un errore relativo su $K_d$ del 2 \%.
+
+
 
 
 
 \section{Misura della costante elastica con il metodo statico}
-Questo step consiste nel misurare l'allungamento delle due molle soggette a differenti forze, generate dai contrappesi. I dati sono riportati di seguito in Tabella \ref{tab: Misure Statiche Non Precompresse} e Tabella \ref{tab: Misure Statiche Precompresse}:
-\\
+Questo step consiste nel misurare l'allungamento delle due molle soggette a differenti forze, generate dai contrappesi. I dati sono riportati di seguito in Tabella \ref{tab: Misure Statiche Non Precompresse} e Tabella \ref{tab: Misure Statiche Precompresse}:\\
 
 \begin{table}[!htb]
     \begin{minipage}[t]{.5\linewidth}
@@ -136,48 +155,39 @@ Questo step consiste nel misurare l'allungamento delle due molle soggette a diff
 \end{table}
 
 
-
+L'errore sulle masse non è specificato perchè lo consideriamo unitario sull'ultima cifra decimale, 
+in quanto i valori erano tabulati e non sono stati misurati per questo esperimento. 
 
 
 
 \subsection{Molla Armonica (non precompressa) - metodo statico}
+\label{Molla non precompressa, statico}
 Dato che la legge di Hook $Mg=K_s\cdot(L-L_0)$ ci suggerisce che l'allungameto sia in relazione lineare con la forza applicata, abbiamo attuato una regressione lineare. 
 Per la molla non precompressa la legge di cui trovare i coefficienti è: 
 \begin{equation*}
     L=M\cdot\displaystyle\frac{g}{K_s}+L_0
-    \xrightarrow{} Y = A + BX
+    \quad \xrightarrow{} \quad Y = A + BX
 \end{equation*} 
-dove\\ 
+dove:
 \begin{equation*}
- A= L_0 \mbox{ , } B=\displaystyle\frac{g}{K_s} \mbox{ , } y = L \mbox{ e } X = m
+ A= L_0 \quad , \quad B=\displaystyle\frac{g}{K_s} \quad , \quad y = L \quad e \quad X = m
 \end{equation*}
+\bigskip
 
-
-
+La figura sottostante è il grafico ottenuto da un $quick fit$ eseguito con il programma di analisi dati, che rappresenta anche la retta dei minimi quadrati.\\
 \begin{figure}[h]
-\includegraphics[width=170mm]{IMMAGINI/Graph Molla Arm Stat.jpg}
-\centering
-\caption{\textit{{\footnotesize{Grafico $L(M)$}: sul'asse asse \textit{y} sono riportati i valori della posizione finale misurata $L$ coi rispettivi errori, sull'asse \textit{x} la massa corrispettiva}}}
-\label{Grafico parabolico}
+    \includegraphics[width=150mm]{IMMAGINI/Graph Molla Arm Stat.jpg}
+    \centering
+    \caption{\textit{{\footnotesize{Grafico $L(M)$}: sul'asse asse \textit{y} sono riportati i valori della posizione finale misurata $L$ coi rispettivi errori, sull'asse \textit{x} la massa corrispettiva}}}
+    \label{Grafico parabolico}
 \end{figure}
-
-
-\bigskip
 \bigskip
 
-
-Calcolando $K_s$ e il rispettivo errore $\Delta K_s$ come\\
-
+Calcolando $K_s$ e il rispettivo errore $\Delta K_s$ come:
 \begin{equation*}
-\centering
-    K_s= \frac{g}{B} \text{\phantom{Testo invi}} \text{,} \text{\phantom{Testo sibil}} \Delta K_s = \left | \frac{g}{B}  \right | \cdot \Delta B 
+    K_s= \frac{g}{B} \quad , \quad \Delta K_s = \left | \frac{g}{B}  \right | \cdot \Delta B 
 \end{equation*}
-\bigskip
-
 Si ottiene $K_s = (24.1 \pm 0.2)$ $N m^{-1}$
-
-
-
 
 
 
@@ -212,13 +222,13 @@ Per avere una miglior stima del periodo, abbiamo misurato 30  volte il tempo rel
 Abbiamo controllato che il campione fosse compatibile con una distribuzione gaussiana.
 Calcolando il valore medio $\overline{x}$ e la deviazione standar $\sigma_x$ tramite le formule: 
 \begin{equation}
-    \overline{x} = \frac{\sum_{i=1}^{N}x_i}{N} \mbox{\hspace{0.5cm} , \hspace{0.5cm}}
+    \overline{x} = \frac{\sum_{i=1}^{N}x_i}{N} \quad , \quad
     \sigma_x = \sqrt{\frac{\sum_{i=1}^{N}(x_i-\overline{x})^2}{(N-1)}}
 \end{equation}
 
 \smallskip
 Nel nostro caso $\overline{x} = 9,2773$ e $\sigma_x = 0,0921 $. 
-Ora possiamo dividere le misure delle dieci oscilazioni in classi con il relativo numero valori osservatie  riportarle  nella seguente tabella  
+Ora possiamo dividere le misure delle dieci oscilazioni in classi con il relativo numero valori osservati e riportarle  nella seguente tabella: 
 
 
 \begin{table}[hbt!]
@@ -256,31 +266,44 @@ Ora possiamo dividere le misure delle dieci oscilazioni in classi con il relativ
 \end{table}
 
 
-\begin{table}[hbt!]
-    \centering
-    {\renewcommand\arraystretch{1.0} 
-    \begin{tabular}{|c|c|}
-    \hline
-        \ & \textbf{}
-        $10T(s)$ & $f(n)$\\
-    \hline 
-    \hline
-    \end{tabular}}
-    \caption{Misurazioni dinamiche.}
-    \label{tab: Classi}
-\end{table}
+I dati sono stati divisi in 6 classi come mostrato in figura. 
+
+!!!!!!!!!!!ISTOGRAMMA !!!!!!!!!!!!!!!
+
+Visto che nessun dato è più distante di 2.5 deviazioni standard dal valor medio, abbiamo deciso di accettarli tutti. Inoltre, dato che le 2 classi agli estremi hanno soltanto 1 o 2 valori, possiamo includerli nelle classi più interne per averne un totale di 4. 
+
+Tramite il test del chi-quadro, che mette in relazione i valori osservati ($O_k$) con i valori attesi secondo una distribuzione gaussiana perfetta ($E_k$), si può verificare che sia effettivamente un campione gaussiano e quindi usare le formule per il valore migliore e l'errore.
+\begin{equation*}
+    \chi^2 = \sum_{k=0}^N \frac{(O_k - E_k)^2}{E_k} = 0.552
+\end{equation*}
+Con N = 30, numero di misure. La gaussiana ha 3 vincoli e visto che le classi sono 4, i gradi di libertà risultano essere 1.
+
+Con questi dati, cosultando la relativa tabella, la confidenza risulta essere tra il 50 ed il 75\%. Essendo minore del 90\%, possiamo cosiderare gaussiano il nostro campione e utilizzare la seguente formula per ottenere l'errore sul valor medio. 
+\begin{equation*}
+    \delta \overline{x} = \frac{\sigma_x}{\sqrt{N}} \approx 0.02s \quad \xrightarrow{} \quad 10T = (9.28 \pm 0.02)s
+\end{equation*}
+Dividendo tutto per 10, otteniamo la misura del singolo periodo con il relativo errore. Tuttavia non possiamo tenere come errore $0.02s / 10$, in quanto l'errore è minore dell'errore strumentale, quindi dobbiamo considerare quest'ultimo. 
+\begin{equation*}
+    T = (0.93 \pm 0.01)s
+\end{equation*}
+
+Ora tramite la formula inversa si calcola la costante $k_d$ e il relativo errore considerando l'errore di una potenza per una costante, dato che le masse hanno valori tabulati e possiamo considerarle senza incertezza. 
+\begin{equation*}
+    k_d = \frac{T^2 m}{4\pi^2} = 0.010954N/m \quad , \quad \delta k_d = \frac{m}{4\pi^2} * 2 \frac{\delta T}{T} * k_d = 
+\end{equation*}
+
+
+
 
 
 
 \newpage
 \section{Determinazione di una massa incognita}
-Questa misura consiste nell'appendere la massa e misurarne l'allungamento ($\Delta L$). Per calcolare il valore di $m_i$ bisogna usare la relazione lineare del paragrafo 5.1, in quanto anche questa è stata una misura statica. I coefficienti sono già stati trovati e riportati qui sotto. 
-Il processo è stato svolto con la molla non precompressa, e sulla massa incognita compariva la lettera "A".\\
-
+Questa misura consiste nell'appendere la massa e misurarne l'allungamento ($\Delta L$). Per calcolare il valore di $m_i$ bisogna usare la relazione lineare del paragrafo \ref{Molla non precompressa, statico}, in quanto anche questa è stata una misura statica. I coefficienti sono già stati trovati e riportati qui sotto. 
+Il processo è stato svolto con la molla non precompressa, e sulla massa incognita compariva la lettera "A".
 \begin{equation}
     L = A + Bm  \mbox{\hspace{0.5cm} quindi \hspace{0.5cm}}  m_i = \frac{L - A}{B}
 \end{equation}\\
-
 Con i valori: $A = (0.3052 \pm 0.0011)m$, $B = (0.407 \pm 0.004)\frac{m}{kg}$, $L = (0.517 \pm 0.002)m$, calcolando l'errore sommando le derivate parziali oltiplicate per gli errori relativi, si ottiene: 
 
 \begin{equation} 
@@ -291,4 +314,3 @@ Con i valori: $A = (0.3052 \pm 0.0011)m$, $B = (0.407 \pm 0.004)\frac{m}{kg}$, $
 
 
 \end{document}
-
