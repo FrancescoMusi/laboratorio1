@@ -1,61 +1,161 @@
-
 \documentclass[12pt, a4paper]{article}
 \usepackage{graphicx}
 \usepackage{mathtools}
+\usepackage{xcolor}
 \usepackage{amsmath}
+\usepackage{caption}
+\usepackage[italian]{babel}
+\usepackage{eso-pic}
+\usepackage{setspace}
+\usepackage{multirow}
+\usepackage{array}
 \usepackage{geometry}
+\usepackage{longtable}
+\graphicspath{ {./immagini/} }
 \linespread{1.1}
+\binoppenalty=10000 %impedisce di separare a capo formule matematiche nel testo
+\relpenalty=10000
 \geometry{
- total={170mm,257mm},
- left=20mm,
- top=15mm,
- bottom=28mm
- }
+    total={170mm,257mm},
+    left=20mm,
+    top=15mm,
+    bottom=28mm
+}
+
  
- \title{\textbf{\scalebox{1.4}{\text{{\Huge Onde Stazionarie}}}}}
- \date{}
+\title{\textbf{Misura della velocità di fase di un’onda
+elastica trasversale in una fune confinata}}
+\date{}
 
-\author{\begin{small}Mussini Simone, Ruscillo Fabio, Musi Francesco\end{small}}
-
-
-
+ 
 \begin{document}
 \maketitle
-\section{Obbiettivo}
-Lo scopo di questa esperienza è quello di trovare la velocità di propagazione di un'onda elastica trasversale, attraverso la misura della frequenza e della lunghezza d'onda di varie onde stazionarie.\
+\AddToShipoutPictureBG*{%
+  \AtPageUpperLeft{%
+    \hspace{\paperwidth}%
+    \raisebox{-\baselineskip}{%
+      \makebox[0pt][r]{\textbf{Gruppo 10}: Mussini Simone, Musi Francesco, Ruscillo Fabio        }
+}}}%
 
-L'onda stazionaria è un'interferenza di due onde contrarie con la stessa frequenza e si può generare dalla riflessione di un'onda.
-L'equazione dell'onda stazionaria è:
+
+
+\section{Richiami teorici}
+Un'onda è una perturbazione che viene generata da una sorgente. È caratterizzata da lunghezza d'onda ($\lambda, [m]$), ampiezza ($A, [m]$) e frequenza ($f, [Hz]$).
+Essa può essere un onda meccanica, per cui si ha uno spostamento di particelle che si propaga attraverso un mezzo, oppure può essere un onda elettromagnetica, che si propaga nel vuoto, essendo una perturbazione non di particelle ma di un campo elettrico e magnetico.\\
+
+Un vincolo o una superficie possono causare il fenomeno di riflessione di un onda. 
+Se la riflessione avviene nella stessa direzione dell'onda iniziale, come nel nostro caso, si crea un interferenza tra onda generata ed onda riflessa.\\
+
+Questa interferenza può essere un onda stazionaria se "non si propaga", ossia vi sono dei punti fissi detti nodi la cui quota non varia mai. 
+Seguono l'equazione di questo tipo di onda e le relazioni che caratterizzano i nodi:
+
 \begin{equation*}
-    y=\frac{A}{2}\sin{(kx - \omega t)} + \frac{A}{2}\sin{(kx + \omega t)}
+    y = \frac{A}{2} sin(kx - \omega t) + \frac{A}{2} sin(kx - \omega t) = \frac{A}{2} sin(kx)cos(\omega t)
+\end{equation*}
+\begin{equation*}
+    k x_{nodo} = n\pi, \quad n \in \mathbb{N}  \quad ; \quad \Delta x_{nodo} = \lambda /2
 \end{equation*}
 
 
+
+
+\section{Obbiettivo}
+Lo scopo di questa esperienza è quello di trovare la velocità di propagazione di un'onda elastica trasversale, attraverso la misura della frequenza e della lunghezza d'onda di più onde stazionarie, ottenute con frequenze differenti.\\
+
+La velocità dipende soltanto dal mezzo di propagazione, nel nostro caso dalla densità lineare e dalla tensione della fune elastica. Dato che la essa rimane la stessa per tutto l'esperimento, si ha:
+\begin{equation*}
+    cost = v = \lambda f
+\end{equation*}
+
+Pertanto delle velocità ottenute a diverse frequenze va fatta una media pesata in base alle incertezze.
+
+
+
+
+
+\newpage
 \section{Materiale}
 \begin{itemize}
 \setlength\itemsep{0mm}
     \item Fune omogenea
     \item Sostegni
     \item Peso da 5 $kg$
-    \item Generatore di segnale
-    \item Pistone
+    \item Generatore di segnale con pistone
     \item Metro a nastro da 2,10 $m$
 \end{itemize}
 
-\section{Procedimento}
-Il set-up era montato in modo che ci fosse una corda \textbf{\textit{tesa}} legata a un sostegno fisso da un lato, e dall'altro, ad un peso da $5$ $kg$. Il pistone era posto in prossimità  dell'estremo fisso, in modo tale da limitare l'errore sulla misura della distanza tra gli due nodi.\ 
 
-Abbimo realizzato la \textit{Tabella \ref{tab:Tabella_completa}} nel quale riportare i dati utili, coi rispettivi errori.\
+
+
+\section{Procedimento}
+Il set-up era montato in modo che ci fosse una corda \textbf{tesa} legata a un sostegno fisso da un lato, e dall'altro, ad un peso da $5$ $kg$. Il pistone era posto in prossimità  dell'estremo fisso, in modo tale da limitare l'errore sulla misura della distanza tra i  nodi.\\
+Tramite il generatore, si aumenta progressivamente la frequenza dell'onda finchè non si forma un'onda stazionaria. Per ogni valore di $f$ per cui ciò accade, si misura: il numero di nodi, la loro distanza e la loro larghezza (che rappresenta l'incertezza sulle distanze, perchè in condizioni ideali sono puntiformi).
+
+
+
+
   
 \subsection{Frequenza e distanza tra gli internodi}
-Per avere una prima stima delle frequenze di risonanza, abbiamo acceso il generatore di segnale collegato al pistone, il quale ha cominciato a generare delle oscillazioni sulla corda.\ 
+Per avere una prima stima delle frequenze di risonanza, abbiamo acceso il generatore di segnale collegato al pistone, il quale ha cominciato a generare delle oscillazioni sulla corda. 
+\bigskip
 
-Abbiamo iniziato a modulare la frequenza e l'intensità del segnale, fino ad ottenere un'onda stazionaria con ampiezza maggiore possibile.\
+Abbiamo iniziato a modulare la frequenza e l'intensità del segnale, fino ad ottenere un'onda stazionaria con ampiezza maggiore possibile.
+\bigskip
 
-Dopo aver ripetuto l'operzione ottenendo diversi modi, abbiamo calcolato con maggiore precisione la frequenza di risonanza del modo fondamentale, i cui multipli ci permettono di individuare il range delle frequenze dei modi successivi, considerando come errore sulle frequenze quello strumentale, poichè era l'unica fonte di errore rilevante.\
+Dopo aver ripetuto l'operzione ottenendo diversi modi, abbiamo calcolato con maggiore precisione la frequenza di risonanza del modo fondamentale, i cui multipli ci permettono di individuare il range delle frequenze dei modi successivi, considerando come errore sulle frequenze quello strumentale, poichè era l'unica fonte di errore rilevante.
+ \bigskip
  
-Infine abbiamo calcolato la distanza tra due nodi successivi e l'errore su ogni singolo nodo, così da poter fare una misura più accurata sull'errore da attribuire alla distanza degli internodi, stando attenti nell'assegnare un errore maggiore agli estremi della corda, visto che i nodi, erano meno individuabili. Abbiamo riportando sia le frequenze che le distanze tra due nodi successivi, con i rispettivi errori, sulla Tabella \ref{tab:Tabella_completa} (vedi Colonna \begin{footnotesize}{\textit{(2)}}\end{footnotesize}: frequenza, Colonna \begin{footnotesize}{\textit{(3)}}\end{footnotesize}: distanza tra i nodi) .\
+Infine abbiamo calcolato la distanza tra due nodi successivi e l'errore su ogni singolo nodo, così da poter fare una misura più accurata sull'errore da attribuire alla distanza degli internodi, stando attenti nell'assegnare un errore maggiore agli estremi della corda, visto che i nodi, erano meno individuabili. Abbiamo riportando sia le frequenze che le distanze tra due nodi successivi, con i rispettivi errori, sulla Tabella \ref{tab: Frequenza e distanza } (vedi Colonna \begin{footnotesize}{\textit{(2)}}\end{footnotesize}: frequenza, Colonna \begin{footnotesize}{\textit{(3)}}\end{footnotesize}: distanza tra i nodi) 
 
+\newpage
+\begin{table}[!htb]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+    \textbf{Modo} & \textbf{Frequenza} & \textbf{Distanza tra due nodi} \\ 
+    \footnotesize$(n)$ & \footnotesize$(f\pm\Delta f)$($Hz$) & \footnotesize$(d_n\pm\Delta d_n)$ $(m)$ \\ 
+    \hline\hline
+    \footnotesize$1$ & \footnotesize$7.0\pm0.1$ & \footnotesize$2.007 \pm 0.015$ \\[0.7ex] 
+    \hline %freq          %dist.inter.
+    \footnotesize$2$ & \footnotesize$14.0 \pm 0.1 $ &  \footnotesize$1.005 \pm 0.008$ \\[0.7ex]
+    \footnotesize & \footnotesize & \footnotesize$1.005 \pm 0.013$ \\[0.7ex]
+    \hline
+    \footnotesize & \footnotesize & \footnotesize$0.665 \pm 0.008$ \\ [0.7ex]
+    \footnotesize$3$ & \footnotesize$20.9 \pm 0.1$ & \footnotesize$0.670 \pm 0.005$  \\ [0.7ex]
+    \footnotesize & \footnotesize & \footnotesize$0.680 \pm 0.012$ \\ [0.7ex]
+    \hline 
+    \footnotesize & \footnotesize & \footnotesize$0.500 \pm 0.008$ \\ [0.7ex]
+    \footnotesize$4$ & \footnotesize$27.8 \pm 0.1$ & \footnotesize$0.508 \pm 0.005$ \\ [0.7ex]
+    \footnotesize & \footnotesize & \footnotesize$0.505 \pm 0.005$ \\ [0.7ex]
+    \footnotesize & \footnotesize & \footnotesize$0.505 \pm 0.013$ \\ [0.7ex]
+    \footnotesize & \footnotesize & \footnotesize$0.401 \pm 0.008$ \\ [0.7ex]
+    \footnotesize & \footnotesize & \footnotesize$0.411 \pm 0.005$ \\ [0.7ex]
+    \footnotesize$5$ & \footnotesize$34.7 \pm 0.1$ & \footnotesize$0.407 \pm 0.004$ \\ [0.7ex]
+    \footnotesize & \footnotesize & \footnotesize$0.395 \pm 0.005$ \\ [0.7ex]
+    \footnotesize & \footnotesize & \footnotesize$0.407 \pm 0.013$ \\ [0.7ex]
+    \hline
+    \footnotesize & \footnotesize & \footnotesize$0.330 \pm 0.006$ \\ [0.7ex]
+    \footnotesize & \footnotesize & \footnotesize$0.333 \pm 0.003$ \\ [0.7ex]
+    \footnotesize$6$ & \footnotesize$41.7 \pm 0.1$ & \footnotesize$0.336 \pm 0.005$ \\ [0.7ex]
+    \footnotesize & \footnotesize & \footnotesize$0.335 \pm 0.004$ \\ [0.7ex]
+    \footnotesize & \footnotesize & \footnotesize$0.332 \pm 0.002$ \\ [0.7ex]
+    \footnotesize & \footnotesize & \footnotesize$0.339 \pm 0.011$ \\ [0.7ex]
+    \hline
+    \footnotesize & \footnotesize & \footnotesize$0.332 \pm 0.002$ \\ [0.7ex]
+    \footnotesize & \footnotesize & \footnotesize$0.332 \pm 0.002$ \\ [0.7ex]
+    \footnotesize & \footnotesize & \footnotesize$0.332 \pm 0.002$ \\ [0.7ex]
+    \footnotesize$7$ & \footnotesize$48.7 \pm 0.1$ & \footnotesize$0.332 \pm 0.002$ \\ [0.7ex]
+    \footnotesize & \footnotesize & \footnotesize$0.332 \pm 0.002$ \\ [0.7ex]
+    \footnotesize & \footnotesize & \footnotesize$0.332 \pm 0.002$ \\ [0.7ex]
+    \footnotesize & \footnotesize & \footnotesize$0.332 \pm 0.002$ \\ [0.7ex]
+    \hline
+
+    \hline
+ \end{tabular}
+ \caption{Colonna\begin{footnotesize}{\textit{(1)}}\end{footnotesize}: numero di modi \textbf{-} Colonna \begin{footnotesize}{\textit{(2)}}\end{footnotesize}: frequenza \textbf{-} 
+ Colonna \begin{footnotesize}{\textit{(3)}}\end{footnotesize}: distanza tra i nodi}
+ \label{tab: Frequenza e distanza }
+ \end{table} 
 
 \subsection{Distanza media degli internodi e Lunghezza d'onda}
 Poichè la distanza tra due nodi e il rispettivo errore, variano da internodo a internodo, utilizziamo la media pesata per il calcolo della distanza media, e dell'errore medio.\ 
@@ -66,15 +166,18 @@ Per il calcolo sulla distanza media usiamo la formula:
   &\overline{d} =\frac{\sum w_n\cdot d_n}{\sum w_n}
   &\quad{} 
   \end{aligned}
+  &
   \begin{aligned}
-  & & & & & & & & &\text{dove il peso di ogni misura è:}& w_n=\frac{1}{\delta d_n^2}
+  & & & & & & & & &\text{dove il peso di ogni misura è:}& w_n=\frac{1}{\Delta d_n^2}
   &
   \end{aligned}
 \end{equation*}
 Invece l'errore medio è calcolato come:
 \begin{equation*}
-    \delta\overline{d} =\frac{1}{\sqrt{\sum w_n}}
+    \overline{\Delta{d}} =\frac{1}{\sqrt{\sum w_n}}
 \end{equation*}
+
+\addvspace{1.5cm}
 Otteniamo quindi i seguenti valori:
 {
 \renewcommand\arraystretch{1.2} %spaziatura tra le colonne (da 1 a 1.1)
@@ -85,12 +188,12 @@ Otteniamo quindi i seguenti valori:
 \begin{tabular}{|c|c|c|c|c|c|c|c|} 
  
  \hline
-  Modi (n) & 1 & 2 & 3 & 4 & 5 & 6 & 7\\
+  \small Modi (n) & 1 & 2 & 3 & 4 & 5 & 6 & 7\\
   
 \hline
 
   
-  $\overline{d}\pm\delta\overline{d}$ ($m$) &\footnotesize{2.007$\pm$0.015}  &\footnotesize{1.005$\pm$0.007} &\footnotesize{0.670$\pm$0.004}&\footnotesize{0.505$\pm$0.003}&\footnotesize{0.404$\pm$0.002} &\footnotesize{0.333$\pm$0.001}&\footnotesize{0.285$\pm$0.001}\\
+  \small $\overline{d}\pm\overline{\Delta{d}}$ ($m$) &\footnotesize{2.007$\pm$0.015}  &\footnotesize{1.005$\pm$0.007} &\footnotesize{0.670$\pm$0.004}&\footnotesize{0.505$\pm$0.003}&\footnotesize{0.404$\pm$0.002} &\footnotesize{0.333$\pm$0.001}&\footnotesize{0.285$\pm$0.001}\\
 \hline
 
 
@@ -104,14 +207,15 @@ L'errore ottenuto facendo la media pesata è \textbf{\textit{inferiore}} all'err
 
 
 
-Successivamente siamo andati a calcolare la lunghezza d'onda, moltiplicando per due la distanza media e l'errore medio, poichè la distanza tra due nodi è la metà di una lunghezza d'onda:
+Successivamente siamo andati a calcolare la lunghezza d'onda, moltiplicando per due la distanza media e l'errore sulla distanza media, poichè la distanza tra due nodi è la metà di una lunghezza d'onda:
 \begin{equation*}
     \lambda=2\cdot\overline{d}
 \end{equation*}
 \begin{equation*}
-    \delta\lambda=2\cdot\delta\overline{d}
+    \Delta\lambda=2\cdot\overline{\Delta{d}}
 \end{equation*}
 
+\addvspace{1.5cm}
  I risultati ottenuti sono riportati di seguito: 
  
  {
@@ -123,12 +227,12 @@ Successivamente siamo andati a calcolare la lunghezza d'onda, moltiplicando per 
 \begin{tabular}{|c|c|c|c|c|c|c|c|} 
  
  \hline
-  Modi (n) & 1 & 2 & 3 & 4 & 5 & 6 & 7\\
+  \small Modi (n) & 1 & 2 & 3 & 4 & 5 & 6 & 7\\
   
 \hline
 
   
-  $\lambda\pm\delta\lambda$ ($m$) &\footnotesize{4.014$\pm$0.030}  &\footnotesize{2.010$\pm$0.016} &\footnotesize{1.340$\pm$0.010}&\footnotesize{1.010$\pm$0.010}&\footnotesize{0.808$\pm$0.008} &\footnotesize{0.666$\pm$0.004}&\footnotesize{0.570$\pm$0.006}\\
+  \small $\lambda\pm\Delta\lambda$ ($m$) &\footnotesize{4.014$\pm$0.030}  &\footnotesize{2.010$\pm$0.016} &\footnotesize{1.340$\pm$0.010}&\footnotesize{1.010$\pm$0.010}&\footnotesize{0.808$\pm$0.008} &\footnotesize{0.666$\pm$0.004}&\footnotesize{0.570$\pm$0.006}\\
 \hline
 
 
@@ -139,22 +243,118 @@ Successivamente siamo andati a calcolare la lunghezza d'onda, moltiplicando per 
 }
 
 
+\addvspace{1.5cm}
+\section{Grafico lineare $\lambda=(f)$ }
+Successivamente si è graficato la lunghezza d'onda in funzione della frequenza. 
+\\
+Al fine di ottenere una relazione lineare, abbiamo convertito i dati in logaritmi, gli errori sul logaritmo della lunghezza d'onda e sul logaritmo frequenza, sono srtati ottenuti con la seguente formula :
+
+\begin{equation*}
+    \Delta ln(A) = \frac{\Delta A}{A}
+\end{equation*}
+
+\newpage
+
+I valori ottenuti sono riportati nella seguente tabella :
 
 
+\begin{table}[ht] %[hl] serve per mettere la tabella nel mezzo del testo
+ \centering
+
+\begin{tabular}{|c|c|c|} 
+ \hline
+  \footnotesize{Modi (n)}& \footnotesize{$ln(\lambda)\pm\Delta \ln(\lambda)$ ($m$)}  & \footnotesize{$ln(f) \pm \Delta ln(f) $ ($Hz$)} \\ 
+\hline
+ $1$ & \footnotesize{$\pm$} & \footnotesize{$\pm$} \\   
+ $2$ & \footnotesize{$\pm$} & \footnotesize{$\pm$} \\
+ $3$ & \footnotesize{$\pm$} & \footnotesize{$\pm$} \\
+ $4$ & \footnotesize{$\pm$} & \footnotesize{$\pm$} \\
+ $5$ & \footnotesize{$\pm$} & \footnotesize{$\pm$} \\
+ $6$ & \footnotesize{$\pm$} & \footnotesize{$\pm$} \\
+ $7$ & \footnotesize{$\pm$} & \footnotesize{$\pm$} \\
+\hline
+
+\end{tabular}\\
+\caption{\small{\textit{logatmo della lunghezza d'onda e della frequenza} }}
+    \label{tab:Logaritmo lunghezza d'onda e frequenza}
+\end{table}
+
+Il grafico ottenuto è il seguente: 
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[]{}
+    \caption{Caption}
+    \label{f}
+\end{figure}
+
+AGGIUNGI CONSIDERAZIONI
+
+
+
+\section{Regressione lineare}
+A questo punto cerchiamo la relazione che lega la lunghezza d'onda alla frequenza, aspettandoci una legge di potenza del tipo 
+\begin{equation*}
+    \lambda = Cf^{q}
+\end{equation*}
+Al fine di trovare con la massima precisione i parametri C e q si studiano i dati tramite una regressione lineare utilizzando i logaritmi della lunghezza d'onda e della frequenza riportati nella tabella \ref{tab:Logaritmo lunghezza d'onda e frequenza}.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[]{}
+    \centering
+    \caption{\textit{Grafico tra logaritmo della lunghrzza d'onda e logaritmo della frequenza .}}
+\end{figure}
+
+
+Controllando la compatibilità di q rispetto a
+\begin{equation*}
+    |q-q_{atteso}| = 0.006 
+\end{equation*} 
+\begin{equation*}
+     |\Delta q + \Delta q_{attesso}| = |\Delta q | = 0.002
+\end{equation*}
+risulta non compatibile poichè $|q-q_{atteso}|>|\Delta q + \Delta q_{attesso}|$.
+Allo scopo di verificare se questa dicrepanza sia dovuta all'aver adottato come confidenza della regressione una deviazione standard, si rivalutano i valori dei coefficenti con un confidenza pari al 95$\%$,ottendo:
+
+\begin{equation*}
+    a = 3.3512 \pm 0.0381  \sim 3.35 \pm 0.04 
+\end{equation*}
+\begin{equation*}
+    b = -1.0064 \pm 0.0119 \sim -1.006 \pm 0.012 
+\end{equation*}
+\bigskip
+
+Riverificando la compatibilità : 
+\begin{equation*}
+    |q-q_{atteso}| = 0.006
+\end{equation*}
+\begin{equation*}
+    |\delta q + \delta q_{atteso}| = 0.012 
+\end{equation*}
+Il valore di q risulta compatibile con quello estratto dalla legge teorica, pertanto possiamo procedere misurando la velocità di fase con i dati osservati.
+
+
+
+
+
+\section{Velocità di fase}
+AAAAAA
+
+\section{Conclusioni}
+AAAAAA
 
 \newpage
 
 \section{Tabella Completa}
 {
 \renewcommand\arraystretch{1.08} %spaziatura tra le colonne (da 1 a 1.1)
-
-
 \begin{table}[h!] %TABELLA COMPLETA
     \centering
     \begin{tabular}{|c|c|c|c|c|} % numero di colonne
     
     \hline %LINEA DEI TITOLI
-    \textbf{Modo} & \textbf{Frequenza} & \textbf{Distanza tra due nodi} & \textbf{Distanza media} & \textbf{Lunghezza d'onda} \\ (n) & ($f\pm\delta f$)($Hz$) & ($d_n\pm\delta d_n$ )($m$) & ($\overline{d}\pm\delta\overline{d}$)($m$) & ($\lambda\pm\delta\lambda$ )($m$) \\ [1ex] 
+    \textbf{Modo} & \textbf{Frequenza} & \textbf{Distanza tra due nodi} & \textbf{Distanza media} & \textbf{Lunghezza d'onda} \\ (n) & ($f\pm\Delta f$)($Hz$) & ($d_n\pm\Delta d_n$ )($m$) & ($\overline{d}\pm\overline{\Delta{d}}$)($m$) & ($\lambda\pm\Delta\lambda$ )($m$) \\ [1ex] 
     
     \hline\hline %LINEE DEI DATI
 1 & 7.0$\pm$0.1  & 2.007$\pm$0.015 & 2.007$\pm$0.015 & 4.014$\pm$0.030 \\ [0.7ex] %ampiezza tra celle
